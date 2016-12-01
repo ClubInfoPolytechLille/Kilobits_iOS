@@ -8,20 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		35A69CBF1DF0D5B000D4740C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A69CBE1DF0D5B000D4740C /* AppDelegate.swift */; };
-		35A69CC11DF0D5B000D4740C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A69CC01DF0D5B000D4740C /* ViewController.swift */; };
+		35A69CC11DF0D5B000D4740C /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A69CC01DF0D5B000D4740C /* MenuViewController.swift */; };
 		35A69CC41DF0D5B000D4740C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35A69CC21DF0D5B000D4740C /* Main.storyboard */; };
 		35A69CC61DF0D5B000D4740C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35A69CC51DF0D5B000D4740C /* Assets.xcassets */; };
 		35A69CC91DF0D5B000D4740C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35A69CC71DF0D5B000D4740C /* LaunchScreen.storyboard */; };
+		35A69CD11DF0DEEE00D4740C /* ConnexionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A69CD01DF0DEEE00D4740C /* ConnexionViewController.swift */; };
+		35A69CD31DF0E07A00D4740C /* InscriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A69CD21DF0E07A00D4740C /* InscriptionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		35A69CBB1DF0D5B000D4740C /* Kilobits_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kilobits_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35A69CBE1DF0D5B000D4740C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		35A69CC01DF0D5B000D4740C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		35A69CC01DF0D5B000D4740C /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		35A69CC31DF0D5B000D4740C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		35A69CC51DF0D5B000D4740C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		35A69CC81DF0D5B000D4740C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		35A69CCA1DF0D5B000D4740C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		35A69CD01DF0DEEE00D4740C /* ConnexionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnexionViewController.swift; sourceTree = "<group>"; };
+		35A69CD21DF0E07A00D4740C /* InscriptionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InscriptionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,11 +59,13 @@
 			isa = PBXGroup;
 			children = (
 				35A69CBE1DF0D5B000D4740C /* AppDelegate.swift */,
-				35A69CC01DF0D5B000D4740C /* ViewController.swift */,
+				35A69CC01DF0D5B000D4740C /* MenuViewController.swift */,
 				35A69CC21DF0D5B000D4740C /* Main.storyboard */,
 				35A69CC51DF0D5B000D4740C /* Assets.xcassets */,
 				35A69CC71DF0D5B000D4740C /* LaunchScreen.storyboard */,
 				35A69CCA1DF0D5B000D4740C /* Info.plist */,
+				35A69CD01DF0DEEE00D4740C /* ConnexionViewController.swift */,
+				35A69CD21DF0E07A00D4740C /* InscriptionViewController.swift */,
 			);
 			path = Kilobits_iOS;
 			sourceTree = "<group>";
@@ -135,8 +141,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				35A69CC11DF0D5B000D4740C /* ViewController.swift in Sources */,
+				35A69CD11DF0DEEE00D4740C /* ConnexionViewController.swift in Sources */,
+				35A69CC11DF0D5B000D4740C /* MenuViewController.swift in Sources */,
 				35A69CBF1DF0D5B000D4740C /* AppDelegate.swift in Sources */,
+				35A69CD31DF0E07A00D4740C /* InscriptionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,6 +294,7 @@
 				35A69CCF1DF0D5B000D4740C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
