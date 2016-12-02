@@ -14,6 +14,7 @@
 		35A69CC91DF0D5B000D4740C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35A69CC71DF0D5B000D4740C /* LaunchScreen.storyboard */; };
 		35A69CD11DF0DEEE00D4740C /* ConnexionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A69CD01DF0DEEE00D4740C /* ConnexionViewController.swift */; };
 		35A69CD31DF0E07A00D4740C /* InscriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A69CD21DF0E07A00D4740C /* InscriptionViewController.swift */; };
+		35A69CD51DF0EB5800D4740C /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A69CD41DF0EB5800D4740C /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		35A69CCA1DF0D5B000D4740C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		35A69CD01DF0DEEE00D4740C /* ConnexionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnexionViewController.swift; sourceTree = "<group>"; };
 		35A69CD21DF0E07A00D4740C /* InscriptionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InscriptionViewController.swift; sourceTree = "<group>"; };
+		35A69CD41DF0EB5800D4740C /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				35A69CCA1DF0D5B000D4740C /* Info.plist */,
 				35A69CD01DF0DEEE00D4740C /* ConnexionViewController.swift */,
 				35A69CD21DF0E07A00D4740C /* InscriptionViewController.swift */,
+				35A69CD41DF0EB5800D4740C /* Extensions.swift */,
 			);
 			path = Kilobits_iOS;
 			sourceTree = "<group>";
@@ -141,6 +144,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35A69CD51DF0EB5800D4740C /* Extensions.swift in Sources */,
 				35A69CD11DF0DEEE00D4740C /* ConnexionViewController.swift in Sources */,
 				35A69CC11DF0D5B000D4740C /* MenuViewController.swift in Sources */,
 				35A69CBF1DF0D5B000D4740C /* AppDelegate.swift in Sources */,

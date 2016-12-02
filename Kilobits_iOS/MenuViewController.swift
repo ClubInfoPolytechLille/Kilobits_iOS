@@ -33,5 +33,14 @@ class MenuViewController: UIViewController
         performSegueWithIdentifier("goToInscription", sender: self)
     }
 
+    @IBAction func accesForum(sender: UIButton)
+    {
+        //performSegueWithIdentifier("goToForum", sender: self)
+    }
+    
+    @IBAction func consulterEvenements(sender: UIButton)
+    {
+        //performSegueWithIdentifier("goToListeEvenements", sender: self)
+    }
 }
 
