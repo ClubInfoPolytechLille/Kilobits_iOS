@@ -31,19 +31,17 @@ class ConnexionViewController: UIViewController, UITextFieldDelegate, UINavigati
     @IBAction func seConnecter(sender: UIButton)
     {
         //Données
-        let dic = ["pseudo": "Poulou", "mdp": "testmdp"]
+        _ = ["pseudo": "Poulou", "mdp": "testmdp"]
         
-        //let jsonData = try NSJSONSerialization.dataWithJSONObject(dic, options: NSJSONWritingOptions.PrettyPrinted) as? NSData
-        
-        // here "jsonData" is the dictionary encoded in JSON data
+        //String sql = "SELECT pseudo, Typ FROM utilisateur WHERE pseudo = ? AND mdp = ? ;";
         
         //Requête
-        let URL: NSURL = NSURL(string: "https://2016.ninfo.frogeye.fr/v1/users/login")!
+        let URL: NSURL = NSURL(string: "https://2016.ninfo.frogeye.fr/v1/langues")! // /users/connect
         let request:NSMutableURLRequest = NSMutableURLRequest(URL:URL)
         
         let session = NSURLSession.sharedSession()
-        request.HTTPMethod = "POST"
-        request.HTTPBody = try! NSJSONSerialization.dataWithJSONObject(dic, options: NSJSONWritingOptions.PrettyPrinted)
+        request.HTTPMethod = "GET" //POST
+        //request.HTTPBody = try! NSJSONSerialization.dataWithJSONObject(dic, options: [])
 
         let task = session.dataTaskWithRequest(request, completionHandler: {(data, response, error) in
             guard let res = NSString(data: data!, encoding: NSUTF8StringEncoding) where error == nil else
@@ -51,7 +49,25 @@ class ConnexionViewController: UIViewController, UITextFieldDelegate, UINavigati
                 print("error: \(error)")
                 return
             }
-            print(res)
+            print("Data : " + (res as String))
+            print("Response : " + (response?.description)!)
+            do {
+                if let json = try NSJSONSerialization.JSONObjectWithData(data!, options: .AllowFragments) as? NSDictionary {
+                    /*let pseudo = json["pseudo"] as? String
+                    print("Pseudo : \(pseudo)")
+                    let estMigrant = json["Typ"] as? Bool
+                    print("EstMigrant : \(estMigrant)")*/
+                    let langue = json["langue"] as? String
+                    print("Langue : \(langue)")
+                } else {
+                    let jsonStr = String(data: data!, encoding: NSUTF8StringEncoding)    // No error thrown, but not NSDictionary
+                    print("Error could not parse JSON: \(jsonStr)")
+                }
+            } catch let parseError {
+                print(parseError)                                                          // Log the error thrown by `JSONObjectWithData`
+                let jsonStr = String(data: data!, encoding: NSUTF8StringEncoding)
+                print("Error could not parse JSON: '\(jsonStr)'")
+            }
             
         })
         
@@ -71,6 +87,7 @@ class ConnexionViewController: UIViewController, UITextFieldDelegate, UINavigati
         else if mdpTextField.isFirstResponder()
         {
             mdpTextField.resignFirstResponder()
+            seConnecter(boutonConnexion)
         }
         
         

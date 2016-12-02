@@ -14,7 +14,7 @@ class ProfileViewController: UIViewController
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        //print("deze is on fire")
+        //get user info and load it all
         // Do any additional setup after loading the view, typically from a nib.
     }
     
@@ -24,7 +24,21 @@ class ProfileViewController: UIViewController
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func Cancel(sender: UIBarButtonItem)
+    {
+        performSegueWithIdentifier("goToMenuMigrantFromProfile", sender: self)
+    }
     
+    @IBAction func Save(sender: UIBarButtonItem)
+    {
+        //set user info if changed
+    }
+    
+    @IBAction func CloseAccount(sender: UIButton)
+    {
+        //Send request to delete user
+        dismissViewControllerAnimated(true, completion: nil)
+    }
 }
 
 
