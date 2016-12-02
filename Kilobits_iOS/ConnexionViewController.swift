@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ConnexionViewController: UIViewController, UITextFieldDelegate
+class ConnexionViewController: UIViewController, UITextFieldDelegate, UINavigationControllerDelegate
 {
     @IBOutlet weak var nomTextField: UITextField!
     @IBOutlet weak var mdpTextField: UITextField!
@@ -30,23 +30,35 @@ class ConnexionViewController: UIViewController, UITextFieldDelegate
     
     @IBAction func seConnecter(sender: UIButton)
     {
-        let URL: NSURL = NSURL(string: "https://2016.ninfo.frogeye.fr/v1/")!
+        //Données
+        let dic = ["pseudo": "Poulou", "mdp": "testmdp"]
+        
+        //let jsonData = try NSJSONSerialization.dataWithJSONObject(dic, options: NSJSONWritingOptions.PrettyPrinted) as? NSData
+        
+        // here "jsonData" is the dictionary encoded in JSON data
+        
+        //Requête
+        let URL: NSURL = NSURL(string: "https://2016.ninfo.frogeye.fr/v1/users/login")!
         let request:NSMutableURLRequest = NSMutableURLRequest(URL:URL)
+        
+        let session = NSURLSession.sharedSession()
         request.HTTPMethod = "POST"
-        let bodyData = "Pseudo=" + "Poupou"
-        let config = NSURLSessionConfiguration.defaultSessionConfiguration()
-        let session = NSURLSession(configuration: config)
-        
+        request.HTTPBody = try! NSJSONSerialization.dataWithJSONObject(dic, options: NSJSONWritingOptions.PrettyPrinted)
+
         let task = session.dataTaskWithRequest(request, completionHandler: {(data, response, error) in
-            print(NSString(data: data!, encoding: NSUTF8StringEncoding)) //mdp
+            guard let res = NSString(data: data!, encoding: NSUTF8StringEncoding) where error == nil else
+            {
+                print("error: \(error)")
+                return
+            }
+            print(res)
+            
         })
-        request.HTTPBody = bodyData.dataUsingEncoding(NSUTF8StringEncoding)
         
+        self.performSegueWithIdentifier("goToMenuMigrantFromConnexion", sender: self)
         task.resume()
-        
-        //performSegueWithIdentifier("goToMenuMigrantFromConnexion", sender: self)
     }
-    
+ 
     // MARK: UITextFieldDelegate
     //Quand l'utilisateur tape sur Done/Return
     func textFieldShouldReturn(textField: UITextField) -> Bool
@@ -77,4 +89,8 @@ class ConnexionViewController: UIViewController, UITextFieldDelegate
         boutonConnexion.enabled = nomTextField.text != "" && mdpTextField.text != ""
     }
 
+    @IBAction func Cancel(sender: UIBarButtonItem)
+    {
+        dismissViewControllerAnimated(true, completion: nil)
+    }
 }

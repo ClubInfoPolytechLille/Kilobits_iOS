@@ -1,0 +1,27 @@
+
+/* Class = "UILabel"; text = "FirstName"; ObjectID = "7nk-Sm-tPf"; */
+"7nk-Sm-tPf.text" = "FirstName : ";
+
+/* Class = "UILabel"; text = "Mot de passe : "; ObjectID = "9iJ-u0-tNn"; */
+"9iJ-u0-tNn.text" = "Password : ";
+
+/* Class = "UILabel"; text = "Password"; ObjectID = "CEE-cD-hIK"; */
+"CEE-cD-hIK.text" = "Password : ";
+
+/* Class = "UILabel"; text = "Connecté"; ObjectID = "Hmc-18-ZKq"; */
+"Hmc-18-ZKq.text" = "Connecté";
+
+/* Class = "UIButton"; normalTitle = "Connexion"; ObjectID = "b5f-tF-C7q"; */
+"b5f-tF-C7q.normalTitle" = "Sign in";
+
+/* Class = "UIButton"; normalTitle = "Inscription"; ObjectID = "dlm-CR-ne6"; */
+"dlm-CR-ne6.normalTitle" = "Sign up";
+
+/* Class = "UILabel"; text = "Name"; ObjectID = "j2n-Vj-K0f"; */
+"j2n-Vj-K0f.text" = "Name : ";
+
+/* Class = "UILabel"; text = "Nom : "; ObjectID = "vXC-Ev-VKL"; */
+"vXC-Ev-VKL.text" = "Identifier : ";
+
+/* Class = "UILabel"; text = "City(nearby)"; ObjectID = "yAC-vY-3y1"; */
+"yAC-vY-3y1.text" = "City(nearby) : ";
