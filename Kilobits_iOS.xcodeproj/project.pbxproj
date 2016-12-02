@@ -17,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1751C8B11DF0F7EC003802B0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		35A69CBB1DF0D5B000D4740C /* Kilobits_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kilobits_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35A69CBE1DF0D5B000D4740C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		35A69CC01DF0D5B000D4740C /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
@@ -155,6 +156,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				35A69CC31DF0D5B000D4740C /* Base */,
+				1751C8B11DF0F7EC003802B0 /* en */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -258,6 +260,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Kilobits_iOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "club-info.Kilobits-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -269,6 +272,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Kilobits_iOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "club-info.Kilobits-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";

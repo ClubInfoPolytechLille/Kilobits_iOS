@@ -10,6 +10,11 @@ import UIKit
 
 class InscriptionViewController: UIViewController
 {
+    @IBOutlet weak var name: UITextField!
+    @IBOutlet weak var firstName: UITextField!
+    @IBOutlet weak var password: UITextField!
+    @IBOutlet weak var cityNearby: UIPickerView!
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
