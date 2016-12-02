@@ -147,11 +147,38 @@
                         <outlet property="boutonConnexion" destination="clU-gS-Q2W" id="bNN-5j-scg"/>
                         <outlet property="mdpTextField" destination="2i3-0X-8Gp" id="9Ys-Yj-0zz"/>
                         <outlet property="nomTextField" destination="78J-mk-SHe" id="vw6-3V-XFo"/>
+                        <segue destination="RBa-n0-tgH" kind="show" identifier="goToMenuMigrantFromConnexion" id="kRh-XD-mmd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vyd-8g-MKK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1155" y="188"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="nzU-cG-iOH">
+            <objects>
+                <viewController id="RBa-n0-tgH" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Our-Iz-GiL"/>
+                        <viewControllerLayoutGuide type="bottom" id="CCw-qk-qdj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bJ9-eP-sOM">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Connecté !" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tbB-IO-MIj">
+                                <rect key="frame" x="216" y="289" width="90" height="22"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="guc-Pb-Rmc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1846" y="188"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="27l-Mz-GhK">
@@ -210,10 +237,16 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <segue destination="RBa-n0-tgH" kind="show" identifier="goToMenuMigrantFromInscription" id="QqF-3w-Md5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iHn-tX-Jf9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1043" y="953"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="kRh-XD-mmd"/>
+    </inferredMetricsTieBreakers>
 </document>

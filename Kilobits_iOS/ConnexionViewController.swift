@@ -30,7 +30,21 @@ class ConnexionViewController: UIViewController, UITextFieldDelegate
     
     @IBAction func seConnecter(sender: UIButton)
     {
+        let URL: NSURL = NSURL(string: "https://2016.ninfo.frogeye.fr/v1/")!
+        let request:NSMutableURLRequest = NSMutableURLRequest(URL:URL)
+        request.HTTPMethod = "POST"
+        let bodyData = "Pseudo=" + "Poupou"
+        let config = NSURLSessionConfiguration.defaultSessionConfiguration()
+        let session = NSURLSession(configuration: config)
         
+        let task = session.dataTaskWithRequest(request, completionHandler: {(data, response, error) in
+            print(NSString(data: data!, encoding: NSUTF8StringEncoding)) //mdp
+        })
+        request.HTTPBody = bodyData.dataUsingEncoding(NSUTF8StringEncoding)
+        
+        task.resume()
+        
+        //performSegueWithIdentifier("goToMenuMigrantFromConnexion", sender: self)
     }
     
     // MARK: UITextFieldDelegate

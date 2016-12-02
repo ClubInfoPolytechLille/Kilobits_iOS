@@ -13,7 +13,7 @@ class MenuViewController: UIViewController
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        print("deze is on fire")
+        //print("deze is on fire")
         // Do any additional setup after loading the view, typically from a nib.
     }
 
