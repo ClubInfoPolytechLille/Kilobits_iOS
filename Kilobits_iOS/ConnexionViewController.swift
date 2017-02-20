@@ -8,6 +8,7 @@
 
 import UIKit
 import SwiftyJSON
+import Alamofire
 
 class ConnexionViewController: UIViewController, UITextFieldDelegate, UINavigationControllerDelegate
 {
@@ -31,47 +32,34 @@ class ConnexionViewController: UIViewController, UITextFieldDelegate, UINavigati
     
     @IBAction func seConnecter(_ sender: UIButton)
     {
-        //Requete GET fonctionne, mais pas la POST pour le moment, on recupere null
-        /*RestApiManager.sharedInstance.getAllUsers { (json: JSON) in
-            if let users = json.array
+        //self.performSegue(withIdentifier: "goToMenuMigrantFromConnexion", sender: self)
+        
+        //GET Alamofire -> Fonctionne
+        //RestApiManager.sharedInstance.getTestRequest()
+        
+        //GET Alamofire Kilobits -> Fonctionne
+        /*var users = [UserData]()
+        RestApiManager.sharedInstance.getAllUsers(completionHandler: { us in
+            users = us
+            
+            for user in users
             {
-                for data in users
-                {
-                    let user = UserData(json: data)
-                    print(user.pseudo)
-                    self.performSegue(withIdentifier: "goToMenuMigrantFromConnexion", sender: self)
-                }
+                print("pseudo : ", user.pseudo)
             }
-        }*/
-        /*let user = UserData(json: ["pseudo":"badetitou", "mdp":"unicorn"])
-        RestApiManager.sharedInstance.connectUser(user: user, onCompletion: { (json: JSON) in
-            if let _pseudo = json["pseudo"].string
-            {
-                if let _typ = json["typ"].bool
-                {
-                    //Peut se connecter, même utilisateur
-                    if user.pseudo == _pseudo
-                    {
-                        user.typ = _typ
-                        print(user)
-                        self.performSegue(withIdentifier: "goToMenuMigrantFromConnexion", sender: self)
-                    }
-                    else
-                    {
-                        print("ERREUR : Le pseudo de l'utilisateur voulan se connecter (" + user.pseudo + ") est différent de celui renvoyé par la base de données (" + _pseudo + ").")
-                    }
-                }
-                else
-                {
-                    print(json["typ"].error as Any)
-                    print(json)
-                }
-            }
-            else
-            {
-                print(json["pseudo"].error as Any)
-                print(json)
-            }
+        })*/
+        
+        
+        //POST Alamofire -> Fonctionne !!!
+        //let newPost: [String: Any] = ["title":"foo", "body":"bar", "userId":10]
+        //RestApiManager.sharedInstance.postTestRequest(post: newPost)
+        
+        //POST Alamofire Kilobits -> Ne marche pas, on recoit null (pb serveur)
+        /*var user = UserData(json: ["pseudo":"badetitou", "mdp":"unicorn"])
+        RestApiManager.sharedInstance.connectUser(user: user, completionHandler: { us in
+            user = us
+            
+            print("pseudo : ", user.pseudo)
+            print("typ : ", user.typ as Any)
         })*/
     }
  

@@ -56,30 +56,43 @@ class UserData
         }
     }
     
-    func toDict() -> [String : AnyObject]
+    func toDict() -> [String : Any]
     {
-        let str : [String : AnyObject] = [
-            "pseudo": "\"" + pseudo + "\"" as AnyObject,
-            "nom": nom as AnyObject,
-            "prenom": prenom as AnyObject,
-            "mdp": "\"" + mdp + "\"" as AnyObject,
-            "ville": ville as AnyObject,
-            "estMobile": estMobile as AnyObject,
-            "typ": typ as AnyObject,
-            "divers": divers as AnyObject,
-            "dispo": dispo as AnyObject
+        var str : [String : Any] = [
+            "pseudo": pseudo,
+            "mdp": mdp
         ]
+        
+        if let _nom = nom as String?
+        {
+            str["nom"] = _nom
+        }
+        if let _prenom = prenom as String?
+        {
+            str["prenom"] = _prenom
+        }
+        if let _ville = ville as String?
+        {
+            str["ville"] = _ville
+        }
+        if let _estMobile = estMobile as Bool?
+        {
+            str["estMobile"] = _estMobile
+        }
+        if let _typ = typ as Bool?
+        {
+            str["typ"] = _typ
+        }
+        if let _divers = divers as String?
+        {
+            str["divers"] = _divers
+        }
+        if let _dispo = dispo as Bool?
+        {
+            str["dispo"] = _dispo
+        }
         
         return str
     }
-    
-    func toDict2() -> [String : AnyObject]
-    {
-        let str : [String : AnyObject] = [
-            "pseudo": "\"" + pseudo + "\"" as AnyObject,
-            "mdp": "\"" + mdp + "\"" as AnyObject
-        ]
-        
-        return str
-    }
+
 }

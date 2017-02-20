@@ -8,6 +8,7 @@
 
 import Foundation
 import SwiftyJSON
+import Alamofire
 
 typealias ServiceResponse = (JSON, NSError?) -> Void
 
@@ -16,80 +17,124 @@ class RestApiManager: NSObject {
     let baseURL = "https://kilobits.clubinfo.frogeye.fr/"
     
     // MARK: API Functions
-    func getAllUsers(onCompletion: @escaping (JSON) -> Void) {
-        let route = baseURL + "user"
-        makeHTTPGetRequest(path: route, onCompletion: { json, err in
-            onCompletion(json as JSON)
-        })
-    }
-    
-    func createUser(user: UserData, onCompletion: @escaping (JSON) -> Void) {
+    func getAllUsers(completionHandler: @escaping ([UserData]) -> Void) {
+        var users = [UserData]()
         let route = baseURL + "user"
         
-        makeHTTPPostRequest(path: route, body: user.toDict(), onCompletion:
-            { json, err in onCompletion(json as JSON)})
-    }
-    
-    func connectUser(user: UserData, onCompletion: @escaping (JSON) -> Void) {
-        let route = baseURL + "user/connect"
-        print("User to dict : ")
-        print(user.toDict2())
-        
-        makeHTTPPostRequest(path: route, body: user.toDict2(), onCompletion:
-            { json, err in onCompletion(json as JSON)
-        })
-        
-    }
-    
-    // MARK: Perform a GET Request
-    private func makeHTTPGetRequest(path: String, onCompletion: @escaping ServiceResponse) {
-        let request = NSMutableURLRequest(url: NSURL(string: path)! as URL)
-        
-        let session = URLSession.shared
-        
-        let task = session.dataTask(with: request as URLRequest, completionHandler: {data, response, error -> Void in
-            print("response : ", response as Any)
-            
-            if let jsonData = data {
-                let json:JSON = JSON(data: jsonData)
-                onCompletion(json, error as NSError?)
-            } else {
-                onCompletion(JSON.null, error as NSError?)
-            }
-        })
-        task.resume()
-    }
-    
-    // MARK: Perform a POST Request
-    private func makeHTTPPostRequest(path: String, body: [String: AnyObject], onCompletion: @escaping ServiceResponse) {
-        let request = NSMutableURLRequest(url: NSURL(string: path)! as URL)
-        
-        // Set the method to POST
-        request.httpMethod = "POST"
-        
-        do {
-            // Set the POST body for the request
-            let jsonBody = try JSONSerialization.data(withJSONObject: body, options: .prettyPrinted)
-            request.httpBody = jsonBody
-            let session = URLSession.shared
-            
-            let task = session.dataTask(with: request as URLRequest, completionHandler: {data, response, error -> Void in
-                print("response : ", response as Any)
-                
-                if let jsonData = data {
-                    let json:JSON = JSON(data: jsonData)
-                    onCompletion(json, nil)
-                    print("PAS D'ERREUR sur la requête POST")
-                } else {
-                    print("ERREUR sur la requête POST 2")
-                    onCompletion(JSON.null, error as NSError?)
+        Alamofire.request(route, method: .get)
+            .responseJSON(completionHandler: { response in
+                guard response.result.error == nil else {
+                    // got an error in getting the data, need to handle it
+                    print("error calling GET on /user")
+                    print(response.result.error!)
+                    return
                 }
+                
+                guard let json = response.result.value as? NSArray else {
+                    print("didn't get user object as JSON from API")
+                    print("Error : \(response.result.error)")
+                    return
+                }
+                
+                for user in json //Pour chaque NSDictionary de l'Array
+                {
+                    users.append(UserData(json: JSON(user)))
+                }
+                
+                completionHandler(users)
             })
-            task.resume()
-        } catch {
-            // Create your personal error
-            print("ERREUR sur la requête POST")
-            onCompletion(JSON.null, nil)
-        }
+    }
+    
+    func createUser(user: UserData) {
+        
+    }
+    
+    func connectUser(user: UserData, completionHandler: @escaping (UserData) -> Void) {
+        let route = baseURL + "user/connect"
+        let newUser = user
+        
+        print("user.toDict : ", user.toDict())
+
+        Alamofire.request(route, method: .post, parameters: user.toDict(), encoding: JSONEncoding.default)
+            .responseJSON(completionHandler: { response in
+                print("JSON traitement")
+                
+                guard response.result.error == nil else
+                {
+                    print("error calling POST on /user/connect")
+                    print(response.result.error!)
+                    return
+                }
+                guard let json = response.result.value as? [String: Any] else {
+                    print("didn't get user object as JSON from API")
+                    print("Error : \(response.result.error)")
+                    return
+                }
+                
+                print("JSON : ", json) //Tests
+                
+                guard let pseudo = json["pseudo"] as? String else {
+                    print("Could not get user pseudo from JSON")
+                    return
+                }
+                guard let typ = json["typ"] as? Bool else {
+                    print("Could not get user typ from JSON")
+                    return
+                }
+                
+                print("The pseudo is " + pseudo + " and the typ is " + typ.description)
+                
+                newUser.typ = typ
+                completionHandler(newUser)
+            })
+    }
+    
+    func getTestRequest() {
+        let route = "https://jsonplaceholder.typicode.com/posts/1"
+        
+        Alamofire.request(route, method: .get)
+            .responseJSON(completionHandler: { response in
+                //handle JSON
+                print("JSON traitement")
+                guard let json = response.result.value as? [String: Any] else {
+                    print("didn't get posts object as JSON from API")
+                    print("Error : \(response.result.error)")
+                    return
+                }
+                print(json)
+            })
+    }
+    
+    func postTestRequest(post: [String : Any]) {
+        let route = "https://jsonplaceholder.typicode.com/posts"
+        
+         Alamofire.request(route, method: .post, parameters: post, encoding: JSONEncoding.default)
+            .responseJSON(completionHandler: { response in
+                //handle JSON
+                print("JSON traitement")
+         
+                guard response.result.error == nil else
+                {
+                    print("error calling POST on /posts")
+                    print(response.result.error!)
+                    return
+                }
+         
+                guard let json = response.result.value as? [String: Any] else {
+                    print("didn't get posts object as JSON from API")
+                    print("Error : \(response.result.error)")
+                    return
+                }
+         
+                print(json)
+         
+                guard let title = json["title"] as? String else {
+                    print("Could not get todo title from JSON")
+                    return
+                }
+         
+                print("The title is " + title)
+            })
+        
     }
 }
