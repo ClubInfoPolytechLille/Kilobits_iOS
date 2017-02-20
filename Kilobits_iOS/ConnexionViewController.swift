@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftyJSON
 
 class ConnexionViewController: UIViewController, UITextFieldDelegate, UINavigationControllerDelegate
 {
@@ -19,7 +20,7 @@ class ConnexionViewController: UIViewController, UITextFieldDelegate, UINavigati
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         hideKeyboardWithTouch()
-        boutonConnexion.enabled = false
+        boutonConnexion.isEnabled = false
     }
     
     override func didReceiveMemoryWarning()
@@ -28,63 +29,62 @@ class ConnexionViewController: UIViewController, UITextFieldDelegate, UINavigati
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func seConnecter(sender: UIButton)
+    @IBAction func seConnecter(_ sender: UIButton)
     {
-        //Données
-        _ = ["pseudo": "Poulou", "mdp": "testmdp"]
-        
-        //String sql = "SELECT pseudo, Typ FROM utilisateur WHERE pseudo = ? AND mdp = ? ;";
-        
-        //Requête
-        let URL: NSURL = NSURL(string: "https://2016.ninfo.frogeye.fr/v1/langues")! // /users/connect
-        let request:NSMutableURLRequest = NSMutableURLRequest(URL:URL)
-        
-        let session = NSURLSession.sharedSession()
-        request.HTTPMethod = "GET" //POST
-        //request.HTTPBody = try! NSJSONSerialization.dataWithJSONObject(dic, options: [])
-
-        let task = session.dataTaskWithRequest(request, completionHandler: {(data, response, error) in
-            guard let res = NSString(data: data!, encoding: NSUTF8StringEncoding) where error == nil else
+        //Requete GET fonctionne, mais pas la POST pour le moment, on recupere null
+        /*RestApiManager.sharedInstance.getAllUsers { (json: JSON) in
+            if let users = json.array
             {
-                print("error: \(error)")
-                return
-            }
-            print("Data : " + (res as String))
-            print("Response : " + (response?.description)!)
-            do {
-                if let json = try NSJSONSerialization.JSONObjectWithData(data!, options: .AllowFragments) as? NSDictionary {
-                    /*let pseudo = json["pseudo"] as? String
-                    print("Pseudo : \(pseudo)")
-                    let estMigrant = json["Typ"] as? Bool
-                    print("EstMigrant : \(estMigrant)")*/
-                    let langue = json["langue"] as? String
-                    print("Langue : \(langue)")
-                } else {
-                    let jsonStr = String(data: data!, encoding: NSUTF8StringEncoding)    // No error thrown, but not NSDictionary
-                    print("Error could not parse JSON: \(jsonStr)")
+                for data in users
+                {
+                    let user = UserData(json: data)
+                    print(user.pseudo)
+                    self.performSegue(withIdentifier: "goToMenuMigrantFromConnexion", sender: self)
                 }
-            } catch let parseError {
-                print(parseError)                                                          // Log the error thrown by `JSONObjectWithData`
-                let jsonStr = String(data: data!, encoding: NSUTF8StringEncoding)
-                print("Error could not parse JSON: '\(jsonStr)'")
             }
-            
-        })
-        
-        self.performSegueWithIdentifier("goToMenuMigrantFromConnexion", sender: self)
-        task.resume()
+        }*/
+        /*let user = UserData(json: ["pseudo":"badetitou", "mdp":"unicorn"])
+        RestApiManager.sharedInstance.connectUser(user: user, onCompletion: { (json: JSON) in
+            if let _pseudo = json["pseudo"].string
+            {
+                if let _typ = json["typ"].bool
+                {
+                    //Peut se connecter, même utilisateur
+                    if user.pseudo == _pseudo
+                    {
+                        user.typ = _typ
+                        print(user)
+                        self.performSegue(withIdentifier: "goToMenuMigrantFromConnexion", sender: self)
+                    }
+                    else
+                    {
+                        print("ERREUR : Le pseudo de l'utilisateur voulan se connecter (" + user.pseudo + ") est différent de celui renvoyé par la base de données (" + _pseudo + ").")
+                    }
+                }
+                else
+                {
+                    print(json["typ"].error as Any)
+                    print(json)
+                }
+            }
+            else
+            {
+                print(json["pseudo"].error as Any)
+                print(json)
+            }
+        })*/
     }
  
     // MARK: UITextFieldDelegate
     //Quand l'utilisateur tape sur Done/Return
-    func textFieldShouldReturn(textField: UITextField) -> Bool
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool
     {
-        if nomTextField.isFirstResponder()
+        if nomTextField.isFirstResponder
         {
             nomTextField.resignFirstResponder() //fait disparaître le clavier
             mdpTextField.becomeFirstResponder()
         }
-        else if mdpTextField.isFirstResponder()
+        else if mdpTextField.isFirstResponder
         {
             mdpTextField.resignFirstResponder()
             seConnecter(boutonConnexion)
@@ -94,20 +94,20 @@ class ConnexionViewController: UIViewController, UITextFieldDelegate, UINavigati
         return true
     }
     
-    func textFieldDidBeginEditing(textField: UITextField)
+    func textFieldDidBeginEditing(_ textField: UITextField)
     {
         // Ne pas autoriser l'utilisateur à continuer s'il n'a pas rentré un nom et un mdp
-        boutonConnexion.enabled = nomTextField.text != "" && mdpTextField.text != ""
+        boutonConnexion.isEnabled = nomTextField.text != "" && mdpTextField.text != ""
     }
     
-    func textFieldDidEndEditing(textField: UITextField)
+    func textFieldDidEndEditing(_ textField: UITextField)
     {
         // Ne pas autoriser l'utilisateur à continuer s'il n'a pas rentré un nom et un mdp
-        boutonConnexion.enabled = nomTextField.text != "" && mdpTextField.text != ""
+        boutonConnexion.isEnabled = nomTextField.text != "" && mdpTextField.text != ""
     }
 
-    @IBAction func Cancel(sender: UIBarButtonItem)
+    @IBAction func Cancel(_ sender: UIBarButtonItem)
     {
-        dismissViewControllerAnimated(true, completion: nil)
+        dismiss(animated: true, completion: nil)
     }
 }

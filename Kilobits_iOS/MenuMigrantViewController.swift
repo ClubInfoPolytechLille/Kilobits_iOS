@@ -24,15 +24,15 @@ class MenuMigrantViewController: UIViewController
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func disconnect(sender: UIBarButtonItem)
+    @IBAction func disconnect(_ sender: UIBarButtonItem)
     {
-        self.navigationController!.navigationBar.hidden = true
-        performSegueWithIdentifier("goToMenuFromMenuMigrant", sender: self)
+        self.navigationController!.navigationBar.isHidden = true
+        performSegue(withIdentifier: "goToMenuFromMenuMigrant", sender: self)
     }
     
-    @IBAction func goToProfile(sender: UIBarButtonItem)
+    @IBAction func goToProfile(_ sender: UIBarButtonItem)
     {
-        performSegueWithIdentifier("goToProfile", sender: self)
+        performSegue(withIdentifier: "goToProfile", sender: self)
     }
 }
 

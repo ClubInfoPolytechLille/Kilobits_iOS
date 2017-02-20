@@ -23,22 +23,22 @@ class MenuViewController: UIViewController
         // Dispose of any resources that can be recreated.
     }
 
-    @IBAction func seConnecter(sender: UIButton)
+    @IBAction func seConnecter(_ sender: UIButton)
     {
-        performSegueWithIdentifier("goToConnexion", sender: self)
+        performSegue(withIdentifier: "goToConnexion", sender: self)
     }
     
-    @IBAction func sInscrire(sender: UIButton)
+    @IBAction func sInscrire(_ sender: UIButton)
     {
-        performSegueWithIdentifier("goToInscription", sender: self)
+        performSegue(withIdentifier: "goToInscription", sender: self)
     }
 
-    @IBAction func accesForum(sender: UIButton)
+    @IBAction func accesForum(_ sender: UIButton)
     {
         //performSegueWithIdentifier("goToForum", sender: self)
     }
     
-    @IBAction func consulterEvenements(sender: UIButton)
+    @IBAction func consulterEvenements(_ sender: UIButton)
     {
         //performSegueWithIdentifier("goToListeEvenements", sender: self)
     }

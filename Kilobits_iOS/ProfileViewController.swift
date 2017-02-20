@@ -24,20 +24,20 @@ class ProfileViewController: UIViewController
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func Cancel(sender: UIBarButtonItem)
+    @IBAction func Cancel(_ sender: UIBarButtonItem)
     {
-        performSegueWithIdentifier("goToMenuMigrantFromProfile", sender: self)
+        performSegue(withIdentifier: "goToMenuMigrantFromProfile", sender: self)
     }
     
-    @IBAction func Save(sender: UIBarButtonItem)
+    @IBAction func Save(_ sender: UIBarButtonItem)
     {
         //set user info if changed
     }
     
-    @IBAction func CloseAccount(sender: UIButton)
+    @IBAction func CloseAccount(_ sender: UIButton)
     {
         //Send request to delete user
-        dismissViewControllerAnimated(true, completion: nil)
+        dismiss(animated: true, completion: nil)
     }
 }
 
