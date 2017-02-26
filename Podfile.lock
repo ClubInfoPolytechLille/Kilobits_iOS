@@ -1,9 +1,11 @@
 PODS:
   - Alamofire (4.3.0)
+  - SpeedLog (0.3.0)
   - SwiftyJSON (3.1.4)
 
 DEPENDENCIES:
   - Alamofire (from `https://github.com/Alamofire/Alamofire.git`)
+  - SpeedLog
   - SwiftyJSON (from `https://github.com/SwiftyJSON/SwiftyJSON.git`)
 
 EXTERNAL SOURCES:
@@ -22,8 +24,9 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   Alamofire: 1f72088aff8f6b40828dadd61be2e9a31beca01e
+  SpeedLog: 7d4413adbbaef1894dd264516707b57f30f06515
   SwiftyJSON: 05cf0e98a950e2ba343735264f5a96b81e755d00
 
-PODFILE CHECKSUM: 3acc4ae474dcc3b1efa465f8b18e11a84b85d780
+PODFILE CHECKSUM: 491b01563048f246cac2f704cb462bce0f83dccc
 
 COCOAPODS: 1.2.0

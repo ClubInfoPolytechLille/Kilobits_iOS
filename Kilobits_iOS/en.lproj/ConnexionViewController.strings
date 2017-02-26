@@ -1,0 +1,16 @@
+/* 
+  ConnexionViewController.strings
+  Kilobits_iOS
+
+  Created by Marianne on 26/02/2017.
+  Copyright © 2017 Club Info. All rights reserved.
+*/
+
+/* Titre de l'alerte erreur 404 (utilisateur/mdp incorrect) */
+"alerte_404_titre" = "Error";
+
+/* Contenu de l'alerte erreur 404 (utilisateur/mdp incorrect) */
+"alerte_404_contenu" = "Username or password is incorrect.";
+
+/* Bouton Action (OK) de l'alerte erreur 404 (utilisateur/mdp incorrect) */
+"alerte_404_action" = "OK";

@@ -7,14 +7,17 @@
 //
 
 import Foundation
+import UIKit
 import SwiftyJSON
 import Alamofire
+import SpeedLog
 
 typealias ServiceResponse = (JSON, NSError?) -> Void
 
 class RestApiManager: NSObject {
     static let sharedInstance = RestApiManager()
     let baseURL = "https://kilobits.clubinfo.frogeye.fr/"
+    var user : UserData? //Un seul utilisateur pour toute l'appli
     
     // MARK: API Functions
     func getAllUsers(completionHandler: @escaping ([UserData]) -> Void) {
@@ -25,14 +28,14 @@ class RestApiManager: NSObject {
             .responseJSON(completionHandler: { response in
                 guard response.result.error == nil else {
                     // got an error in getting the data, need to handle it
-                    print("error calling GET on /user")
-                    print(response.result.error!)
+                    SpeedLog.print("error calling GET on /user")
+                    SpeedLog.print(response.result.error!)
                     return
                 }
                 
                 guard let json = response.result.value as? NSArray else {
-                    print("didn't get user object as JSON from API")
-                    print("Error : \(response.result.error)")
+                    SpeedLog.print("didn't get user object as JSON from API")
+                    SpeedLog.print("Error : \(response.result.error)")
                     return
                 }
                 
@@ -49,43 +52,37 @@ class RestApiManager: NSObject {
         
     }
     
-    func connectUser(user: UserData, completionHandler: @escaping (UserData) -> Void) {
+    func connectUser(user: UserData, completionHandler: @escaping (Bool) -> Void) {
         let route = baseURL + "user/connect"
-        let newUser = user
-        
-        print("user.toDict : ", user.toDict())
 
         Alamofire.request(route, method: .post, parameters: user.toDict(), encoding: JSONEncoding.default)
             .responseJSON(completionHandler: { response in
-                print("JSON traitement")
-                
                 guard response.result.error == nil else
                 {
-                    print("error calling POST on /user/connect")
-                    print(response.result.error!)
+                    if response.response!.statusCode == 404
+                    {
+                        SpeedLog.print("L'utilisateur ou le mot de passe est incorrect.")
+                        completionHandler(false)
+                    }
+                    else
+                    {
+                        SpeedLog.print("error calling POST on /user/connect")
+                        SpeedLog.print(response.result.error!)
+                        SpeedLog.print("Code erreur \(response.response!.statusCode)")
+                    }
                     return
                 }
-                guard let json = response.result.value as? [String: Any] else {
-                    print("didn't get user object as JSON from API")
-                    print("Error : \(response.result.error)")
+                guard let dict = response.result.value as? [String : Any] else {
+                    SpeedLog.print("didn't get user object as JSON from API")
+                    SpeedLog.print("Error : \(response.result.error)")
                     return
                 }
                 
-                print("JSON : ", json) //Tests
+                //newUser = UserData(json: JSON(dict))
+                self.user = UserData(json: JSON(dict))
                 
-                guard let pseudo = json["pseudo"] as? String else {
-                    print("Could not get user pseudo from JSON")
-                    return
-                }
-                guard let typ = json["typ"] as? Bool else {
-                    print("Could not get user typ from JSON")
-                    return
-                }
-                
-                print("The pseudo is " + pseudo + " and the typ is " + typ.description)
-                
-                newUser.typ = typ
-                completionHandler(newUser)
+                SpeedLog.print("Utilisateur \(user.pseudo!) connecté.")
+                completionHandler(true)
             })
     }
     
@@ -95,13 +92,13 @@ class RestApiManager: NSObject {
         Alamofire.request(route, method: .get)
             .responseJSON(completionHandler: { response in
                 //handle JSON
-                print("JSON traitement")
+                SpeedLog.print("JSON traitement")
                 guard let json = response.result.value as? [String: Any] else {
-                    print("didn't get posts object as JSON from API")
-                    print("Error : \(response.result.error)")
+                    SpeedLog.print("didn't get posts object as JSON from API")
+                    SpeedLog.print("Error : \(response.result.error)")
                     return
                 }
-                print(json)
+                SpeedLog.print(json)
             })
     }
     
@@ -111,29 +108,29 @@ class RestApiManager: NSObject {
          Alamofire.request(route, method: .post, parameters: post, encoding: JSONEncoding.default)
             .responseJSON(completionHandler: { response in
                 //handle JSON
-                print("JSON traitement")
+                SpeedLog.print("JSON traitement")
          
                 guard response.result.error == nil else
                 {
-                    print("error calling POST on /posts")
-                    print(response.result.error!)
+                    SpeedLog.print("error calling POST on /posts")
+                    SpeedLog.print(response.result.error!)
                     return
                 }
          
                 guard let json = response.result.value as? [String: Any] else {
-                    print("didn't get posts object as JSON from API")
-                    print("Error : \(response.result.error)")
+                    SpeedLog.print("didn't get posts object as JSON from API")
+                    SpeedLog.print("Error : \(response.result.error)")
                     return
                 }
          
-                print(json)
+                SpeedLog.print(json)
          
                 guard let title = json["title"] as? String else {
-                    print("Could not get todo title from JSON")
+                    SpeedLog.print("Could not get todo title from JSON")
                     return
                 }
          
-                print("The title is " + title)
+                SpeedLog.print("The title is " + title)
             })
         
     }

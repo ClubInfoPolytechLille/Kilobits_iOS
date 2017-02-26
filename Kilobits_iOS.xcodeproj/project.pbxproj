@@ -12,6 +12,7 @@
 		264812B41E5A356500A67300 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264812B31E5A356500A67300 /* UserData.swift */; };
 		264812B71E5A4B0200A67300 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 264812B51E5A43AB00A67300 /* README.md */; };
 		264812B91E5A4B9500A67300 /* InscriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264812B81E5A4B9500A67300 /* InscriptionViewController.swift */; };
+		26C194671E624B27000DB1E2 /* ConnexionViewController.strings in Resources */ = {isa = PBXBuildFile; fileRef = 26C194651E624B27000DB1E2 /* ConnexionViewController.strings */; };
 		350752FA1DF121280062F606 /* MenuMigrantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350752F91DF121280062F606 /* MenuMigrantViewController.swift */; };
 		350752FC1DF134D20062F606 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350752FB1DF134D20062F606 /* ProfileViewController.swift */; };
 		35A69CBF1DF0D5B000D4740C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A69CBE1DF0D5B000D4740C /* AppDelegate.swift */; };
@@ -30,9 +31,10 @@
 		264812B31E5A356500A67300 /* UserData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		264812B51E5A43AB00A67300 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		264812B81E5A4B9500A67300 /* InscriptionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InscriptionViewController.swift; sourceTree = "<group>"; };
+		26C194661E624B27000DB1E2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/ConnexionViewController.strings; sourceTree = "<group>"; };
+		26C194691E625304000DB1E2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		350752F91DF121280062F606 /* MenuMigrantViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuMigrantViewController.swift; sourceTree = "<group>"; };
 		350752FB1DF134D20062F606 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		350752FE1DF232270062F606 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		35A69CBB1DF0D5B000D4740C /* Kilobits_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kilobits_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35A69CBE1DF0D5B000D4740C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		35A69CC01DF0D5B000D4740C /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
@@ -80,6 +82,14 @@
 			name = Data;
 			sourceTree = "<group>";
 		};
+		26C194641E624A7C000DB1E2 /* Strings-English */ = {
+			isa = PBXGroup;
+			children = (
+				26C194651E624B27000DB1E2 /* ConnexionViewController.strings */,
+			);
+			name = "Strings-English";
+			sourceTree = "<group>";
+		};
 		35A69CB21DF0D5B000D4740C = {
 			isa = PBXGroup;
 			children = (
@@ -103,6 +113,7 @@
 		35A69CBD1DF0D5B000D4740C /* Kilobits_iOS */ = {
 			isa = PBXGroup;
 			children = (
+				26C194641E624A7C000DB1E2 /* Strings-English */,
 				264812B21E5A351A00A67300 /* Data */,
 				264812B11E5A351100A67300 /* ViewControllers */,
 				35A69CBE1DF0D5B000D4740C /* AppDelegate.swift */,
@@ -197,6 +208,7 @@
 				264812B71E5A4B0200A67300 /* README.md in Resources */,
 				35A69CC91DF0D5B000D4740C /* LaunchScreen.storyboard in Resources */,
 				35A69CC61DF0D5B000D4740C /* Assets.xcassets in Resources */,
+				26C194671E624B27000DB1E2 /* ConnexionViewController.strings in Resources */,
 				264812AB1E5A308800A67300 /* Podfile in Resources */,
 				35A69CC41DF0D5B000D4740C /* Main.storyboard in Resources */,
 			);
@@ -272,11 +284,19 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		26C194651E624B27000DB1E2 /* ConnexionViewController.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				26C194661E624B27000DB1E2 /* en */,
+			);
+			name = ConnexionViewController.strings;
+			sourceTree = "<group>";
+		};
 		35A69CC21DF0D5B000D4740C /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				35A69CC31DF0D5B000D4740C /* Base */,
-				350752FE1DF232270062F606 /* en */,
+				26C194691E625304000DB1E2 /* en */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -296,6 +316,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -343,6 +364,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -385,9 +407,12 @@
 			baseConfigurationReference = 65BB1D13EB96AF712E1E2019 /* Pods-Kilobits_iOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_LOCALIZABILITY_EMPTY_CONTEXT = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				INFOPLIST_FILE = Kilobits_iOS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" \"-D\" \"ENABLE_LOG\"";
 				PRODUCT_BUNDLE_IDENTIFIER = "club-info.Kilobits-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
@@ -399,9 +424,12 @@
 			baseConfigurationReference = AF3DE3DCC539C90219738367 /* Pods-Kilobits_iOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_LOCALIZABILITY_EMPTY_CONTEXT = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				INFOPLIST_FILE = Kilobits_iOS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" \"-D\" \"ENABLE_LOG\"";
 				PRODUCT_BUNDLE_IDENTIFIER = "club-info.Kilobits-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;

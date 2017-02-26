@@ -3,8 +3,10 @@
 ### Outils
 * Version 8.2.1 de XCode
 * Swift 3
-* L'outil de gestion de Frameworks Cocoapods
-* Le Framework SwiftyJSON
+* L'outil de gestion de Frameworks Cocoapods (Lancer 'pod install' dans le répertoire du projet à chaque nouveau Framework ajouté).
+* Le Framework SwiftyJSON pour récupérer facilement le JSON (classe JSON)
+* Le Framework Alamofire pour faciliter les requêtes HTTP (récupération des codes status des réponses, des données etc.)
+* Le Framework SpeedLog pour faciliter le debugging (permet de supprimer tous les print en mode Release -> plus rapide)
 * La base de donnée liée au projet ([ici](https://github.com/ClubInfoPolytechLille/kilobits-serv))
 
 ### Installation du dépôt
@@ -21,3 +23,4 @@
 * [Tutoriel SwiftyJSON](https://devdactic.com/parse-json-with-swift)
 * [SwiftyJSON Documentation](https://github.com/SwiftyJSON/SwiftyJSON)
 * [Tutoriel Alamofire & SwiftyJSON](https://grokswift.com/rest-with-alamofire-swiftyjson/)
+* [SpeedLog Documentation](https://github.com/kostiakoval/SpeedLog/tree/master)

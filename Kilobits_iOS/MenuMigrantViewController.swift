@@ -27,6 +27,7 @@ class MenuMigrantViewController: UIViewController
     @IBAction func disconnect(_ sender: UIBarButtonItem)
     {
         self.navigationController!.navigationBar.isHidden = true
+        RestApiManager.sharedInstance.user = nil
         performSegue(withIdentifier: "goToMenuFromMenuMigrant", sender: self)
     }
     

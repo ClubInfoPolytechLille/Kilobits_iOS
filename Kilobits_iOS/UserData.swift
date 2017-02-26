@@ -55,6 +55,7 @@ class UserData
             dispo = _dispo
         }
     }
+
     
     func toDict() -> [String : Any]
     {

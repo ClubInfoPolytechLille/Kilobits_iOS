@@ -7,8 +7,7 @@
 //
 
 import UIKit
-import SwiftyJSON
-import Alamofire
+import SpeedLog
 
 class ConnexionViewController: UIViewController, UITextFieldDelegate, UINavigationControllerDelegate
 {
@@ -22,6 +21,8 @@ class ConnexionViewController: UIViewController, UITextFieldDelegate, UINavigati
         // Do any additional setup after loading the view, typically from a nib.
         hideKeyboardWithTouch()
         boutonConnexion.isEnabled = false
+        nomTextField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
+        mdpTextField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
     }
     
     override func didReceiveMemoryWarning()
@@ -32,35 +33,27 @@ class ConnexionViewController: UIViewController, UITextFieldDelegate, UINavigati
     
     @IBAction func seConnecter(_ sender: UIButton)
     {
-        //self.performSegue(withIdentifier: "goToMenuMigrantFromConnexion", sender: self)
+        //let user = UserData(json: ["pseudo":"badetitou", "mdp":"unicorn"]) //Pour que le debug soit plus facile
+        let user = UserData(json: ["pseudo":nomTextField.text!, "mdp":mdpTextField.text!]) //Vraie version
         
-        //GET Alamofire -> Fonctionne
-        //RestApiManager.sharedInstance.getTestRequest()
-        
-        //GET Alamofire Kilobits -> Fonctionne
-        /*var users = [UserData]()
-        RestApiManager.sharedInstance.getAllUsers(completionHandler: { us in
-            users = us
-            
-            for user in users
+        RestApiManager.sharedInstance.connectUser(user: user, completionHandler: { success in
+            if success
             {
-                print("pseudo : ", user.pseudo)
+                self.performSegue(withIdentifier: "goToMenuMigrantFromConnexion", sender: self)
             }
-        })*/
-        
-        
-        //POST Alamofire -> Fonctionne !!!
-        //let newPost: [String: Any] = ["title":"foo", "body":"bar", "userId":10]
-        //RestApiManager.sharedInstance.postTestRequest(post: newPost)
-        
-        //POST Alamofire Kilobits -> Ne marche pas, on recoit null (pb serveur)
-        /*var user = UserData(json: ["pseudo":"badetitou", "mdp":"unicorn"])
-        RestApiManager.sharedInstance.connectUser(user: user, completionHandler: { us in
-            user = us
-            
-            print("pseudo : ", user.pseudo)
-            print("typ : ", user.typ as Any)
-        })*/
+            else
+            {
+                //LocalizedStrings
+                let titre = NSLocalizedString("alerte_404_titre", tableName: "ConnexionViewController", bundle: Bundle.main, value: "Error", comment: "Titre de l'alerte erreur 404 (utilisateur/mdp incorrect)")
+                let contenu = NSLocalizedString("alerte_404_contenu", tableName: "ConnexionViewController", bundle: Bundle.main, value: "Username or password is incorrect.", comment: "Contenu de l'alerte erreur 404 (utilisateur/mdp incorrect)")
+                let action = NSLocalizedString("alerte_404_action", tableName: "ConnexionViewController", bundle: Bundle.main, value: "OK", comment: "Bouton Action (OK) de l'alerte erreur 404 (utilisateur/mdp incorrect)")
+                
+                //Alerte
+                let alerte = UIAlertController(title: titre, message: contenu, preferredStyle: UIAlertControllerStyle.alert)
+                alerte.addAction(UIAlertAction(title: action, style: UIAlertActionStyle.default, handler: nil))
+                self.present(alerte, animated: true, completion: nil)
+            }
+        })
     }
  
     // MARK: UITextFieldDelegate
@@ -88,7 +81,7 @@ class ConnexionViewController: UIViewController, UITextFieldDelegate, UINavigati
         boutonConnexion.isEnabled = nomTextField.text != "" && mdpTextField.text != ""
     }
     
-    func textFieldDidEndEditing(_ textField: UITextField)
+    func textFieldDidChange(_ textField: UITextField)
     {
         // Ne pas autoriser l'utilisateur à continuer s'il n'a pas rentré un nom et un mdp
         boutonConnexion.isEnabled = nomTextField.text != "" && mdpTextField.text != ""

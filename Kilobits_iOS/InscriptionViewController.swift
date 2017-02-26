@@ -15,9 +15,10 @@ class InscriptionViewController: UIViewController, UITextFieldDelegate, UIPicker
     @IBOutlet weak var identifier: UITextField!
     @IBOutlet weak var password: UITextField!
     @IBOutlet weak var isMobile: UISwitch!
-    @IBOutlet weak var cityNearby: UIPickerView!
-    @IBOutlet weak var language: UIPickerView!
+    @IBOutlet weak var city: UIPickerView!
     @IBOutlet weak var isMigrant: UISwitch!
+    @IBOutlet weak var hasFreeTime: UISwitch!
+    @IBOutlet weak var miscellaneous: UITextView!
     @IBOutlet weak var createAccount: UIButton!
     
     let cityData : [String] = []
@@ -28,6 +29,10 @@ class InscriptionViewController: UIViewController, UITextFieldDelegate, UIPicker
         // Do any additional setup after loading the view, typically from a nib.
         hideKeyboardWithTouch()
         createAccount.isEnabled = false
+        name.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
+        firstName.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
+        identifier.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
+        password.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
     }
     
     override func didReceiveMemoryWarning()
@@ -63,11 +68,11 @@ class InscriptionViewController: UIViewController, UITextFieldDelegate, UIPicker
         else if password.isFirstResponder
         {
             password.resignFirstResponder()
-            cityNearby.becomeFirstResponder()
+            city.becomeFirstResponder()
         }
-        else if cityNearby.isFirstResponder
+        else if city.isFirstResponder
         {
-            cityNearby.resignFirstResponder()
+            city.resignFirstResponder()
         }
         
         return true
@@ -76,13 +81,13 @@ class InscriptionViewController: UIViewController, UITextFieldDelegate, UIPicker
     func textFieldDidBeginEditing(_ textField: UITextField)
     {
         // Ne pas autoriser l'utilisateur à continuer s'il n'a pas rentré un nom et un mdp
-        createAccount.isEnabled = name.text != "" && firstName.text != "" && password.text != ""
+        createAccount.isEnabled = name.text != "" && firstName.text != "" && identifier.text != "" && password.text != ""
     }
     
-    func textFieldDidEndEditing(_ textField: UITextField)
+    func textFieldDidChange(_ textField: UITextField)
     {
         // Ne pas autoriser l'utilisateur à continuer s'il n'a pas rentré un nom et un mdp
-        createAccount.isEnabled = name.text != "" && firstName.text != "" && password.text != ""
+        createAccount.isEnabled = name.text != "" && firstName.text != "" && identifier.text != "" && password.text != ""
     }
     
     // MARK: UIPickerViewDelegate

@@ -8,8 +8,8 @@
 /* Class = "UIBarButtonItem"; title = "Profile"; ObjectID = "8nC-EQ-OZz"; */
 "8nC-EQ-OZz.title" = "Profile";
 
-/* Class = "UILabel"; text = "You are a migrant : "; ObjectID = "9fJ-Jm-bsN"; */
-"9fJ-Jm-bsN.text" = "You are a migrant : ";
+/* Class = "UILabel"; text = "Are you a migrant ?"; ObjectID = "9fJ-Jm-bsN"; */
+"9fJ-Jm-bsN.text" = "Are you a migrant ?";
 
 /* Class = "UILabel"; text = "Password : "; ObjectID = "9iJ-u0-tNn"; */
 "9iJ-u0-tNn.text" = "Password : ";
@@ -17,8 +17,8 @@
 /* Class = "UILabel"; text = "Password : "; ObjectID = "CEE-cD-hIK"; */
 "CEE-cD-hIK.text" = "Password : ";
 
-/* Class = "UILabel"; text = "You are staying in a fixed location :"; ObjectID = "CQF-dA-MLS"; */
-"CQF-dA-MLS.text" = "You are staying in a fixed location :";
+/* Class = "UILabel"; text = "Are you mobile ?"; ObjectID = "CQF-dA-MLS"; */
+"CQF-dA-MLS.text" = "Are you mobile ?";
 
 /* Class = "UIButton"; normalTitle = "See the events"; ObjectID = "DGj-Zn-6Xw"; */
 "DGj-Zn-6Xw.normalTitle" = "See the events";
@@ -41,6 +41,9 @@
 /* Class = "UIButton"; normalTitle = "Sign up"; ObjectID = "dlm-CR-ne6"; */
 "dlm-CR-ne6.normalTitle" = "Sign up";
 
+/* Class = "UILabel"; text = "Miscellaneous : "; ObjectID = "eDe-08-oe2"; */
+"eDe-08-oe2.text" = "Miscellaneous : ";
+
 /* Class = "UIBarButtonItem"; title = "Disconnect"; ObjectID = "eFU-Sf-qki"; */
 "eFU-Sf-qki.title" = "Disconnect";
 
@@ -56,14 +59,17 @@
 /* Class = "UIButton"; normalTitle = "Go to the forum"; ObjectID = "hra-8U-LO0"; */
 "hra-8U-LO0.normalTitle" = "Go to the forum";
 
-/* Class = "UILabel"; text = "Language : "; ObjectID = "iKN-kc-a4j"; */
-"iKN-kc-a4j.text" = "Language : ";
-
 /* Class = "UILabel"; text = "Name : "; ObjectID = "j2n-Vj-K0f"; */
 "j2n-Vj-K0f.text" = "Name : ";
 
+/* Class = "UILabel"; text = "Do you have free time ?"; ObjectID = "mSI-K2-hNv"; */
+"mSI-K2-hNv.text" = "Do you have free time ?";
+
 /* Class = "UIButton"; normalTitle = "Close account"; ObjectID = "mhJ-oQ-iGx"; */
 "mhJ-oQ-iGx.normalTitle" = "Close account";
+
+/* Class = "UITextView"; text = "Lorem ipsum dolor"; ObjectID = "pip-44-ybG"; */
+"pip-44-ybG.text" = "Lorem ipsum dolor";
 
 /* Class = "UILabel"; text = "Connecté !"; ObjectID = "tbB-IO-MIj"; */
 "tbB-IO-MIj.text" = "Connecté !";
@@ -71,5 +77,5 @@
 /* Class = "UILabel"; text = "Identifier : "; ObjectID = "vXC-Ev-VKL"; */
 "vXC-Ev-VKL.text" = "Identifier : ";
 
-/* Class = "UILabel"; text = "City(nearby) : "; ObjectID = "yAC-vY-3y1"; */
-"yAC-vY-3y1.text" = "City(nearby) : ";
+/* Class = "UILabel"; text = "City :"; ObjectID = "yAC-vY-3y1"; */
+"yAC-vY-3y1.text" = "City :";

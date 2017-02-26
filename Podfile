@@ -8,4 +8,5 @@ target 'Kilobits_iOS' do
   # Pods for Kilobits_iOS
     pod 'SwiftyJSON', :git => 'https://github.com/SwiftyJSON/SwiftyJSON.git'
     pod 'Alamofire', :git => 'https://github.com/Alamofire/Alamofire.git'
+    pod 'SpeedLog'
 end
