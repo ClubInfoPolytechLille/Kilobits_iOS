@@ -69,7 +69,7 @@
 "mhJ-oQ-iGx.normalTitle" = "Close account";
 
 /* Class = "UITextView"; text = "Lorem ipsum dolor"; ObjectID = "pip-44-ybG"; */
-"pip-44-ybG.text" = "Lorem ipsum dolor";
+/*"pip-44-ybG.text" = "";*/
 
 /* Class = "UILabel"; text = "Connecté !"; ObjectID = "tbB-IO-MIj"; */
 "tbB-IO-MIj.text" = "Connecté !";

@@ -44,9 +44,9 @@ class ConnexionViewController: UIViewController, UITextFieldDelegate, UINavigati
             else
             {
                 //LocalizedStrings
-                let titre = NSLocalizedString("alerte_404_titre", tableName: "ConnexionViewController", bundle: Bundle.main, value: "Error", comment: "Titre de l'alerte erreur 404 (utilisateur/mdp incorrect)")
+                let titre = NSLocalizedString("alerte_erreur_titre", tableName: "Common", bundle: Bundle.main, value: "Error", comment: "Titre de l'alerte erreur")
                 let contenu = NSLocalizedString("alerte_404_contenu", tableName: "ConnexionViewController", bundle: Bundle.main, value: "Username or password is incorrect.", comment: "Contenu de l'alerte erreur 404 (utilisateur/mdp incorrect)")
-                let action = NSLocalizedString("alerte_404_action", tableName: "ConnexionViewController", bundle: Bundle.main, value: "OK", comment: "Bouton Action (OK) de l'alerte erreur 404 (utilisateur/mdp incorrect)")
+                let action = NSLocalizedString("alerte_action_OK", tableName: "Common", bundle: Bundle.main, value: "OK", comment: "Bouton Action (OK) de l'alerte erreur")
                 
                 //Alerte
                 let alerte = UIAlertController(title: titre, message: contenu, preferredStyle: UIAlertControllerStyle.alert)

@@ -10,6 +10,7 @@ import UIKit
 
 class InscriptionViewController: UIViewController, UITextFieldDelegate, UIPickerViewDataSource, UIPickerViewDelegate
 {
+    // MARK: IBOutlets
     @IBOutlet weak var name: UITextField!
     @IBOutlet weak var firstName: UITextField!
     @IBOutlet weak var identifier: UITextField!
@@ -21,18 +22,48 @@ class InscriptionViewController: UIViewController, UITextFieldDelegate, UIPicker
     @IBOutlet weak var miscellaneous: UITextView!
     @IBOutlet weak var createAccount: UIButton!
     
-    let cityData : [String] = []
+    var cityData : [String] = []
     
+    // MARK: Initialisation
+    //TODO: Trouver le moyen de retirer la ligne vide mise par défaut dans la textview
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
         hideKeyboardWithTouch()
         createAccount.isEnabled = false
+        miscellaneous.enablesReturnKeyAutomatically = false //On peut créer un compte sans forcément de texte dans ce champs
+        print(miscellaneous.text)
+        
+        //Activation/Désactivation du bouton 'create account'
         name.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
         firstName.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
         identifier.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
         password.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
+        
+        //Rend la textview miscellaneous visible lors de son édition
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+        
+        //Load cities data from txt file
+        //TODO: poser la question -> pas mieux depuis base pour synchroniser les villes ? getAllCities
+        guard let data = loadCitiesData() else
+        {
+            //Alerte erreur
+            
+            //LocalizedStrings
+            let titre = NSLocalizedString("alerte_erreur_titre", tableName: "Common", bundle: Bundle.main, value: "Error", comment: "Titre de l'alerte erreur")
+            let contenu = NSLocalizedString("alerte_chargement_villes_contenu", tableName: "InscriptionViewController", bundle: Bundle.main, value: "Cities could not be loaded.", comment: "Contenu de l'alerte erreur du cahrgement des villes")
+            let action = NSLocalizedString("alerte_action_OK", tableName: "Common", bundle: Bundle.main, value: "OK", comment: "Bouton Action (OK) de l'alerte erreur")
+            
+            //Alerte
+            let alerte = UIAlertController(title: titre, message: contenu, preferredStyle: UIAlertControllerStyle.alert)
+            alerte.addAction(UIAlertAction(title: action, style: UIAlertActionStyle.default, handler: nil))
+            self.present(alerte, animated: true, completion: nil)
+            
+            return
+        }
+        cityData = data
     }
     
     override func didReceiveMemoryWarning()
@@ -41,9 +72,29 @@ class InscriptionViewController: UIViewController, UITextFieldDelegate, UIPicker
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func createAccountAction(_ sender: UIButton)
+    //Charge les villes depuis un fichier texte nommé "villes.txt"
+    func loadCitiesData() -> [String]?
     {
+        guard let path = Bundle.main.path(forResource: "villes", ofType: "txt") else {
+            return nil
+        }
         
+        do
+        {
+            let content = try String(contentsOfFile: path)
+            var components = content.components(separatedBy: "\n")
+            
+            //Retirer la ville "" s'il y en a une
+            if let index = components.index(of: "") {
+                components.remove(at: index)
+            }
+            
+            return components
+        }
+        catch _ as NSError
+        {
+            return nil
+        }
     }
     
     // MARK: UITextFieldDelegate
@@ -68,11 +119,11 @@ class InscriptionViewController: UIViewController, UITextFieldDelegate, UIPicker
         else if password.isFirstResponder
         {
             password.resignFirstResponder()
-            city.becomeFirstResponder()
+            miscellaneous.becomeFirstResponder()
         }
-        else if city.isFirstResponder
+        else if miscellaneous.isFirstResponder
         {
-            city.resignFirstResponder()
+            miscellaneous.resignFirstResponder()
         }
         
         return true
@@ -84,10 +135,37 @@ class InscriptionViewController: UIViewController, UITextFieldDelegate, UIPicker
         createAccount.isEnabled = name.text != "" && firstName.text != "" && identifier.text != "" && password.text != ""
     }
     
+    //À chaque lettre écrite, vérifie si on peut créer un utilisateur ou pas
     func textFieldDidChange(_ textField: UITextField)
     {
         // Ne pas autoriser l'utilisateur à continuer s'il n'a pas rentré un nom et un mdp
         createAccount.isEnabled = name.text != "" && firstName.text != "" && identifier.text != "" && password.text != ""
+    }
+    
+    //Scroll the view up when miscellaneous is not visible (hidden under the keyboard)
+    func keyboardWillShow(notification: NSNotification) {
+        
+        if(miscellaneous.isFirstResponder)
+        {
+            if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
+                if self.view.frame.origin.y == 0{
+                    self.view.frame.origin.y -= keyboardSize.height
+                }
+            }
+        }
+        
+    }
+    
+    //Scroll the view down when it was scrolled up and the keyboard should disappear
+    func keyboardWillHide(notification: NSNotification) {
+        if(miscellaneous.isFirstResponder)
+        {
+            if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
+                if self.view.frame.origin.y != 0{
+                    self.view.frame.origin.y += keyboardSize.height
+                }
+            }
+        }
     }
     
     // MARK: UIPickerViewDelegate
@@ -105,9 +183,55 @@ class InscriptionViewController: UIViewController, UITextFieldDelegate, UIPicker
     {
         return cityData[row]
     }
+    
+    // MARK: IBActions
 
     @IBAction func Cancel(_ sender: UIBarButtonItem)
     {
         dismiss(animated: true, completion: nil)
     }
+    
+    @IBAction func createAccountAction(_ sender: UIButton)
+    {
+        //let user = UserData(json: ["pseudo":"userTest3", "nom":"TestNom", "prenom":"TestPrenom", "ville":"Lille","mdp":"unicorn", "EstMobile":false, "Typ":false, "Dispo":true]) //Pour que le debug soit plus facile
+        let ville = city.delegate!.pickerView!(city, titleForRow: city.selectedRow(inComponent: 0), forComponent: 0)!
+        let divers = miscellaneous.text
+        let user = UserData(json: ["pseudo":identifier.text!, "nom":name.text!, "prenom":firstName.text!, "mdp":password.text!, "ville":ville, "EstMobile":isMobile.isOn, "Typ":!isMigrant.isOn, "Dispo":hasFreeTime.isOn]) //Vraie version
+        if !divers!.isEmpty
+        {
+            user.divers = divers
+        }
+        
+        RestApiManager.sharedInstance.createUser(user: user, completionHandler: { success in
+            if success == 1
+            {
+                self.performSegue(withIdentifier: "goToMenuMigrantFromConnexion", sender: self)
+            }
+            else if success == 0
+            {
+                //LocalizedStrings
+                let titre = NSLocalizedString("alerte_erreur_titre", tableName: "Common", bundle: Bundle.main, value: "Error", comment: "Titre de l'alerte erreur")
+                let contenu = NSLocalizedString("alerte_utilisateur_existant_contenu", tableName: "InscriptionViewController", bundle: Bundle.main, value: "Username is already in use.", comment: "Contenu de l'alerte erreur utilisateur existant")
+                let action = NSLocalizedString("alerte_action_OK", tableName: "Common", bundle: Bundle.main, value: "OK", comment: "Bouton Action (OK) de l'alerte erreur")
+                
+                //Alerte
+                let alerte = UIAlertController(title: titre, message: contenu, preferredStyle: UIAlertControllerStyle.alert)
+                alerte.addAction(UIAlertAction(title: action, style: UIAlertActionStyle.default, handler: nil))
+                self.present(alerte, animated: true, completion: nil)
+            }
+            else
+            {
+                //LocalizedStrings
+                let titre = NSLocalizedString("alerte_erreur_titre", tableName: "Common", bundle: Bundle.main, value: "Error", comment: "Titre de l'alerte erreur")
+                let contenu = NSLocalizedString("alerte_utilisateur_incomplet_contenu", tableName: "InscriptionViewController", bundle: Bundle.main, value: "Please fill in the username, name, first name and password fields.", comment: "Contenu de l'alerte erreur utilisateur incomplet")
+                let action = NSLocalizedString("alerte_action_OK", tableName: "Common", bundle: Bundle.main, value: "OK", comment: "Bouton Action (OK) de l'alerte erreur")
+                
+                //Alerte
+                let alerte = UIAlertController(title: titre, message: contenu, preferredStyle: UIAlertControllerStyle.alert)
+                alerte.addAction(UIAlertAction(title: action, style: UIAlertActionStyle.default, handler: nil))
+                self.present(alerte, animated: true, completion: nil)
+            }
+        })
+    }
+
 }

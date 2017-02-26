@@ -48,8 +48,42 @@ class RestApiManager: NSObject {
             })
     }
     
-    func createUser(user: UserData) {
-        
+    //La requête ne renvoie rien -> pour savoir si ça a marché, on essaye de se connecter après. Sinon on montre une alerte. On peut aussi vérifier avant d'envoyer la requête que l'utilisateur n'existe pas.
+    func createUser(user: UserData, completionHandler: @escaping (Int) -> Void) {
+        let route = baseURL + "user"
+ 
+        //On vérifie que l'utilisateur n'existe pas déjà
+        RestApiManager.sharedInstance.getAllUsers(completionHandler: { users in
+            for us in users
+            {
+                guard us.pseudo != user.pseudo else
+                {
+                    SpeedLog.print("Ce pseudo est déjà utilisé.")
+                    completionHandler(0)
+                    return
+                }
+            }
+            
+            Alamofire.request(route, method: .post, parameters: user.toDict(), encoding: JSONEncoding.default)
+                .response(completionHandler: { response in
+                    
+                    //On essaye de se connecter
+                    RestApiManager.sharedInstance.connectUser(user: user, completionHandler: { success in
+                        if success
+                        {
+                            SpeedLog.print("Utilisateur \(user.pseudo!) créé.")
+                            completionHandler(1)
+                        }
+                        else //L'utilisateur n'a pas été créé
+                        {
+                            SpeedLog.print("Il manque des champs nécessaires pour créer l'utilisateur.")
+                            completionHandler(-1)
+                        }
+                        
+                    })
+                })
+            
+        })
     }
     
     func connectUser(user: UserData, completionHandler: @escaping (Bool) -> Void) {
@@ -78,7 +112,6 @@ class RestApiManager: NSObject {
                     return
                 }
                 
-                //newUser = UserData(json: JSON(dict))
                 self.user = UserData(json: JSON(dict))
                 
                 SpeedLog.print("Utilisateur \(user.pseudo!) connecté.")

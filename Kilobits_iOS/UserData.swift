@@ -38,19 +38,19 @@ class UserData
         {
             ville = _ville
         }
-        if let _estMobile = json["estMobile"].bool
+        if let _estMobile = json["EstMobile"].bool
         {
             estMobile = _estMobile
         }
-        if let _typ = json["typ"].bool
+        if let _typ = json["Typ"].bool
         {
             typ = _typ
         }
-        if let _divers = json["divers"].string
+        if let _divers = json["Divers"].string
         {
             divers = _divers
         }
-        if let _dispo = json["dispo"].bool
+        if let _dispo = json["Dispo"].bool
         {
             dispo = _dispo
         }
@@ -78,19 +78,19 @@ class UserData
         }
         if let _estMobile = estMobile as Bool?
         {
-            str["estMobile"] = _estMobile
+            str["EstMobile"] = _estMobile
         }
         if let _typ = typ as Bool?
         {
-            str["typ"] = _typ
+            str["Typ"] = _typ
         }
         if let _divers = divers as String?
         {
-            str["divers"] = _divers
+            str["Divers"] = _divers
         }
         if let _dispo = dispo as Bool?
         {
-            str["dispo"] = _dispo
+            str["Dispo"] = _dispo
         }
         
         return str
