@@ -11,6 +11,7 @@ import UIKit
 
 class ProfileViewController: UIViewController
 {
+    // MARK: - Initialisation
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -24,6 +25,7 @@ class ProfileViewController: UIViewController
         // Dispose of any resources that can be recreated.
     }
     
+    // MARK: - IBActions
     @IBAction func Cancel(_ sender: UIBarButtonItem)
     {
         performSegue(withIdentifier: "goToMenuMigrantFromProfile", sender: self)

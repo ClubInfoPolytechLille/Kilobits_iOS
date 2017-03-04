@@ -1,0 +1,16 @@
+/* 
+  Common.strings
+  Kilobits_iOS
+
+  Created by Marianne on 26/02/2017.
+  Copyright © 2017 Club Info. All rights reserved.
+*/
+
+/* Titre de l'alerte erreur */
+"alerte_erreur_titre" = "Erreur";
+
+/* Bouton Action (OK) de l'alerte erreur */
+"alerte_action_OK" = "OK";
+
+/* Bouton Action (Cancel) d'une alerte */
+"alerte_action_Cancel" = "Annuler";

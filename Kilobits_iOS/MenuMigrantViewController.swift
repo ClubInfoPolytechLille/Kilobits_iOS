@@ -11,6 +11,7 @@ import UIKit
 
 class MenuMigrantViewController: UIViewController
 {
+    // MARK: - Initialisation
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -24,6 +25,7 @@ class MenuMigrantViewController: UIViewController
         // Dispose of any resources that can be recreated.
     }
     
+    // MARK: - IBActions
     @IBAction func disconnect(_ sender: UIBarButtonItem)
     {
         self.navigationController!.navigationBar.isHidden = true

@@ -10,7 +10,7 @@ import UIKit
 
 class InscriptionViewController: UIViewController, UITextFieldDelegate, UIPickerViewDataSource, UIPickerViewDelegate
 {
-    // MARK: IBOutlets
+    // MARK: - IBOutlets
     @IBOutlet weak var name: UITextField!
     @IBOutlet weak var firstName: UITextField!
     @IBOutlet weak var identifier: UITextField!
@@ -22,9 +22,9 @@ class InscriptionViewController: UIViewController, UITextFieldDelegate, UIPicker
     @IBOutlet weak var miscellaneous: UITextView!
     @IBOutlet weak var createAccount: UIButton!
     
-    var cityData : [String] = []
+    var cityData : [(Int, String)] = []
     
-    // MARK: Initialisation
+    // MARK: - Initialisation
     //TODO: Trouver le moyen de retirer la ligne vide mise par défaut dans la textview
     override func viewDidLoad()
     {
@@ -33,7 +33,6 @@ class InscriptionViewController: UIViewController, UITextFieldDelegate, UIPicker
         hideKeyboardWithTouch()
         createAccount.isEnabled = false
         miscellaneous.enablesReturnKeyAutomatically = false //On peut créer un compte sans forcément de texte dans ce champs
-        print(miscellaneous.text)
         
         //Activation/Désactivation du bouton 'create account'
         name.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
@@ -46,24 +45,10 @@ class InscriptionViewController: UIViewController, UITextFieldDelegate, UIPicker
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
         
         //Load cities data from txt file
-        //TODO: poser la question -> pas mieux depuis base pour synchroniser les villes ? getAllCities
-        guard let data = loadCitiesData() else
-        {
-            //Alerte erreur
-            
-            //LocalizedStrings
-            let titre = NSLocalizedString("alerte_erreur_titre", tableName: "Common", bundle: Bundle.main, value: "Error", comment: "Titre de l'alerte erreur")
-            let contenu = NSLocalizedString("alerte_chargement_villes_contenu", tableName: "InscriptionViewController", bundle: Bundle.main, value: "Cities could not be loaded.", comment: "Contenu de l'alerte erreur du cahrgement des villes")
-            let action = NSLocalizedString("alerte_action_OK", tableName: "Common", bundle: Bundle.main, value: "OK", comment: "Bouton Action (OK) de l'alerte erreur")
-            
-            //Alerte
-            let alerte = UIAlertController(title: titre, message: contenu, preferredStyle: UIAlertControllerStyle.alert)
-            alerte.addAction(UIAlertAction(title: action, style: UIAlertActionStyle.default, handler: nil))
-            self.present(alerte, animated: true, completion: nil)
-            
-            return
-        }
-        cityData = data
+        RestApiManager.sharedInstance.getAllCities(completionHandler: { cities in
+            self.cityData = Array(cities.villes).sorted(by: {$0.0 < $1.0})
+            self.city.reloadAllComponents()
+        })
     }
     
     override func didReceiveMemoryWarning()
@@ -72,32 +57,7 @@ class InscriptionViewController: UIViewController, UITextFieldDelegate, UIPicker
         // Dispose of any resources that can be recreated.
     }
     
-    //Charge les villes depuis un fichier texte nommé "villes.txt"
-    func loadCitiesData() -> [String]?
-    {
-        guard let path = Bundle.main.path(forResource: "villes", ofType: "txt") else {
-            return nil
-        }
-        
-        do
-        {
-            let content = try String(contentsOfFile: path)
-            var components = content.components(separatedBy: "\n")
-            
-            //Retirer la ville "" s'il y en a une
-            if let index = components.index(of: "") {
-                components.remove(at: index)
-            }
-            
-            return components
-        }
-        catch _ as NSError
-        {
-            return nil
-        }
-    }
-    
-    // MARK: UITextFieldDelegate
+    // MARK: - UITextFieldDelegate
     //Quand l'utilisateur tape sur Done/Return
     func textFieldShouldReturn(_ textField: UITextField) -> Bool
     {
@@ -168,7 +128,7 @@ class InscriptionViewController: UIViewController, UITextFieldDelegate, UIPicker
         }
     }
     
-    // MARK: UIPickerViewDelegate
+    // MARK: - UIPickerViewDelegate
     func numberOfComponents(in pickerView: UIPickerView) -> Int
     {
         return 1
@@ -181,10 +141,10 @@ class InscriptionViewController: UIViewController, UITextFieldDelegate, UIPicker
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String?
     {
-        return cityData[row]
+        return cityData[row].1
     }
     
-    // MARK: IBActions
+    // MARK: - IBActions
 
     @IBAction func Cancel(_ sender: UIBarButtonItem)
     {
@@ -193,10 +153,10 @@ class InscriptionViewController: UIViewController, UITextFieldDelegate, UIPicker
     
     @IBAction func createAccountAction(_ sender: UIButton)
     {
-        //let user = UserData(json: ["pseudo":"userTest3", "nom":"TestNom", "prenom":"TestPrenom", "ville":"Lille","mdp":"unicorn", "EstMobile":false, "Typ":false, "Dispo":true]) //Pour que le debug soit plus facile
-        let ville = city.delegate!.pickerView!(city, titleForRow: city.selectedRow(inComponent: 0), forComponent: 0)!
+        //let user = UserData(json: ["pseudo":"userTest3", "nom":"TestNom", "prenom":"TestPrenom", "ville":"Lille","mdp":"unicorn", "estMobile":false, "typ":false, "dispo":true]) //Pour que le debug soit plus facile
+        let ville = cityData[city.selectedRow(inComponent: 0)].0
         let divers = miscellaneous.text
-        let user = UserData(json: ["pseudo":identifier.text!, "nom":name.text!, "prenom":firstName.text!, "mdp":password.text!, "ville":ville, "EstMobile":isMobile.isOn, "Typ":!isMigrant.isOn, "Dispo":hasFreeTime.isOn]) //Vraie version
+        let user = UserData(json: ["pseudo":identifier.text!, "nom":name.text!, "prenom":firstName.text!, "mdp":password.text!, "ville":ville, "estMobile":isMobile.isOn, "typ":!isMigrant.isOn, "dispo":hasFreeTime.isOn]) //Vraie version
         if !divers!.isEmpty
         {
             user.divers = divers
@@ -205,14 +165,14 @@ class InscriptionViewController: UIViewController, UITextFieldDelegate, UIPicker
         RestApiManager.sharedInstance.createUser(user: user, completionHandler: { success in
             if success == 1
             {
-                self.performSegue(withIdentifier: "goToMenuMigrantFromConnexion", sender: self)
+                self.performSegue(withIdentifier: "goToMenuMigrantFromInscription", sender: self)
             }
             else if success == 0
             {
                 //LocalizedStrings
-                let titre = NSLocalizedString("alerte_erreur_titre", tableName: "Common", bundle: Bundle.main, value: "Error", comment: "Titre de l'alerte erreur")
-                let contenu = NSLocalizedString("alerte_utilisateur_existant_contenu", tableName: "InscriptionViewController", bundle: Bundle.main, value: "Username is already in use.", comment: "Contenu de l'alerte erreur utilisateur existant")
-                let action = NSLocalizedString("alerte_action_OK", tableName: "Common", bundle: Bundle.main, value: "OK", comment: "Bouton Action (OK) de l'alerte erreur")
+                let titre = "alerte_erreur_titre".localized(table: "Common")
+                let contenu = "alerte_utilisateur_existant_contenu".localized(table: "InscriptionViewController")
+                let action = "alerte_action_OK".localized(table: "Common")
                 
                 //Alerte
                 let alerte = UIAlertController(title: titre, message: contenu, preferredStyle: UIAlertControllerStyle.alert)
@@ -222,9 +182,9 @@ class InscriptionViewController: UIViewController, UITextFieldDelegate, UIPicker
             else
             {
                 //LocalizedStrings
-                let titre = NSLocalizedString("alerte_erreur_titre", tableName: "Common", bundle: Bundle.main, value: "Error", comment: "Titre de l'alerte erreur")
-                let contenu = NSLocalizedString("alerte_utilisateur_incomplet_contenu", tableName: "InscriptionViewController", bundle: Bundle.main, value: "Please fill in the username, name, first name and password fields.", comment: "Contenu de l'alerte erreur utilisateur incomplet")
-                let action = NSLocalizedString("alerte_action_OK", tableName: "Common", bundle: Bundle.main, value: "OK", comment: "Bouton Action (OK) de l'alerte erreur")
+                let titre = "alerte_erreur_titre".localized(table: "Common")
+                let contenu = "alerte_utilisateur_incomplet_contenu".localized(table: "InscriptionViewController")
+                let action = "alerte_action_OK".localized(table: "Common")
                 
                 //Alerte
                 let alerte = UIAlertController(title: titre, message: contenu, preferredStyle: UIAlertControllerStyle.alert)

@@ -11,10 +11,12 @@ import SpeedLog
 
 class ConnexionViewController: UIViewController, UITextFieldDelegate, UINavigationControllerDelegate
 {
+    // MARK: - IBOutlets
     @IBOutlet weak var nomTextField: UITextField!
     @IBOutlet weak var mdpTextField: UITextField!
     @IBOutlet weak var boutonConnexion: UIButton!
     
+    // MARK: - Initialisation
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -31,6 +33,7 @@ class ConnexionViewController: UIViewController, UITextFieldDelegate, UINavigati
         // Dispose of any resources that can be recreated.
     }
     
+    // MARK: - IBActions
     @IBAction func seConnecter(_ sender: UIButton)
     {
         //let user = UserData(json: ["pseudo":"badetitou", "mdp":"unicorn"]) //Pour que le debug soit plus facile
@@ -44,9 +47,9 @@ class ConnexionViewController: UIViewController, UITextFieldDelegate, UINavigati
             else
             {
                 //LocalizedStrings
-                let titre = NSLocalizedString("alerte_erreur_titre", tableName: "Common", bundle: Bundle.main, value: "Error", comment: "Titre de l'alerte erreur")
-                let contenu = NSLocalizedString("alerte_404_contenu", tableName: "ConnexionViewController", bundle: Bundle.main, value: "Username or password is incorrect.", comment: "Contenu de l'alerte erreur 404 (utilisateur/mdp incorrect)")
-                let action = NSLocalizedString("alerte_action_OK", tableName: "Common", bundle: Bundle.main, value: "OK", comment: "Bouton Action (OK) de l'alerte erreur")
+                let titre = "alerte_erreur_titre".localized(table: "Common")
+                let contenu = "alerte_404_contenu".localized(table: "ConnexionViewController")
+                let action = "alerte_action_OK".localized(table: "Common")
                 
                 //Alerte
                 let alerte = UIAlertController(title: titre, message: contenu, preferredStyle: UIAlertControllerStyle.alert)
@@ -55,8 +58,13 @@ class ConnexionViewController: UIViewController, UITextFieldDelegate, UINavigati
             }
         })
     }
+    
+    @IBAction func Cancel(_ sender: UIBarButtonItem)
+    {
+        dismiss(animated: true, completion: nil)
+    }
  
-    // MARK: UITextFieldDelegate
+    // MARK: - UITextFieldDelegate
     //Quand l'utilisateur tape sur Done/Return
     func textFieldShouldReturn(_ textField: UITextField) -> Bool
     {
@@ -85,10 +93,5 @@ class ConnexionViewController: UIViewController, UITextFieldDelegate, UINavigati
     {
         // Ne pas autoriser l'utilisateur à continuer s'il n'a pas rentré un nom et un mdp
         boutonConnexion.isEnabled = nomTextField.text != "" && mdpTextField.text != ""
-    }
-
-    @IBAction func Cancel(_ sender: UIBarButtonItem)
-    {
-        dismiss(animated: true, completion: nil)
     }
 }

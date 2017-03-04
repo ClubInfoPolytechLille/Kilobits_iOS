@@ -1,0 +1,81 @@
+
+/* Class = "UINavigationItem"; title = "Profile settings"; ObjectID = "1wS-hg-5eK"; */
+"1wS-hg-5eK.title" = "Profile settings";
+
+/* Class = "UIButton"; normalTitle = "English"; ObjectID = "7RZ-1h-lal"; */
+"7RZ-1h-lal.normalTitle" = "Français";
+
+/* Class = "UILabel"; text = "FirstName : "; ObjectID = "7nk-Sm-tPf"; */
+"7nk-Sm-tPf.text" = "Prénom : ";
+
+/* Class = "UIBarButtonItem"; title = "Profile"; ObjectID = "8nC-EQ-OZz"; */
+"8nC-EQ-OZz.title" = "Profile";
+
+/* Class = "UILabel"; text = "Are you a migrant ?"; ObjectID = "9fJ-Jm-bsN"; */
+"9fJ-Jm-bsN.text" = "Are you a migrant ?";
+
+/* Class = "UILabel"; text = "Password : "; ObjectID = "9iJ-u0-tNn"; */
+"9iJ-u0-tNn.text" = "Password : ";
+
+/* Class = "UILabel"; text = "Password : "; ObjectID = "CEE-cD-hIK"; */
+"CEE-cD-hIK.text" = "Password : ";
+
+/* Class = "UILabel"; text = "Are you mobile ?"; ObjectID = "CQF-dA-MLS"; */
+"CQF-dA-MLS.text" = "Are you mobile ?";
+
+/* Class = "UIButton"; normalTitle = "See the events"; ObjectID = "DGj-Zn-6Xw"; */
+"DGj-Zn-6Xw.normalTitle" = "Voir les événements";
+
+/* Class = "UIButton"; normalTitle = "Create Account"; ObjectID = "NZM-ng-dKh"; */
+"NZM-ng-dKh.normalTitle" = "Create Account";
+
+/* Class = "UIBarButtonItem"; title = "Back"; ObjectID = "RR4-b4-ttc"; */
+"RR4-b4-ttc.title" = "Back";
+
+/* Class = "UIButton"; normalTitle = "Sign in"; ObjectID = "b5f-tF-C7q"; */
+"b5f-tF-C7q.normalTitle" = "Connexion";
+
+/* Class = "UINavigationItem"; title = "Sign up"; ObjectID = "cIS-uV-Ujj"; */
+"cIS-uV-Ujj.title" = "Inscription";
+
+/* Class = "UIButton"; normalTitle = "Connect"; ObjectID = "clU-gS-Q2W"; */
+"clU-gS-Q2W.normalTitle" = "Connect";
+
+/* Class = "UIButton"; normalTitle = "Sign up"; ObjectID = "dlm-CR-ne6"; */
+"dlm-CR-ne6.normalTitle" = "Inscription";
+
+/* Class = "UILabel"; text = "Miscellaneous : "; ObjectID = "eDe-08-oe2"; */
+"eDe-08-oe2.text" = "Miscellaneous : ";
+
+/* Class = "UIBarButtonItem"; title = "Disconnect"; ObjectID = "eFU-Sf-qki"; */
+"eFU-Sf-qki.title" = "Disconnect";
+
+/* Class = "UILabel"; text = "Identifier : "; ObjectID = "gCT-a4-Irj"; */
+"gCT-a4-Irj.text" = "Identifier : ";
+
+/* Class = "UIBarButtonItem"; title = "Back"; ObjectID = "hAu-HP-7J6"; */
+"hAu-HP-7J6.title" = "Back";
+
+/* Class = "UINavigationItem"; title = "Sign in"; ObjectID = "hGr-ma-sfz"; */
+"hGr-ma-sfz.title" = "Sign in";
+
+/* Class = "UIButton"; normalTitle = "Go to the forum"; ObjectID = "hra-8U-LO0"; */
+"hra-8U-LO0.normalTitle" = "Aller au forum";
+
+/* Class = "UILabel"; text = "Name : "; ObjectID = "j2n-Vj-K0f"; */
+"j2n-Vj-K0f.text" = "Name : ";
+
+/* Class = "UILabel"; text = "Do you have free time ?"; ObjectID = "mSI-K2-hNv"; */
+"mSI-K2-hNv.text" = "Do you have free time ?";
+
+/* Class = "UIButton"; normalTitle = "Close account"; ObjectID = "mhJ-oQ-iGx"; */
+"mhJ-oQ-iGx.normalTitle" = "Close account";
+
+/* Class = "UILabel"; text = "Connecté !"; ObjectID = "tbB-IO-MIj"; */
+"tbB-IO-MIj.text" = "Connecté !";
+
+/* Class = "UILabel"; text = "Identifier : "; ObjectID = "vXC-Ev-VKL"; */
+"vXC-Ev-VKL.text" = "Identifier : ";
+
+/* Class = "UILabel"; text = "City :"; ObjectID = "yAC-vY-3y1"; */
+"yAC-vY-3y1.text" = "City :";

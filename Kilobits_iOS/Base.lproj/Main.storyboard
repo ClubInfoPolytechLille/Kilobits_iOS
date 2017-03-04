@@ -23,49 +23,66 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dlm-CR-ne6">
-                                <rect key="frame" x="181.33333333333334" y="353" width="52" height="30"/>
-                                <state key="normal" title="Sign up"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="qdQ-BH-bMN">
+                                <rect key="frame" x="153" y="275" width="108" height="186"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b5f-tF-C7q">
+                                        <rect key="frame" x="30.666666666666657" y="0.0" width="47" height="30"/>
+                                        <state key="normal" title="Sign in"/>
+                                        <connections>
+                                            <action selector="seConnecter:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UUs-Tq-bGo"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dlm-CR-ne6">
+                                        <rect key="frame" x="28" y="52" width="52" height="30"/>
+                                        <state key="normal" title="Sign up"/>
+                                        <connections>
+                                            <action selector="sInscrire:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lL2-8a-JpB"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hra-8U-LO0">
+                                        <rect key="frame" x="0.0" y="104" width="108" height="30"/>
+                                        <state key="normal" title="Go to the forum"/>
+                                        <connections>
+                                            <action selector="accesForum:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Qae-0A-PtZ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DGj-Zn-6Xw" userLabel="See the events">
+                                        <rect key="frame" x="3" y="156" width="102" height="30"/>
+                                        <state key="normal" title="See the events"/>
+                                        <connections>
+                                            <action selector="consulterEvenements:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jGt-am-JCl"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="7RZ-1h-lal" userLabel="Language">
+                                <rect key="frame" x="89.666666666666686" y="28" width="235" height="38"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="7RZ-1h-lal" secondAttribute="height" multiplier="235:38" id="wF0-jE-tj7"/>
+                                </constraints>
+                                <inset key="titleEdgeInsets" minX="8" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="8" maxY="0.0"/>
+                                <state key="normal" title="English" image="Drapeau_en">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
-                                    <action selector="sInscrire:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lL2-8a-JpB"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hra-8U-LO0">
-                                <rect key="frame" x="153.33333333333331" y="405" width="107.99999999999994" height="30"/>
-                                <state key="normal" title="Go to the forum"/>
-                                <connections>
-                                    <action selector="accesForum:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Qae-0A-PtZ"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DGj-Zn-6Xw" userLabel="See the events">
-                                <rect key="frame" x="156.33333333333331" y="457" width="101.99999999999994" height="30"/>
-                                <state key="normal" title="See the events"/>
-                                <connections>
-                                    <action selector="consulterEvenements:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jGt-am-JCl"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b5f-tF-C7q">
-                                <rect key="frame" x="183.66666666666666" y="301" width="47" height="30"/>
-                                <state key="normal" title="Sign in"/>
-                                <connections>
-                                    <action selector="seConnecter:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UUs-Tq-bGo"/>
+                                    <action selector="changerLangue:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Qz1-E8-Uke"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="hra-8U-LO0" firstAttribute="top" secondItem="dlm-CR-ne6" secondAttribute="bottom" constant="22" id="DxD-Wf-Ta4"/>
-                            <constraint firstItem="hra-8U-LO0" firstAttribute="centerX" secondItem="dlm-CR-ne6" secondAttribute="centerX" id="HRB-xP-h46"/>
-                            <constraint firstItem="b5f-tF-C7q" firstAttribute="centerX" secondItem="dlm-CR-ne6" secondAttribute="centerX" id="PRx-1H-2UX"/>
-                            <constraint firstItem="dlm-CR-ne6" firstAttribute="top" secondItem="b5f-tF-C7q" secondAttribute="bottom" constant="22" id="TYb-gZ-Z7E"/>
-                            <constraint firstItem="b5f-tF-C7q" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aRq-Hg-9cx"/>
-                            <constraint firstItem="DGj-Zn-6Xw" firstAttribute="top" secondItem="hra-8U-LO0" secondAttribute="bottom" constant="22" id="gbQ-s8-XSl"/>
-                            <constraint firstItem="dlm-CR-ne6" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="tEw-jc-NRG"/>
-                            <constraint firstItem="DGj-Zn-6Xw" firstAttribute="centerX" secondItem="hra-8U-LO0" secondAttribute="centerX" id="uPF-8d-rqg"/>
+                            <constraint firstItem="qdQ-BH-bMN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8mn-TB-rFs"/>
+                            <constraint firstItem="qdQ-BH-bMN" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="YUE-DY-LAh"/>
+                            <constraint firstItem="7RZ-1h-lal" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="8" id="iPK-7Y-viY"/>
+                            <constraint firstItem="7RZ-1h-lal" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="p7t-dI-43M"/>
+                            <constraint firstItem="7RZ-1h-lal" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="rNW-OH-VmL"/>
                         </constraints>
                     </view>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
+                        <outlet property="boutonLangues" destination="7RZ-1h-lal" id="21c-YD-YWd"/>
                         <segue destination="rC0-f7-J4M" kind="show" identifier="goToListeEvenements" id="Vvm-Yx-dSy"/>
                         <segue destination="9UI-ht-JOO" kind="show" identifier="goToForum" id="n8l-Nn-Ryt"/>
                         <segue destination="26Q-6i-TPX" kind="show" identifier="goToConnexion" id="qkX-A7-60U"/>
@@ -74,7 +91,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="317" y="254"/>
+            <point key="canvasLocation" x="305.79710144927537" y="248.64130434782609"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="NbW-JL-9w9">
@@ -281,7 +298,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="guc-Pb-Rmc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2318" y="264"/>
+            <point key="canvasLocation" x="2465" y="263"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="27l-Mz-GhK">
@@ -583,6 +600,9 @@
             <point key="canvasLocation" x="1022" y="1067"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Drapeau_en" width="57" height="38"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="QqF-3w-Md5"/>
     </inferredMetricsTieBreakers>

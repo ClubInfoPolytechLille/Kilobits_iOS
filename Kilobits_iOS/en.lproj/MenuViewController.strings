@@ -1,0 +1,22 @@
+/* 
+  MenuViewController.strings
+  Kilobits_iOS
+
+  Created by Marianne on 26/02/2017.
+  Copyright © 2017 Club Info. All rights reserved.
+*/
+
+/* Contenu de l'alerte erreur aucune langue (remplacer par la langue de la traduction : langue du téléphone) */
+"alerte_aucune_langue_contenu" = "No languages could be loaded. Default language will be English.";
+
+/* Titre de l'alerte de choix des langues */
+"alerte_langue_titre" = "Choose a language";
+
+/* Contenu de l'alerte fermeture de l'appli lors d'un changement de langue */
+"alerte_changer_langue_contenu" = "In order to change the language, the App must be closed and reopened by you.";
+
+/* Titre de l'alerte fermeture de l'appli lors d'un changement de langue */
+"alerte_changer_langue_titre" = "App restart required";
+
+/* Action (Close now) de l'alerte fermeture de l'appli lors d'un changement de langue */
+"alerte_changer_langue_close_action" = "Close now";

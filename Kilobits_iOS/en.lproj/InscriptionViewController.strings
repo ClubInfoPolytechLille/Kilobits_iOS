@@ -1,0 +1,16 @@
+/* 
+  InscriptionViewController.strings
+  Kilobits_iOS
+
+  Created by Marianne on 26/02/2017.
+  Copyright © 2017 Club Info. All rights reserved.
+*/
+
+/* Contenu de l'alerte erreur du chargement des villes */
+"alerte_chargement_villes_contenu" = "Cities could not be loaded.";
+
+/* Contenu de l'alerte erreur utilisateur existant */
+"alerte_utilisateur_existant_contenu" = "Username is already in use.";
+
+/* Contenu de l'alerte erreur utilisateur incomplet */
+"alerte_utilisateur_incomplet_contenu" = "Please fill in the username, name, first name and password fields.";

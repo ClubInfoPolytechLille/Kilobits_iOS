@@ -11,16 +11,18 @@ import SwiftyJSON
 
 class UserData
 {
+    // MARK: - Variables
     var pseudo: String!
     var nom: String?
     var prenom: String?
     var mdp: String!
-    var ville: String?
+    var ville: Int?
     var estMobile: Bool?
     var typ: Bool?
     var divers: String?
     var dispo: Bool?
     
+    // MARK: - Initialisation
     required init(json: JSON)
     {
         pseudo = json["pseudo"].stringValue //.xxxValue pour des getters non-optionnels
@@ -34,29 +36,29 @@ class UserData
         {
             prenom = _prenom
         }
-        if let _ville = json["ville"].string
+        if let _ville = json["ville"].int
         {
             ville = _ville
         }
-        if let _estMobile = json["EstMobile"].bool
+        if let _estMobile = json["estMobile"].bool
         {
             estMobile = _estMobile
         }
-        if let _typ = json["Typ"].bool
+        if let _typ = json["typ"].bool
         {
             typ = _typ
         }
-        if let _divers = json["Divers"].string
+        if let _divers = json["divers"].string
         {
             divers = _divers
         }
-        if let _dispo = json["Dispo"].bool
+        if let _dispo = json["dispo"].bool
         {
             dispo = _dispo
         }
     }
 
-    
+    // MARK: - Getters
     func toDict() -> [String : Any]
     {
         var str : [String : Any] = [
@@ -72,25 +74,25 @@ class UserData
         {
             str["prenom"] = _prenom
         }
-        if let _ville = ville as String?
+        if let _ville = ville as Int?
         {
             str["ville"] = _ville
         }
         if let _estMobile = estMobile as Bool?
         {
-            str["EstMobile"] = _estMobile
+            str["estMobile"] = _estMobile
         }
         if let _typ = typ as Bool?
         {
-            str["Typ"] = _typ
+            str["typ"] = _typ
         }
         if let _divers = divers as String?
         {
-            str["Divers"] = _divers
+            str["divers"] = _divers
         }
         if let _dispo = dispo as Bool?
         {
-            str["Dispo"] = _dispo
+            str["dispo"] = _dispo
         }
         
         return str

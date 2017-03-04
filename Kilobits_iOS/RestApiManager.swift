@@ -15,11 +15,13 @@ import SpeedLog
 typealias ServiceResponse = (JSON, NSError?) -> Void
 
 class RestApiManager: NSObject {
+    
+    // MARK: - Variables
     static let sharedInstance = RestApiManager()
     let baseURL = "https://kilobits.clubinfo.frogeye.fr/"
     var user : UserData? //Un seul utilisateur pour toute l'appli
     
-    // MARK: API Functions
+    // MARK: - API GET Functions
     func getAllUsers(completionHandler: @escaping ([UserData]) -> Void) {
         var users = [UserData]()
         let route = baseURL + "user"
@@ -48,6 +50,60 @@ class RestApiManager: NSObject {
             })
     }
     
+    func getAllCities(completionHandler: @escaping (Villes) -> Void) {
+        var cities : Villes = Villes(villes: [:])
+        let route = baseURL + "villes"
+        
+        Alamofire.request(route, method: .get)
+            .responseJSON(completionHandler: { response in
+                guard response.result.error == nil else {
+                    // got an error in getting the data, need to handle it
+                    SpeedLog.print("error calling GET on /villes")
+                    SpeedLog.print(response.result.error!)
+                    return
+                }
+                
+                guard let json = response.result.value as? NSArray else {
+                    SpeedLog.print("didn't get ville object as JSON from API")
+                    SpeedLog.print("Error : \(response.result.error)")
+                    return
+                }
+
+                cities = Villes(json: JSON(json))
+                completionHandler(cities)
+            })
+    }
+    
+    func getAllLanguages(completionHandler: @escaping ([String]) -> Void) {
+        var langues = [String]()
+        let route = baseURL + "langues"
+        
+        Alamofire.request(route, method: .get)
+            .responseJSON(completionHandler: { response in
+                guard response.result.error == nil else {
+                    // got an error in getting the data, need to handle it
+                    SpeedLog.print("error calling GET on /langues")
+                    SpeedLog.print(response.result.error!)
+                    return
+                }
+                
+                guard let json = response.result.value as? NSArray else {
+                    SpeedLog.print("didn't get language object as JSON from API")
+                    SpeedLog.print("Error : \(response.result.error)")
+                    return
+                }
+                
+                for langueDict in json //Pour chaque NSDictionary de l'Array
+                {
+                    let langue = JSON(langueDict)
+                    langues.append(langue["langue"].stringValue)
+                }
+                
+                completionHandler(langues)
+            })
+    }
+    
+    // MARK: - API POST Functions
     //La requête ne renvoie rien -> pour savoir si ça a marché, on essaye de se connecter après. Sinon on montre une alerte. On peut aussi vérifier avant d'envoyer la requête que l'utilisateur n'existe pas.
     func createUser(user: UserData, completionHandler: @escaping (Int) -> Void) {
         let route = baseURL + "user"
@@ -88,7 +144,9 @@ class RestApiManager: NSObject {
     
     func connectUser(user: UserData, completionHandler: @escaping (Bool) -> Void) {
         let route = baseURL + "user/connect"
-
+        user.prenom = "bli"
+        user.nom = "E"
+        print(user.toDict())
         Alamofire.request(route, method: .post, parameters: user.toDict(), encoding: JSONEncoding.default)
             .responseJSON(completionHandler: { response in
                 guard response.result.error == nil else
@@ -119,52 +177,5 @@ class RestApiManager: NSObject {
             })
     }
     
-    func getTestRequest() {
-        let route = "https://jsonplaceholder.typicode.com/posts/1"
-        
-        Alamofire.request(route, method: .get)
-            .responseJSON(completionHandler: { response in
-                //handle JSON
-                SpeedLog.print("JSON traitement")
-                guard let json = response.result.value as? [String: Any] else {
-                    SpeedLog.print("didn't get posts object as JSON from API")
-                    SpeedLog.print("Error : \(response.result.error)")
-                    return
-                }
-                SpeedLog.print(json)
-            })
-    }
     
-    func postTestRequest(post: [String : Any]) {
-        let route = "https://jsonplaceholder.typicode.com/posts"
-        
-         Alamofire.request(route, method: .post, parameters: post, encoding: JSONEncoding.default)
-            .responseJSON(completionHandler: { response in
-                //handle JSON
-                SpeedLog.print("JSON traitement")
-         
-                guard response.result.error == nil else
-                {
-                    SpeedLog.print("error calling POST on /posts")
-                    SpeedLog.print(response.result.error!)
-                    return
-                }
-         
-                guard let json = response.result.value as? [String: Any] else {
-                    SpeedLog.print("didn't get posts object as JSON from API")
-                    SpeedLog.print("Error : \(response.result.error)")
-                    return
-                }
-         
-                SpeedLog.print(json)
-         
-                guard let title = json["title"] as? String else {
-                    SpeedLog.print("Could not get todo title from JSON")
-                    return
-                }
-         
-                SpeedLog.print("The title is " + title)
-            })
-        
-    }
 }
