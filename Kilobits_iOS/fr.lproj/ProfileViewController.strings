@@ -1,0 +1,22 @@
+/*
+ ProfileViewController.strings
+ Kilobits_iOS
+ 
+ Created by Marianne on 04/03/2017.
+ Copyright © 2017 Club Info. All rights reserved.
+ */
+
+/* Contenu de l'alerte erreur utilisateur existant. TODO: delete if needed after update*/
+"alerte_utilisateur_existant_contenu" = "Username is already in use.";
+
+/* Contenu de l'alerte erreur utilisateur incomplet */
+"alerte_utilisateur_incomplet_contenu" = "Please fill in the username, name, first name and password fields.";
+
+/* Contenu de l'alerte de confirmation lors d'une suppression de compte */
+"alerte_delete_account_contenu" = "Are you sure you want to delete this account ?";
+
+/* Titre de l'alerte de confirmation lors d'une suppression de compte */
+"alerte_delete_account_titre" = "Delete account";
+
+/* Action (Confirm action) de l'alerte de confirmation lors d'une suppression de compte */
+"alerte_delete_account_confirm_action" = "Confirm action";

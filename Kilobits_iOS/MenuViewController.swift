@@ -14,9 +14,6 @@ class MenuViewController: UIViewController
     // MARK: - IBOutlets
     @IBOutlet var boutonLangues: UIButton!
     
-    // MARK: - Variables
-    var langues : [String] = []
-    
     // MARK: - Initialisation
     override func viewWillAppear(_ animated: Bool)
     {
@@ -24,6 +21,11 @@ class MenuViewController: UIViewController
         
         //Charger les langues disponibles
         chargerLangues()
+        
+        //Load cities data from bdd
+        RestApiManager.sharedInstance.getAllCities(completionHandler: { cities in
+            RestApiManager.sharedInstance.cityData = Array(cities.villes).sorted(by: {$0.0 < $1.0})
+        })
     }
     
     override func viewDidLoad()
@@ -43,6 +45,27 @@ class MenuViewController: UIViewController
     {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        super.prepare(for: segue, sender: sender)
+        
+        switch(segue.identifier ?? "") {
+            
+        case "goToListeEvenements":
+            guard let navController = segue.destination as? UINavigationController else {
+                fatalError("Unexpected navigation destination: \(segue.destination)")
+            }
+            
+            guard let viewController = navController.viewControllers.first! as? ListeEvenementsViewController else {
+                fatalError("Unexpected destination: \(segue.destination)")
+            }
+        
+            viewController.comingFrom = "Menu"
+        
+        default: break
+        }
     }
     
     //Charge la liste des langues disponibles pour l'application récupérées par une requête à la BDD.
@@ -67,7 +90,7 @@ class MenuViewController: UIViewController
                 self.present(alerte, animated: true, completion: nil)
             }
             
-            self.langues = langues
+            RestApiManager.sharedInstance.langues = langues
         })
     }
     
@@ -103,7 +126,7 @@ class MenuViewController: UIViewController
         
         //Alerte
         let alerte = UIAlertController(title: titre, message: nil, preferredStyle: UIAlertControllerStyle.actionSheet)
-        for langue in langues
+        for langue in RestApiManager.sharedInstance.langues
         {
             //Pour chaque langue, ajouter le bouton dans l'actionSheet et effectuer les modifications (bouton : titre + drapeau, langue de l'appli).
             alerte.addAction(UIAlertAction(title: langue, style: UIAlertActionStyle.default, handler: { alertAction in
@@ -145,7 +168,7 @@ class MenuViewController: UIViewController
     
     @IBAction func consulterEvenements(_ sender: UIButton)
     {
-        //performSegueWithIdentifier("goToListeEvenements", sender: self)
+        performSegue(withIdentifier: "goToListeEvenements", sender: self)
     }
 }
 

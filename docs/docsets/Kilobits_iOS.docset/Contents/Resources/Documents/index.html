@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Kilobits_iOS  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a title="Kilobits_iOS  Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="index.html">Kilobits_iOS Docs</a> (20% documented)</p>
+        <p class="header-right"><a href="https://github.com/ClubInfoPolytechLille/kilobits_iOS"><img src="img/gh.png"/>View on GitHub</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="index.html">Kilobits_iOS Reference</a>
+        <img id="carat" src="img/carat.png" />
+        Kilobits_iOS  Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Classes/AppDelegate.html">AppDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/ConnexionViewController.html">ConnexionViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/EvenementData.html">EvenementData</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/EvenementInfoViewController.html">EvenementInfoViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/InscriptionViewController.html">InscriptionViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/ListeEvenementsViewController.html">ListeEvenementsViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/MenuUserViewController.html">MenuUserViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/MenuViewController.html">MenuViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/ProfileViewController.html">ProfileViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/RestApiManager.html">RestApiManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/UserData.html">UserData</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/Villes.html">Villes</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Extensions/Date.html">Date</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/JSON.html">JSON</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/String.html">String</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/UIViewController.html">UIViewController</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            
+            <a href='#version-ios-du-projet-kilobits' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h1 id='version-ios-du-projet-kilobits'>Version iOS du projet Kilobits</h1>
+<a href='#outils' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='outils'>Outils</h2>
+<div class="aside aside-version">
+    <p class="aside-title">Version</p>
+    Version 8.2.1 de XCode
+
+</div>
+<li>Swift 3</li>
+<li>L&#39;outil de gestion de Frameworks <strong>Cocoapods</strong> (Lancer &lsquo;pod install&rsquo; dans le répertoire du projet à chaque nouveau Framework ajouté).</li>
+<li>Le Framework <strong>SwiftyJSON</strong> pour récupérer facilement le JSON (classe JSON)</li>
+<li>Le Framework <strong>Alamofire</strong> pour faciliter les requêtes HTTP (récupération des codes status des réponses, des données etc.)</li>
+<li>Le Framework <strong>SpeedLog</strong> pour faciliter le debugging (permet de supprimer tous les print en mode Release -&gt; plus rapide)</li>
+<li>La <strong>base de donnée</strong> liée au projet (<a href="https://github.com/ClubInfoPolytechLille/kilobits-serv">ici</a>)</li>
+<li>L&#39;utilitaire <strong>Jazzy</strong> pour générer la documentation du projet</li>
+<a href='#installation-du-d-p-t' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='installation-du-d-p-t'>Installation du dépôt</h2>
+
+<ol>
+<li>Clônage du dépôt avec intégration Git
+
+<ol>
+<li>Ouvrir XCode et choisir d&#39;ouvrir un projet SCM déjà existant.</li>
+<li>Entrer l&#39;addresse Github du dépôt : <q>git@github.com:ClubInfoPolytechLille/Kilobits_iOS.git</q>.</li>
+<li>Lorsque les options de connection s&#39;affichent, choisir <q>SSH Keys</q> et s&#39;assurer d&#39;avoir configuré auparavant une clé SSH sur l&#39;ordinateur (cf <a href="https://help.github.com/articles/connecting-to-github-with-ssh/">ici</a> pour un tuto).</li>
+</ol></li>
+<li>Installer Cocoapods sur le Mac en tapant <q>sudo gem install cocoapods</q> dans un terminal.</li>
+<li>Fermer le projet et à partir de maintenant, toujours ouvrir le Workspace du projet plutôt que le projet lui-même. Pour cela, se rendre avec le terminal dans le dossier du projet (là ou se trouve le fichier Kilobits_iOS.xcworkspace) et lancer la commande suivante : <q>open Kilobits_iOS.xcworkspace</q>. C&#39;est nécessaire car sinon le projet n&#39;arrivera pas à faire le lien avec les Frameworks installés.</li>
+<li>Installer Jazzy en tapant dans un terminal <q>sudo gem install jazzy</q>. Pour générer une nouvelle version de la documentation, aller dans le répertoire du projet et taper <q>jazzy &ndash;min-acl private</q>.</li>
+</ol>
+<a href='#documentation' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='documentation'>Documentation</h2>
+
+<ul>
+<li>Pour générer une nouvelle version de la documentation, aller dans le répertoire du projet et éxécuter la commande <q>./updateDocs.sh</q></li>
+<li>La documentation se trouve dans le dossier /docs.</li>
+</ul>
+<a href='#tutoriels-swift' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='tutoriels-swift'>Tutoriels Swift</h2>
+
+<ul>
+<li><a href="https://developer.apple.com/library/content/referencelibrary/GettingStarted/DevelopiOSAppsSwift/">Tutoriel pas à pas d&#39;une appli Swift</a></li>
+<li><a href="https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/TheBasics.html">Guide du Langage Swift</a></li>
+<li><a href="https://devdactic.com/parse-json-with-swift">Tutoriel SwiftyJSON</a></li>
+<li><a href="https://github.com/SwiftyJSON/SwiftyJSON">SwiftyJSON Documentation</a></li>
+<li><a href="https://grokswift.com/rest-with-alamofire-swiftyjson/">Tutoriel Alamofire &amp; SwiftyJSON</a></li>
+<li><a href="https://github.com/kostiakoval/SpeedLog/tree/master">SpeedLog Documentation</a></li>
+<li><a href="http://stackoverflow.com/questions/24047991/does-swift-have-documentation-comments-or-tools">Mots-clés pour la documentation</a></li>
+</ul>
+
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2017 <a class="link" href="" target="_blank" rel="external">Marianne Butaye</a>. All rights reserved. (Last updated: 2017-03-05)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.4</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

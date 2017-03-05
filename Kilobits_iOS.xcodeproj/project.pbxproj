@@ -7,18 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2644828C1E6B320200CEE6FE /* ProfileViewController.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2644828A1E6B320200CEE6FE /* ProfileViewController.strings */; };
+		264482911E6B322400CEE6FE /* ProfileViewController.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2644828F1E6B322400CEE6FE /* ProfileViewController.strings */; };
+		264482931E6B35ED00CEE6FE /* EvenementData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264482921E6B35ED00CEE6FE /* EvenementData.swift */; };
+		264482951E6B398000CEE6FE /* ListeEvenementsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264482941E6B398000CEE6FE /* ListeEvenementsViewController.swift */; };
+		264482971E6B3B0F00CEE6FE /* JSONExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264482961E6B3B0F00CEE6FE /* JSONExtension.swift */; };
+		264482991E6B7C8A00CEE6FE /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264482981E6B7C8A00CEE6FE /* DateExtension.swift */; };
+		2644829D1E6B841900CEE6FE /* EvenementInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2644829C1E6B841800CEE6FE /* EvenementInfoViewController.swift */; };
 		264812AB1E5A308800A67300 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 264812AA1E5A308800A67300 /* Podfile */; };
 		264812AD1E5A318700A67300 /* RestApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264812AC1E5A318700A67300 /* RestApiManager.swift */; };
 		264812B41E5A356500A67300 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264812B31E5A356500A67300 /* UserData.swift */; };
 		264812B71E5A4B0200A67300 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 264812B51E5A43AB00A67300 /* README.md */; };
 		264812B91E5A4B9500A67300 /* InscriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264812B81E5A4B9500A67300 /* InscriptionViewController.swift */; };
+		267E57AC1E6C4526006E5F5B /* updateDocs.sh in Resources */ = {isa = PBXBuildFile; fileRef = 267E57AB1E6C4526006E5F5B /* updateDocs.sh */; };
 		2693102C1E637F8000B5C11E /* Common.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2693102A1E637F8000B5C11E /* Common.strings */; };
 		2693102F1E637FEF00B5C11E /* InscriptionViewController.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2693102D1E637FEF00B5C11E /* InscriptionViewController.strings */; };
 		269310321E63809B00B5C11E /* MenuViewController.strings in Resources */ = {isa = PBXBuildFile; fileRef = 269310301E63809B00B5C11E /* MenuViewController.strings */; };
 		26BE00A01E69FDDA002603CD /* Villes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26BE009F1E69FDDA002603CD /* Villes.swift */; };
 		26BE00A31E6A30FF002603CD /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26BE00A21E6A30FF002603CD /* StringExtension.swift */; };
 		26C194671E624B27000DB1E2 /* ConnexionViewController.strings in Resources */ = {isa = PBXBuildFile; fileRef = 26C194651E624B27000DB1E2 /* ConnexionViewController.strings */; };
-		350752FA1DF121280062F606 /* MenuMigrantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350752F91DF121280062F606 /* MenuMigrantViewController.swift */; };
+		350752FA1DF121280062F606 /* MenuUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350752F91DF121280062F606 /* MenuUserViewController.swift */; };
 		350752FC1DF134D20062F606 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350752FB1DF134D20062F606 /* ProfileViewController.swift */; };
 		35A69CBF1DF0D5B000D4740C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A69CBE1DF0D5B000D4740C /* AppDelegate.swift */; };
 		35A69CC11DF0D5B000D4740C /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A69CC01DF0D5B000D4740C /* MenuViewController.swift */; };
@@ -31,11 +39,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2644828B1E6B320200CEE6FE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/ProfileViewController.strings; sourceTree = "<group>"; };
+		264482901E6B322400CEE6FE /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/ProfileViewController.strings; sourceTree = "<group>"; };
+		264482921E6B35ED00CEE6FE /* EvenementData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EvenementData.swift; sourceTree = "<group>"; };
+		264482941E6B398000CEE6FE /* ListeEvenementsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListeEvenementsViewController.swift; sourceTree = "<group>"; };
+		264482961E6B3B0F00CEE6FE /* JSONExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONExtension.swift; sourceTree = "<group>"; };
+		264482981E6B7C8A00CEE6FE /* DateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
+		2644829B1E6B805D00CEE6FE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		2644829C1E6B841800CEE6FE /* EvenementInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EvenementInfoViewController.swift; sourceTree = "<group>"; };
 		264812AA1E5A308800A67300 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		264812AC1E5A318700A67300 /* RestApiManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestApiManager.swift; sourceTree = "<group>"; };
 		264812B31E5A356500A67300 /* UserData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		264812B51E5A43AB00A67300 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		264812B81E5A4B9500A67300 /* InscriptionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InscriptionViewController.swift; sourceTree = "<group>"; };
+		267E57AB1E6C4526006E5F5B /* updateDocs.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = updateDocs.sh; sourceTree = "<group>"; };
 		2693102B1E637F8000B5C11E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Common.strings; sourceTree = "<group>"; };
 		2693102E1E637FEF00B5C11E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InscriptionViewController.strings; sourceTree = "<group>"; };
 		269310311E63809B00B5C11E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/MenuViewController.strings; sourceTree = "<group>"; };
@@ -49,7 +66,7 @@
 		26BE00A21E6A30FF002603CD /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		26C194661E624B27000DB1E2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/ConnexionViewController.strings; sourceTree = "<group>"; };
 		26C194691E625304000DB1E2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
-		350752F91DF121280062F606 /* MenuMigrantViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuMigrantViewController.swift; sourceTree = "<group>"; };
+		350752F91DF121280062F606 /* MenuUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuUserViewController.swift; sourceTree = "<group>"; };
 		350752FB1DF134D20062F606 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		35A69CBB1DF0D5B000D4740C /* Kilobits_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kilobits_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35A69CBE1DF0D5B000D4740C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -83,8 +100,10 @@
 				264812B81E5A4B9500A67300 /* InscriptionViewController.swift */,
 				35A69CC01DF0D5B000D4740C /* MenuViewController.swift */,
 				35A69CD01DF0DEEE00D4740C /* ConnexionViewController.swift */,
-				350752F91DF121280062F606 /* MenuMigrantViewController.swift */,
+				350752F91DF121280062F606 /* MenuUserViewController.swift */,
 				350752FB1DF134D20062F606 /* ProfileViewController.swift */,
+				264482941E6B398000CEE6FE /* ListeEvenementsViewController.swift */,
+				2644829C1E6B841800CEE6FE /* EvenementInfoViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -95,6 +114,7 @@
 				264812AC1E5A318700A67300 /* RestApiManager.swift */,
 				264812B31E5A356500A67300 /* UserData.swift */,
 				26BE009F1E69FDDA002603CD /* Villes.swift */,
+				264482921E6B35ED00CEE6FE /* EvenementData.swift */,
 			);
 			name = Data;
 			sourceTree = "<group>";
@@ -103,6 +123,8 @@
 			isa = PBXGroup;
 			children = (
 				26BE00A21E6A30FF002603CD /* StringExtension.swift */,
+				264482961E6B3B0F00CEE6FE /* JSONExtension.swift */,
+				264482981E6B7C8A00CEE6FE /* DateExtension.swift */,
 			);
 			name = Utility;
 			sourceTree = "<group>";
@@ -110,10 +132,12 @@
 		26C194641E624A7C000DB1E2 /* Strings */ = {
 			isa = PBXGroup;
 			children = (
+				2644828A1E6B320200CEE6FE /* ProfileViewController.strings */,
 				26C194651E624B27000DB1E2 /* ConnexionViewController.strings */,
 				2693102A1E637F8000B5C11E /* Common.strings */,
 				2693102D1E637FEF00B5C11E /* InscriptionViewController.strings */,
 				269310301E63809B00B5C11E /* MenuViewController.strings */,
+				2644828F1E6B322400CEE6FE /* ProfileViewController.strings */,
 			);
 			name = Strings;
 			sourceTree = "<group>";
@@ -121,6 +145,7 @@
 		35A69CB21DF0D5B000D4740C = {
 			isa = PBXGroup;
 			children = (
+				267E57AB1E6C4526006E5F5B /* updateDocs.sh */,
 				264812B51E5A43AB00A67300 /* README.md */,
 				264812AA1E5A308800A67300 /* Podfile */,
 				35A69CBD1DF0D5B000D4740C /* Kilobits_iOS */,
@@ -240,8 +265,11 @@
 				35A69CC61DF0D5B000D4740C /* Assets.xcassets in Resources */,
 				269310321E63809B00B5C11E /* MenuViewController.strings in Resources */,
 				26C194671E624B27000DB1E2 /* ConnexionViewController.strings in Resources */,
+				264482911E6B322400CEE6FE /* ProfileViewController.strings in Resources */,
+				267E57AC1E6C4526006E5F5B /* updateDocs.sh in Resources */,
 				264812AB1E5A308800A67300 /* Podfile in Resources */,
 				35A69CC41DF0D5B000D4740C /* Main.storyboard in Resources */,
+				2644828C1E6B320200CEE6FE /* ProfileViewController.strings in Resources */,
 				2693102F1E637FEF00B5C11E /* InscriptionViewController.strings in Resources */,
 				2693102C1E637F8000B5C11E /* Common.strings in Resources */,
 			);
@@ -303,22 +331,43 @@
 			buildActionMask = 2147483647;
 			files = (
 				26BE00A01E69FDDA002603CD /* Villes.swift in Sources */,
-				350752FA1DF121280062F606 /* MenuMigrantViewController.swift in Sources */,
+				264482991E6B7C8A00CEE6FE /* DateExtension.swift in Sources */,
+				350752FA1DF121280062F606 /* MenuUserViewController.swift in Sources */,
 				35A69CD51DF0EB5800D4740C /* Extensions.swift in Sources */,
 				264812AD1E5A318700A67300 /* RestApiManager.swift in Sources */,
 				264812B41E5A356500A67300 /* UserData.swift in Sources */,
 				35A69CD11DF0DEEE00D4740C /* ConnexionViewController.swift in Sources */,
 				264812B91E5A4B9500A67300 /* InscriptionViewController.swift in Sources */,
+				264482971E6B3B0F00CEE6FE /* JSONExtension.swift in Sources */,
 				35A69CC11DF0D5B000D4740C /* MenuViewController.swift in Sources */,
+				2644829D1E6B841900CEE6FE /* EvenementInfoViewController.swift in Sources */,
 				350752FC1DF134D20062F606 /* ProfileViewController.swift in Sources */,
 				35A69CBF1DF0D5B000D4740C /* AppDelegate.swift in Sources */,
 				26BE00A31E6A30FF002603CD /* StringExtension.swift in Sources */,
+				264482951E6B398000CEE6FE /* ListeEvenementsViewController.swift in Sources */,
+				264482931E6B35ED00CEE6FE /* EvenementData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		2644828A1E6B320200CEE6FE /* ProfileViewController.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2644828B1E6B320200CEE6FE /* en */,
+			);
+			name = ProfileViewController.strings;
+			sourceTree = "<group>";
+		};
+		2644828F1E6B322400CEE6FE /* ProfileViewController.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				264482901E6B322400CEE6FE /* fr */,
+			);
+			name = ProfileViewController.strings;
+			sourceTree = "<group>";
+		};
 		2693102A1E637F8000B5C11E /* Common.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -370,6 +419,7 @@
 			children = (
 				35A69CC81DF0D5B000D4740C /* Base */,
 				26B927721E639E9B00EE02AF /* fr */,
+				2644829B1E6B805D00CEE6FE /* en */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -474,6 +524,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ANALYZER_LOCALIZABILITY_EMPTY_CONTEXT = YES;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				INFOPLIST_FILE = Kilobits_iOS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -491,6 +542,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ANALYZER_LOCALIZABILITY_EMPTY_CONTEXT = YES;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				INFOPLIST_FILE = Kilobits_iOS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -511,7 +563,7 @@
 				35A69CCC1DF0D5B000D4740C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		35A69CCD1DF0D5B000D4740C /* Build configuration list for PBXNativeTarget "Kilobits_iOS" */ = {
 			isa = XCConfigurationList;
@@ -520,7 +572,7 @@
 				35A69CCF1DF0D5B000D4740C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};

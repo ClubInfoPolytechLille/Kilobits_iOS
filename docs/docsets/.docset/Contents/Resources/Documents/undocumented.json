@@ -1,0 +1,803 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/Liki/Documents/Programmation/Swift/Kilobits_iOS/Kilobits_iOS/AppDelegate.swift",
+      "line": 12,
+      "symbol": "AppDelegate",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Liki/Documents/Programmation/Swift/Kilobits_iOS/Kilobits_iOS/AppDelegate.swift",
+      "line": 14,
+      "symbol": "AppDelegate.window",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Liki/Documents/Programmation/Swift/Kilobits_iOS/Kilobits_iOS/AppDelegate.swift",
+      "line": 17,
+      "symbol": "AppDelegate.application(_:didFinishLaunchingWithOptions:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Liki/Documents/Programmation/Swift/Kilobits_iOS/Kilobits_iOS/AppDelegate.swift",
+      "line": 22,
+      "symbol": "AppDelegate.applicationWillResignActive(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Liki/Documents/Programmation/Swift/Kilobits_iOS/Kilobits_iOS/AppDelegate.swift",
+      "line": 27,
+      "symbol": "AppDelegate.applicationDidEnterBackground(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Liki/Documents/Programmation/Swift/Kilobits_iOS/Kilobits_iOS/AppDelegate.swift",
+      "line": 32,
+      "symbol": "AppDelegate.applicationWillEnterForeground(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Liki/Documents/Programmation/Swift/Kilobits_iOS/Kilobits_iOS/AppDelegate.swift",
+      "line": 36,
+      "symbol": "AppDelegate.applicationDidBecomeActive(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Liki/Documents/Programmation/Swift/Kilobits_iOS/Kilobits_iOS/AppDelegate.swift",
+      "line": 40,
+      "symbol": "AppDelegate.applicationWillTerminate(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Liki/Documents/Programmation/Swift/Kilobits_iOS/Kilobits_iOS/ConnexionViewController.swift",
+      "line": 12,
+      "symbol": "ConnexionViewController",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Liki/Documents/Programmation/Swift/Kilobits_iOS/Kilobits_iOS/ConnexionViewController.swift",
+      "line": 15,
+      "symbol": "ConnexionViewController.nomTextField",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Liki/Documents/Programmation/Swift/Kilobits_iOS/Kilobits_iOS/ConnexionViewController.swift",
+      "line": 16,
+      "symbol": "ConnexionViewController.mdpTextField",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Liki/Documents/Programmation/Swift/Kilobits_iOS/Kilobits_iOS/ConnexionViewController.swift",
+      "line": 17,
+      "symbol": "ConnexionViewController.boutonConnexion",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Liki/Documents/Programmation/Swift/Kilobits_iOS/Kilobits_iOS/ConnexionViewController.swift",
+      "line": 20,
+      "symbol": "ConnexionViewController.viewDidLoad()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Liki/Documents/Programmation/Swift/Kilobits_iOS/Kilobits_iOS/ConnexionViewController.swift",
+      "line": 30,
+      "symbol": "ConnexionViewController.didReceiveMemoryWarning()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Liki/Documents/Programmation/Swift/Kilobits_iOS/Kilobits_iOS/ConnexionViewController.swift",
+      "line": 37,
+      "symbol": "ConnexionViewController.seConnecter(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Liki/Documents/Programmation/Swift/Kilobits_iOS/Kilobits_iOS/ConnexionViewController.swift",
+      "line": 62,
+      "symbol": "ConnexionViewController.Cancel(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Liki/Documents/Programmation/Swift/Kilobits_iOS/Kilobits_iOS/ConnexionViewController.swift",
+      "line": 69,
+      "symbol": "ConnexionViewController.textFieldShouldReturn(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Liki/Documents/Programmation/Swift/Kilobits_iOS/Kilobits_iOS/ConnexionViewController.swift",
+      "line": 86,
+      "symbol": "ConnexionViewController.textFieldDidBeginEditing(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Liki/Documents/Programmation/Swift/Kilobits_iOS/Kilobits_iOS/ConnexionViewController.swift",
+      "line": 92,
+      "symbol": "ConnexionViewController.textFieldDidChange(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Liki/Documents/Programmation/Swift/Kilobits_iOS/Kilobits_iOS/EvenementInfoViewController.swift",
+      "line": 13,
+      "symbol": "EvenementInfoViewController",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Liki/Documents/Programmation/Swift/Kilobits_iOS/Kilobits_iOS/EvenementInfoViewController.swift",
+      "line": 16,
+      "symbol": "EvenementInfoViewController.descriptionLabel",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Liki/Documents/Programmation/Swift/Kilobits_iOS/Kilobits_iOS/EvenementInfoViewController.swift",
+      "line": 17,
+      "symbol": "EvenementInfoViewController.lieu",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Liki/Documents/Programmation/Swift/Kilobits_iOS/Kilobits_iOS/EvenementInfoViewController.swift",
+      "line": 18,
+      "symbol": "EvenementInfoViewController.date",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Liki/Documents/Programmation/Swift/Kilobits_iOS/Kilobits_iOS/EvenementInfoViewController.swift",
+      "line": 19,
+      "symbol": "EvenementInfoViewController.nbParticipants",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Liki/Documents/Programmation/Swift/Kilobits_iOS/Kilobits_iOS/EvenementInfoViewController.swift",
+      "line": 20,
+      "symbol": "EvenementInfoViewController.organisateur",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Liki/Documents/Programmation/Swift/Kilobits_iOS/Kilobits_iOS/EvenementInfoViewController.swift",
+      "line": 21,
+      "symbol": "EvenementInfoViewController.participateButton",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Liki/Documents/Programmation/Swift/Kilobits_iOS/Kilobits_iOS/EvenementInfoViewController.swift",
+      "line": 24,
+      "symbol": "EvenementInfoViewController.evenement",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Liki/Documents/Programmation/Swift/Kilobits_iOS/Kilobits_iOS/EvenementInfoViewController.swift",
+      "line": 25,
+      "symbol": "EvenementInfoViewController.nbParticipantsVal",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Liki/Documents/Programmation/Swift/Kilobits_iOS/Kilobits_iOS/EvenementInfoViewController.swift",
+      "line": 26,
+      "symbol": "EvenementInfoViewController.organisateurVal",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Liki/Documents/Programmation/Swift/Kilobits_iOS/Kilobits_iOS/EvenementInfoViewController.swift",
+      "line": 27,
+      "symbol": "EvenementInfoViewController.comingFrom",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Liki/Documents/Programmation/Swift/Kilobits_iOS/Kilobits_iOS/EvenementInfoViewController.swift",
+      "line": 30,
+      "symbol": "EvenementInfoViewController.viewDidLoad()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Liki/Documents/Programmation/Swift/Kilobits_iOS/Kilobits_iOS/EvenementInfoViewController.swift",
+      "line": 88,
+      "symbol": "EvenementInfoViewController.didReceiveMemoryWarning()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Liki/Documents/Programmation/Swift/Kilobits_iOS/Kilobits_iOS/EvenementInfoViewController.swift",
+      "line": 95,
+      "symbol": "EvenementInfoViewController.participate(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Liki/Documents/Programmation/Swift/Kilobits_iOS/Kilobits_iOS/Extensions.swift",
+      "line": 15,
+      "symbol": "UIViewController.hideKeyboardWithTouch()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Liki/Documents/Programmation/Swift/Kilobits_iOS/Kilobits_iOS/Extensions.swift",
+      "line": 22,
+      "symbol": "UIViewController.dismissKeyboard()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Liki/Documents/Programmation/Swift/Kilobits_iOS/Kilobits_iOS/InscriptionViewController.swift",
+      "line": 11,
+      "symbol": "InscriptionViewController",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Liki/Documents/Programmation/Swift/Kilobits_iOS/Kilobits_iOS/InscriptionViewController.swift",
+      "line": 14,
+      "symbol": "InscriptionViewController.name",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Liki/Documents/Programmation/Swift/Kilobits_iOS/Kilobits_iOS/InscriptionViewController.swift",
+      "line": 15,
+      "symbol": "InscriptionViewController.firstName",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Liki/Documents/Programmation/Swift/Kilobits_iOS/Kilobits_iOS/InscriptionViewController.swift",
+      "line": 16,
+      "symbol": "InscriptionViewController.identifier",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Liki/Documents/Programmation/Swift/Kilobits_iOS/Kilobits_iOS/InscriptionViewController.swift",
+      "line": 17,
+      "symbol": "InscriptionViewController.password",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Liki/Documents/Programmation/Swift/Kilobits_iOS/Kilobits_iOS/InscriptionViewController.swift",
+      "line": 18,
+      "symbol": "InscriptionViewController.isMobile",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Liki/Documents/Programmation/Swift/Kilobits_iOS/Kilobits_iOS/InscriptionViewController.swift",
+      "line": 19,
+      "symbol": "InscriptionViewController.city",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Liki/Documents/Programmation/Swift/Kilobits_iOS/Kilobits_iOS/InscriptionViewController.swift",
+      "line": 20,
+      "symbol": "InscriptionViewController.isMigrant",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Liki/Documents/Programmation/Swift/Kilobits_iOS/Kilobits_iOS/InscriptionViewController.swift",
+      "line": 21,
+      "symbol": "InscriptionViewController.hasFreeTime",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Liki/Documents/Programmation/Swift/Kilobits_iOS/Kilobits_iOS/InscriptionViewController.swift",
+      "line": 22,
+      "symbol": "InscriptionViewController.miscellaneous",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Liki/Documents/Programmation/Swift/Kilobits_iOS/Kilobits_iOS/InscriptionViewController.swift",
+      "line": 23,
+      "symbol": "InscriptionViewController.createAccount",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Liki/Documents/Programmation/Swift/Kilobits_iOS/Kilobits_iOS/InscriptionViewController.swift",
+      "line": 27,
+      "symbol": "InscriptionViewController.viewDidLoad()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Liki/Documents/Programmation/Swift/Kilobits_iOS/Kilobits_iOS/InscriptionViewController.swift",
+      "line": 46,
+      "symbol": "InscriptionViewController.didReceiveMemoryWarning()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Liki/Documents/Programmation/Swift/Kilobits_iOS/Kilobits_iOS/InscriptionViewController.swift",
+      "line": 54,
+      "symbol": "InscriptionViewController.textFieldShouldReturn(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Liki/Documents/Programmation/Swift/Kilobits_iOS/Kilobits_iOS/InscriptionViewController.swift",
+      "line": 84,
+      "symbol": "InscriptionViewController.textFieldDidBeginEditing(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Liki/Documents/Programmation/Swift/Kilobits_iOS/Kilobits_iOS/InscriptionViewController.swift",
+      "line": 91,
+      "symbol": "InscriptionViewController.textFieldDidChange(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Liki/Documents/Programmation/Swift/Kilobits_iOS/Kilobits_iOS/InscriptionViewController.swift",
+      "line": 98,
+      "symbol": "InscriptionViewController.keyboardWillShow(notification:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Liki/Documents/Programmation/Swift/Kilobits_iOS/Kilobits_iOS/InscriptionViewController.swift",
+      "line": 112,
+      "symbol": "InscriptionViewController.keyboardWillHide(notification:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Liki/Documents/Programmation/Swift/Kilobits_iOS/Kilobits_iOS/InscriptionViewController.swift",
+      "line": 124,
+      "symbol": "InscriptionViewController.numberOfComponents(in:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Liki/Documents/Programmation/Swift/Kilobits_iOS/Kilobits_iOS/InscriptionViewController.swift",
+      "line": 129,
+      "symbol": "InscriptionViewController.pickerView(_:numberOfRowsInComponent:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Liki/Documents/Programmation/Swift/Kilobits_iOS/Kilobits_iOS/InscriptionViewController.swift",
+      "line": 134,
+      "symbol": "InscriptionViewController.pickerView(_:titleForRow:forComponent:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Liki/Documents/Programmation/Swift/Kilobits_iOS/Kilobits_iOS/InscriptionViewController.swift",
+      "line": 141,
+      "symbol": "InscriptionViewController.Cancel(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Liki/Documents/Programmation/Swift/Kilobits_iOS/Kilobits_iOS/InscriptionViewController.swift",
+      "line": 146,
+      "symbol": "InscriptionViewController.createAccountAction(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Liki/Documents/Programmation/Swift/Kilobits_iOS/Kilobits_iOS/ListeEvenementsViewController.swift",
+      "line": 12,
+      "symbol": "ListeEvenementsViewController",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Liki/Documents/Programmation/Swift/Kilobits_iOS/Kilobits_iOS/ListeEvenementsViewController.swift",
+      "line": 15,
+      "symbol": "ListeEvenementsViewController.evenements",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Liki/Documents/Programmation/Swift/Kilobits_iOS/Kilobits_iOS/ListeEvenementsViewController.swift",
+      "line": 16,
+      "symbol": "ListeEvenementsViewController.comingFrom",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Liki/Documents/Programmation/Swift/Kilobits_iOS/Kilobits_iOS/ListeEvenementsViewController.swift",
+      "line": 19,
+      "symbol": "ListeEvenementsViewController.viewDidLoad()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Liki/Documents/Programmation/Swift/Kilobits_iOS/Kilobits_iOS/ListeEvenementsViewController.swift",
+      "line": 36,
+      "symbol": "ListeEvenementsViewController.didReceiveMemoryWarning()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Liki/Documents/Programmation/Swift/Kilobits_iOS/Kilobits_iOS/ListeEvenementsViewController.swift",
+      "line": 42,
+      "symbol": "ListeEvenementsViewController.prepare(for:sender:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Liki/Documents/Programmation/Swift/Kilobits_iOS/Kilobits_iOS/ListeEvenementsViewController.swift",
+      "line": 64,
+      "symbol": "ListeEvenementsViewController.Cancel(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Liki/Documents/Programmation/Swift/Kilobits_iOS/Kilobits_iOS/ListeEvenementsViewController.swift",
+      "line": 70,
+      "symbol": "ListeEvenementsViewController.loadSampleEvents()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Liki/Documents/Programmation/Swift/Kilobits_iOS/Kilobits_iOS/ListeEvenementsViewController.swift",
+      "line": 77,
+      "symbol": "ListeEvenementsViewController.numberOfSections(in:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Liki/Documents/Programmation/Swift/Kilobits_iOS/Kilobits_iOS/ListeEvenementsViewController.swift",
+      "line": 82,
+      "symbol": "ListeEvenementsViewController.tableView(_:numberOfRowsInSection:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Liki/Documents/Programmation/Swift/Kilobits_iOS/Kilobits_iOS/ListeEvenementsViewController.swift",
+      "line": 87,
+      "symbol": "ListeEvenementsViewController.tableView(_:cellForRowAt:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Liki/Documents/Programmation/Swift/Kilobits_iOS/Kilobits_iOS/MenuUserViewController.swift",
+      "line": 13,
+      "symbol": "MenuUserViewController",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Liki/Documents/Programmation/Swift/Kilobits_iOS/Kilobits_iOS/MenuUserViewController.swift",
+      "line": 16,
+      "symbol": "MenuUserViewController.viewDidLoad()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Liki/Documents/Programmation/Swift/Kilobits_iOS/Kilobits_iOS/MenuUserViewController.swift",
+      "line": 23,
+      "symbol": "MenuUserViewController.didReceiveMemoryWarning()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Liki/Documents/Programmation/Swift/Kilobits_iOS/Kilobits_iOS/MenuUserViewController.swift",
+      "line": 29,
+      "symbol": "MenuUserViewController.prepare(for:sender:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Liki/Documents/Programmation/Swift/Kilobits_iOS/Kilobits_iOS/MenuUserViewController.swift",
+      "line": 51,
+      "symbol": "MenuUserViewController.disconnect(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Liki/Documents/Programmation/Swift/Kilobits_iOS/Kilobits_iOS/MenuUserViewController.swift",
+      "line": 59,
+      "symbol": "MenuUserViewController.goToProfile(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Liki/Documents/Programmation/Swift/Kilobits_iOS/Kilobits_iOS/MenuUserViewController.swift",
+      "line": 64,
+      "symbol": "MenuUserViewController.goToListeEvenements(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Liki/Documents/Programmation/Swift/Kilobits_iOS/Kilobits_iOS/MenuViewController.swift",
+      "line": 12,
+      "symbol": "MenuViewController",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Liki/Documents/Programmation/Swift/Kilobits_iOS/Kilobits_iOS/MenuViewController.swift",
+      "line": 15,
+      "symbol": "MenuViewController.boutonLangues",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Liki/Documents/Programmation/Swift/Kilobits_iOS/Kilobits_iOS/MenuViewController.swift",
+      "line": 18,
+      "symbol": "MenuViewController.viewWillAppear(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Liki/Documents/Programmation/Swift/Kilobits_iOS/Kilobits_iOS/MenuViewController.swift",
+      "line": 31,
+      "symbol": "MenuViewController.viewDidLoad()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Liki/Documents/Programmation/Swift/Kilobits_iOS/Kilobits_iOS/MenuViewController.swift",
+      "line": 44,
+      "symbol": "MenuViewController.didReceiveMemoryWarning()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Liki/Documents/Programmation/Swift/Kilobits_iOS/Kilobits_iOS/MenuViewController.swift",
+      "line": 50,
+      "symbol": "MenuViewController.prepare(for:sender:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Liki/Documents/Programmation/Swift/Kilobits_iOS/Kilobits_iOS/MenuViewController.swift",
+      "line": 72,
+      "symbol": "MenuViewController.chargerLangues()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Liki/Documents/Programmation/Swift/Kilobits_iOS/Kilobits_iOS/MenuViewController.swift",
+      "line": 99,
+      "symbol": "MenuViewController.changeToLanguage(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Liki/Documents/Programmation/Swift/Kilobits_iOS/Kilobits_iOS/MenuViewController.swift",
+      "line": 119,
+      "symbol": "MenuViewController.changerLangue(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Liki/Documents/Programmation/Swift/Kilobits_iOS/Kilobits_iOS/MenuViewController.swift",
+      "line": 154,
+      "symbol": "MenuViewController.seConnecter(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Liki/Documents/Programmation/Swift/Kilobits_iOS/Kilobits_iOS/MenuViewController.swift",
+      "line": 159,
+      "symbol": "MenuViewController.sInscrire(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Liki/Documents/Programmation/Swift/Kilobits_iOS/Kilobits_iOS/MenuViewController.swift",
+      "line": 164,
+      "symbol": "MenuViewController.accesForum(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Liki/Documents/Programmation/Swift/Kilobits_iOS/Kilobits_iOS/MenuViewController.swift",
+      "line": 169,
+      "symbol": "MenuViewController.consulterEvenements(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Liki/Documents/Programmation/Swift/Kilobits_iOS/Kilobits_iOS/ProfileViewController.swift",
+      "line": 12,
+      "symbol": "ProfileViewController",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Liki/Documents/Programmation/Swift/Kilobits_iOS/Kilobits_iOS/ProfileViewController.swift",
+      "line": 15,
+      "symbol": "ProfileViewController.name",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Liki/Documents/Programmation/Swift/Kilobits_iOS/Kilobits_iOS/ProfileViewController.swift",
+      "line": 16,
+      "symbol": "ProfileViewController.firstName",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Liki/Documents/Programmation/Swift/Kilobits_iOS/Kilobits_iOS/ProfileViewController.swift",
+      "line": 17,
+      "symbol": "ProfileViewController.identifier",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Liki/Documents/Programmation/Swift/Kilobits_iOS/Kilobits_iOS/ProfileViewController.swift",
+      "line": 18,
+      "symbol": "ProfileViewController.password",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Liki/Documents/Programmation/Swift/Kilobits_iOS/Kilobits_iOS/ProfileViewController.swift",
+      "line": 19,
+      "symbol": "ProfileViewController.isMobile",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Liki/Documents/Programmation/Swift/Kilobits_iOS/Kilobits_iOS/ProfileViewController.swift",
+      "line": 20,
+      "symbol": "ProfileViewController.city",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Liki/Documents/Programmation/Swift/Kilobits_iOS/Kilobits_iOS/ProfileViewController.swift",
+      "line": 21,
+      "symbol": "ProfileViewController.isMigrant",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Liki/Documents/Programmation/Swift/Kilobits_iOS/Kilobits_iOS/ProfileViewController.swift",
+      "line": 22,
+      "symbol": "ProfileViewController.hasFreeTime",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Liki/Documents/Programmation/Swift/Kilobits_iOS/Kilobits_iOS/ProfileViewController.swift",
+      "line": 23,
+      "symbol": "ProfileViewController.miscellaneous",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Liki/Documents/Programmation/Swift/Kilobits_iOS/Kilobits_iOS/ProfileViewController.swift",
+      "line": 24,
+      "symbol": "ProfileViewController.deleteAccount",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Liki/Documents/Programmation/Swift/Kilobits_iOS/Kilobits_iOS/ProfileViewController.swift",
+      "line": 25,
+      "symbol": "ProfileViewController.saveButton",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Liki/Documents/Programmation/Swift/Kilobits_iOS/Kilobits_iOS/ProfileViewController.swift",
+      "line": 28,
+      "symbol": "ProfileViewController.viewDidLoad()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Liki/Documents/Programmation/Swift/Kilobits_iOS/Kilobits_iOS/ProfileViewController.swift",
+      "line": 59,
+      "symbol": "ProfileViewController.didReceiveMemoryWarning()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Liki/Documents/Programmation/Swift/Kilobits_iOS/Kilobits_iOS/ProfileViewController.swift",
+      "line": 66,
+      "symbol": "ProfileViewController.Cancel(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Liki/Documents/Programmation/Swift/Kilobits_iOS/Kilobits_iOS/ProfileViewController.swift",
+      "line": 71,
+      "symbol": "ProfileViewController.Save(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Liki/Documents/Programmation/Swift/Kilobits_iOS/Kilobits_iOS/ProfileViewController.swift",
+      "line": 111,
+      "symbol": "ProfileViewController.CloseAccount(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Liki/Documents/Programmation/Swift/Kilobits_iOS/Kilobits_iOS/ProfileViewController.swift",
+      "line": 134,
+      "symbol": "ProfileViewController.textFieldShouldReturn(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Liki/Documents/Programmation/Swift/Kilobits_iOS/Kilobits_iOS/ProfileViewController.swift",
+      "line": 164,
+      "symbol": "ProfileViewController.textFieldDidBeginEditing(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Liki/Documents/Programmation/Swift/Kilobits_iOS/Kilobits_iOS/ProfileViewController.swift",
+      "line": 171,
+      "symbol": "ProfileViewController.textFieldDidChange(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Liki/Documents/Programmation/Swift/Kilobits_iOS/Kilobits_iOS/ProfileViewController.swift",
+      "line": 178,
+      "symbol": "ProfileViewController.keyboardWillShow(notification:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Liki/Documents/Programmation/Swift/Kilobits_iOS/Kilobits_iOS/ProfileViewController.swift",
+      "line": 192,
+      "symbol": "ProfileViewController.keyboardWillHide(notification:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Liki/Documents/Programmation/Swift/Kilobits_iOS/Kilobits_iOS/ProfileViewController.swift",
+      "line": 204,
+      "symbol": "ProfileViewController.numberOfComponents(in:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Liki/Documents/Programmation/Swift/Kilobits_iOS/Kilobits_iOS/ProfileViewController.swift",
+      "line": 209,
+      "symbol": "ProfileViewController.pickerView(_:numberOfRowsInComponent:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Liki/Documents/Programmation/Swift/Kilobits_iOS/Kilobits_iOS/ProfileViewController.swift",
+      "line": 214,
+      "symbol": "ProfileViewController.pickerView(_:titleForRow:forComponent:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/Liki/Documents/Programmation/Swift/Kilobits_iOS"
+}

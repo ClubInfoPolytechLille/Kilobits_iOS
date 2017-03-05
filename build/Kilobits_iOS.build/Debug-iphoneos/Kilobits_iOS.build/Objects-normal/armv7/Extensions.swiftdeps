@@ -1,0 +1,209 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+provides-nominal:
+provides-member:
+- ["CSo16UIViewController", ""]
+- ["CSo16UIViewController", "hideKeyboardWithTouch"]
+- ["CSo16UIViewController", "dismissKeyboard"]
+provides-dynamic-lookup:
+- "hideKeyboardWithTouch"
+- "dismissKeyboard"
+depends-top-level:
+- !private "BooleanLiteralType"
+- !private "UITapGestureRecognizer"
+- "UIViewController"
+depends-member:
+- !private ["Ps9AnyObject", "UITapGestureRecognizer"]
+- !private ["Ps9AnyObject", "UIViewController"]
+- !private ["Ps9AnyObject", "addGestureRecognizer"]
+- ["Ps9AnyObject", "dismissKeyboard"]
+- !private ["Ps9AnyObject", "endEditing"]
+- ["Ps9AnyObject", "hideKeyboardWithTouch"]
+- !private ["Ps9AnyObject", "init"]
+- !private ["Ps9AnyObject", "view"]
+- ["Sb", "deinit"]
+- !private ["PSo15CALayerDelegate", "addGestureRecognizer"]
+- !private ["PSo15CALayerDelegate", "endEditing"]
+- !private ["Ps7CVarArg", "UITapGestureRecognizer"]
+- !private ["Ps7CVarArg", "UIViewController"]
+- !private ["Ps7CVarArg", "addGestureRecognizer"]
+- ["Ps7CVarArg", "dismissKeyboard"]
+- !private ["Ps7CVarArg", "endEditing"]
+- ["Ps7CVarArg", "hideKeyboardWithTouch"]
+- !private ["Ps7CVarArg", "init"]
+- !private ["Ps7CVarArg", "view"]
+- !private ["Ps28CustomDebugStringConvertible", "UITapGestureRecognizer"]
+- !private ["Ps28CustomDebugStringConvertible", "UIViewController"]
+- !private ["Ps28CustomDebugStringConvertible", "addGestureRecognizer"]
+- ["Ps28CustomDebugStringConvertible", "dismissKeyboard"]
+- !private ["Ps28CustomDebugStringConvertible", "endEditing"]
+- ["Ps28CustomDebugStringConvertible", "hideKeyboardWithTouch"]
+- !private ["Ps28CustomDebugStringConvertible", "init"]
+- !private ["Ps28CustomDebugStringConvertible", "view"]
+- !private ["Ps23CustomStringConvertible", "UITapGestureRecognizer"]
+- !private ["Ps23CustomStringConvertible", "UIViewController"]
+- !private ["Ps23CustomStringConvertible", "addGestureRecognizer"]
+- ["Ps23CustomStringConvertible", "dismissKeyboard"]
+- !private ["Ps23CustomStringConvertible", "endEditing"]
+- ["Ps23CustomStringConvertible", "hideKeyboardWithTouch"]
+- !private ["Ps23CustomStringConvertible", "init"]
+- !private ["Ps23CustomStringConvertible", "view"]
+- !private ["Ps9Equatable", "UITapGestureRecognizer"]
+- !private ["Ps9Equatable", "UIViewController"]
+- !private ["Ps9Equatable", "addGestureRecognizer"]
+- ["Ps9Equatable", "dismissKeyboard"]
+- !private ["Ps9Equatable", "endEditing"]
+- ["Ps9Equatable", "hideKeyboardWithTouch"]
+- !private ["Ps9Equatable", "init"]
+- !private ["Ps9Equatable", "view"]
+- !private ["Ps8Hashable", "UITapGestureRecognizer"]
+- !private ["Ps8Hashable", "UIViewController"]
+- !private ["Ps8Hashable", "addGestureRecognizer"]
+- ["Ps8Hashable", "dismissKeyboard"]
+- !private ["Ps8Hashable", "endEditing"]
+- ["Ps8Hashable", "hideKeyboardWithTouch"]
+- !private ["Ps8Hashable", "init"]
+- !private ["Ps8Hashable", "view"]
+- !private ["PSo8NSCoding", "UITapGestureRecognizer"]
+- !private ["PSo8NSCoding", "UIViewController"]
+- !private ["PSo8NSCoding", "addGestureRecognizer"]
+- !private ["PSo8NSCoding", "dismissKeyboard"]
+- !private ["PSo8NSCoding", "endEditing"]
+- !private ["PSo8NSCoding", "view"]
+- !private ["PSo26NSExtensionRequestHandling", "UITapGestureRecognizer"]
+- !private ["PSo26NSExtensionRequestHandling", "UIViewController"]
+- !private ["PSo26NSExtensionRequestHandling", "dismissKeyboard"]
+- !private ["PSo26NSExtensionRequestHandling", "view"]
+- !private ["CSo8NSObject", "UITapGestureRecognizer"]
+- !private ["CSo8NSObject", "UIViewController"]
+- !private ["CSo8NSObject", "addGestureRecognizer"]
+- ["CSo8NSObject", "dismissKeyboard"]
+- !private ["CSo8NSObject", "endEditing"]
+- ["CSo8NSObject", "hideKeyboardWithTouch"]
+- !private ["CSo8NSObject", "init"]
+- !private ["CSo8NSObject", "view"]
+- !private ["PSo16NSObjectProtocol", "UITapGestureRecognizer"]
+- !private ["PSo16NSObjectProtocol", "UIViewController"]
+- !private ["PSo16NSObjectProtocol", "addGestureRecognizer"]
+- ["PSo16NSObjectProtocol", "dismissKeyboard"]
+- !private ["PSo16NSObjectProtocol", "endEditing"]
+- ["PSo16NSObjectProtocol", "hideKeyboardWithTouch"]
+- !private ["PSo16NSObjectProtocol", "init"]
+- !private ["PSo16NSObjectProtocol", "view"]
+- ["V10ObjectiveC8Selector", "deinit"]
+- !private ["PSo29UIAccessibilityIdentification", "addGestureRecognizer"]
+- !private ["PSo29UIAccessibilityIdentification", "endEditing"]
+- !private ["PSo12UIAppearance", "addGestureRecognizer"]
+- !private ["PSo12UIAppearance", "endEditing"]
+- !private ["PSo21UIAppearanceContainer", "UITapGestureRecognizer"]
+- !private ["PSo21UIAppearanceContainer", "UIViewController"]
+- !private ["PSo21UIAppearanceContainer", "addGestureRecognizer"]
+- !private ["PSo21UIAppearanceContainer", "dismissKeyboard"]
+- !private ["PSo21UIAppearanceContainer", "endEditing"]
+- !private ["PSo21UIAppearanceContainer", "view"]
+- !private ["PSo18UIContentContainer", "UITapGestureRecognizer"]
+- !private ["PSo18UIContentContainer", "UIViewController"]
+- !private ["PSo18UIContentContainer", "dismissKeyboard"]
+- !private ["PSo18UIContentContainer", "view"]
+- !private ["PSo17UICoordinateSpace", "addGestureRecognizer"]
+- !private ["PSo17UICoordinateSpace", "endEditing"]
+- !private ["PSo13UIDynamicItem", "addGestureRecognizer"]
+- !private ["PSo13UIDynamicItem", "endEditing"]
+- !private ["PSo18UIFocusEnvironment", "UITapGestureRecognizer"]
+- !private ["PSo18UIFocusEnvironment", "UIViewController"]
+- !private ["PSo18UIFocusEnvironment", "addGestureRecognizer"]
+- !private ["PSo18UIFocusEnvironment", "dismissKeyboard"]
+- !private ["PSo18UIFocusEnvironment", "endEditing"]
+- !private ["PSo18UIFocusEnvironment", "view"]
+- !private ["PSo11UIFocusItem", "addGestureRecognizer"]
+- !private ["PSo11UIFocusItem", "endEditing"]
+- !private ["CSo19UIGestureRecognizer", "init"]
+- !private ["CSo11UIResponder", "UITapGestureRecognizer"]
+- !private ["CSo11UIResponder", "UIViewController"]
+- !private ["CSo11UIResponder", "addGestureRecognizer"]
+- ["CSo11UIResponder", "dismissKeyboard"]
+- !private ["CSo11UIResponder", "endEditing"]
+- ["CSo11UIResponder", "hideKeyboardWithTouch"]
+- !private ["CSo11UIResponder", "view"]
+- !private ["PSo30UIResponderStandardEditActions", "UITapGestureRecognizer"]
+- !private ["PSo30UIResponderStandardEditActions", "UIViewController"]
+- !private ["PSo30UIResponderStandardEditActions", "addGestureRecognizer"]
+- ["PSo30UIResponderStandardEditActions", "dismissKeyboard"]
+- !private ["PSo30UIResponderStandardEditActions", "endEditing"]
+- ["PSo30UIResponderStandardEditActions", "hideKeyboardWithTouch"]
+- !private ["PSo30UIResponderStandardEditActions", "view"]
+- !private ["PSo16UIStateRestoring", "UITapGestureRecognizer"]
+- !private ["PSo16UIStateRestoring", "UIViewController"]
+- !private ["PSo16UIStateRestoring", "dismissKeyboard"]
+- !private ["PSo16UIStateRestoring", "view"]
+- ["CSo22UITapGestureRecognizer", "deinit"]
+- !private ["CSo22UITapGestureRecognizer", "init"]
+- !private ["PSo18UITraitEnvironment", "UITapGestureRecognizer"]
+- !private ["PSo18UITraitEnvironment", "UIViewController"]
+- !private ["PSo18UITraitEnvironment", "addGestureRecognizer"]
+- !private ["PSo18UITraitEnvironment", "dismissKeyboard"]
+- !private ["PSo18UITraitEnvironment", "endEditing"]
+- !private ["PSo18UITraitEnvironment", "view"]
+- !private ["CSo6UIView", "addGestureRecognizer"]
+- !private ["CSo6UIView", "endEditing"]
+- !private ["CSo16UIViewController", "UITapGestureRecognizer"]
+- !private ["CSo16UIViewController", "UIViewController"]
+- ["CSo16UIViewController", "deinit"]
+- ["CSo16UIViewController", "dismissKeyboard"]
+- ["CSo16UIViewController", "hideKeyboardWithTouch"]
+- !private ["CSo16UIViewController", "view"]
+- !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "addGestureRecognizer"]
+- !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "endEditing"]
+- !private ["Ps9_Hashable", "UITapGestureRecognizer"]
+- !private ["Ps9_Hashable", "UIViewController"]
+- !private ["Ps9_Hashable", "addGestureRecognizer"]
+- ["Ps9_Hashable", "dismissKeyboard"]
+- !private ["Ps9_Hashable", "endEditing"]
+- ["Ps9_Hashable", "hideKeyboardWithTouch"]
+- !private ["Ps9_Hashable", "init"]
+- !private ["Ps9_Hashable", "view"]
+depends-nominal:
+- "Ps9AnyObject"
+- "Sb"
+- !private "PSo15CALayerDelegate"
+- "Ps7CVarArg"
+- "Ps28CustomDebugStringConvertible"
+- "Ps23CustomStringConvertible"
+- "Ps9Equatable"
+- "Ps8Hashable"
+- !private "PSo8NSCoding"
+- !private "PSo26NSExtensionRequestHandling"
+- "CSo8NSObject"
+- "PSo16NSObjectProtocol"
+- "V10ObjectiveC8Selector"
+- !private "PSo29UIAccessibilityIdentification"
+- !private "PSo12UIAppearance"
+- !private "PSo21UIAppearanceContainer"
+- !private "PSo18UIContentContainer"
+- !private "PSo17UICoordinateSpace"
+- !private "PSo13UIDynamicItem"
+- !private "PSo18UIFocusEnvironment"
+- !private "PSo11UIFocusItem"
+- !private "CSo19UIGestureRecognizer"
+- "CSo11UIResponder"
+- "PSo30UIResponderStandardEditActions"
+- !private "PSo16UIStateRestoring"
+- "CSo22UITapGestureRecognizer"
+- !private "PSo18UITraitEnvironment"
+- !private "CSo6UIView"
+- "CSo16UIViewController"
+- !private "Ps37_DefaultCustomPlaygroundQuickLookable"
+- "Ps9_Hashable"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/SwiftOnoneSupport.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/CoreImage.swiftmodule"
+interface-hash: "baaf318ea02d79375d77e1c04ca5f5cb"

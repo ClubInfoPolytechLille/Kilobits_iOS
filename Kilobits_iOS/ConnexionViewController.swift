@@ -42,7 +42,7 @@ class ConnexionViewController: UIViewController, UITextFieldDelegate, UINavigati
         RestApiManager.sharedInstance.connectUser(user: user, completionHandler: { success in
             if success
             {
-                self.performSegue(withIdentifier: "goToMenuMigrantFromConnexion", sender: self)
+                self.performSegue(withIdentifier: "goToMenuUserFromConnexion", sender: self)
             }
             else
             {

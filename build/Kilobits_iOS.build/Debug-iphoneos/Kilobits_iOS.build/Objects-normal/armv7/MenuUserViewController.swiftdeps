@@ -1,0 +1,688 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "MenuUserViewController"
+provides-nominal:
+- "C12Kilobits_iOS22MenuUserViewController"
+provides-member:
+- ["C12Kilobits_iOS22MenuUserViewController", ""]
+provides-dynamic-lookup:
+- "didReceiveMemoryWarning"
+- "goToProfile"
+- "viewDidLoad"
+- "disconnect"
+- "prepare"
+- "goToListeEvenements"
+depends-top-level:
+- "UIStoryboardSegue"
+- !private "BooleanLiteralType"
+- !private "RestApiManager"
+- "CastingPrecedence"
+- "AssignmentPrecedence"
+- "UIViewController"
+- !private "~="
+- !private "UINavigationController"
+- !private "StringLiteralType"
+- !private "ListeEvenementsViewController"
+- !private "SpeedLog"
+- !private "fatalError"
+- "UIButton"
+- !private "??"
+- "MenuUserViewController"
+- "UIBarButtonItem"
+depends-member:
+- !private ["Ps9AnyObject", "RestApiManager"]
+- !private ["Ps9AnyObject", "SpeedLog"]
+- !private ["Ps9AnyObject", "comingFrom"]
+- !private ["Ps9AnyObject", "destination"]
+- ["Ps9AnyObject", "didReceiveMemoryWarning"]
+- ["Ps9AnyObject", "disconnect"]
+- !private ["Ps9AnyObject", "fatalError"]
+- ["Ps9AnyObject", "goToListeEvenements"]
+- ["Ps9AnyObject", "goToProfile"]
+- !private ["Ps9AnyObject", "identifier"]
+- !private ["Ps9AnyObject", "init"]
+- !private ["Ps9AnyObject", "isHidden"]
+- !private ["Ps9AnyObject", "navigationBar"]
+- !private ["Ps9AnyObject", "navigationController"]
+- !private ["Ps9AnyObject", "performSegue"]
+- ["Ps9AnyObject", "prepare"]
+- !private ["Ps9AnyObject", "sharedInstance"]
+- !private ["Ps9AnyObject", "user"]
+- !private ["Ps9AnyObject", "viewControllers"]
+- ["Ps9AnyObject", "viewDidLoad"]
+- ["Ps9AnyObject", ""]
+- !private ["Sa", "Iterator"]
+- !private ["Sa", "_Element"]
+- !private ["Sa", "first"]
+- !private ["Ps23BidirectionalCollection", "Iterator"]
+- !private ["Ps23BidirectionalCollection", "_Element"]
+- !private ["Ps23BidirectionalCollection", "first"]
+- !private ["Ps22BidirectionalIndexable", "Iterator"]
+- !private ["Ps22BidirectionalIndexable", "_Element"]
+- !private ["Ps22BidirectionalIndexable", "first"]
+- !private ["Sb", "_getBuiltinLogicValue"]
+- ["Sb", "deinit"]
+- !private ["PSo15CALayerDelegate", "isHidden"]
+- !private ["Ps7CVarArg", "Iterator"]
+- !private ["Ps7CVarArg", "RestApiManager"]
+- !private ["Ps7CVarArg", "SpeedLog"]
+- !private ["Ps7CVarArg", "_Element"]
+- !private ["Ps7CVarArg", "comingFrom"]
+- !private ["Ps7CVarArg", "destination"]
+- ["Ps7CVarArg", "didReceiveMemoryWarning"]
+- ["Ps7CVarArg", "disconnect"]
+- !private ["Ps7CVarArg", "fatalError"]
+- !private ["Ps7CVarArg", "first"]
+- ["Ps7CVarArg", "goToListeEvenements"]
+- ["Ps7CVarArg", "goToProfile"]
+- !private ["Ps7CVarArg", "identifier"]
+- !private ["Ps7CVarArg", "init"]
+- !private ["Ps7CVarArg", "isHidden"]
+- !private ["Ps7CVarArg", "navigationBar"]
+- !private ["Ps7CVarArg", "navigationController"]
+- !private ["Ps7CVarArg", "performSegue"]
+- ["Ps7CVarArg", "prepare"]
+- !private ["Ps7CVarArg", "sharedInstance"]
+- !private ["Ps7CVarArg", "user"]
+- !private ["Ps7CVarArg", "viewControllers"]
+- ["Ps7CVarArg", "viewDidLoad"]
+- ["Ps7CVarArg", ""]
+- !private ["Vs9Character", "deinit"]
+- !private ["Vs11ClosedRange", "deinit"]
+- !private ["Ps10Collection", "Iterator"]
+- !private ["Ps10Collection", "_Element"]
+- !private ["Ps10Collection", "first"]
+- !private ["Ps10Comparable", "init"]
+- !private ["Vs20CountableClosedRange", "deinit"]
+- !private ["Vs14CountableRange", "deinit"]
+- !private ["Ps28CustomDebugStringConvertible", "Iterator"]
+- !private ["Ps28CustomDebugStringConvertible", "RestApiManager"]
+- !private ["Ps28CustomDebugStringConvertible", "SpeedLog"]
+- !private ["Ps28CustomDebugStringConvertible", "_Element"]
+- !private ["Ps28CustomDebugStringConvertible", "comingFrom"]
+- !private ["Ps28CustomDebugStringConvertible", "destination"]
+- ["Ps28CustomDebugStringConvertible", "didReceiveMemoryWarning"]
+- ["Ps28CustomDebugStringConvertible", "disconnect"]
+- !private ["Ps28CustomDebugStringConvertible", "fatalError"]
+- !private ["Ps28CustomDebugStringConvertible", "first"]
+- ["Ps28CustomDebugStringConvertible", "goToListeEvenements"]
+- ["Ps28CustomDebugStringConvertible", "goToProfile"]
+- !private ["Ps28CustomDebugStringConvertible", "identifier"]
+- !private ["Ps28CustomDebugStringConvertible", "init"]
+- !private ["Ps28CustomDebugStringConvertible", "isHidden"]
+- !private ["Ps28CustomDebugStringConvertible", "navigationBar"]
+- !private ["Ps28CustomDebugStringConvertible", "navigationController"]
+- !private ["Ps28CustomDebugStringConvertible", "performSegue"]
+- ["Ps28CustomDebugStringConvertible", "prepare"]
+- !private ["Ps28CustomDebugStringConvertible", "sharedInstance"]
+- !private ["Ps28CustomDebugStringConvertible", "user"]
+- !private ["Ps28CustomDebugStringConvertible", "viewControllers"]
+- ["Ps28CustomDebugStringConvertible", "viewDidLoad"]
+- ["Ps28CustomDebugStringConvertible", ""]
+- !private ["Ps29CustomPlaygroundQuickLookable", "_getBuiltinLogicValue"]
+- !private ["Ps29CustomPlaygroundQuickLookable", "init"]
+- !private ["Ps17CustomReflectable", "Iterator"]
+- !private ["Ps17CustomReflectable", "_Element"]
+- !private ["Ps17CustomReflectable", "_getBuiltinLogicValue"]
+- !private ["Ps17CustomReflectable", "first"]
+- !private ["Ps17CustomReflectable", "init"]
+- !private ["Ps23CustomStringConvertible", "Iterator"]
+- !private ["Ps23CustomStringConvertible", "RestApiManager"]
+- !private ["Ps23CustomStringConvertible", "SpeedLog"]
+- !private ["Ps23CustomStringConvertible", "_Element"]
+- !private ["Ps23CustomStringConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps23CustomStringConvertible", "comingFrom"]
+- !private ["Ps23CustomStringConvertible", "destination"]
+- ["Ps23CustomStringConvertible", "didReceiveMemoryWarning"]
+- ["Ps23CustomStringConvertible", "disconnect"]
+- !private ["Ps23CustomStringConvertible", "fatalError"]
+- !private ["Ps23CustomStringConvertible", "first"]
+- ["Ps23CustomStringConvertible", "goToListeEvenements"]
+- ["Ps23CustomStringConvertible", "goToProfile"]
+- !private ["Ps23CustomStringConvertible", "identifier"]
+- !private ["Ps23CustomStringConvertible", "init"]
+- !private ["Ps23CustomStringConvertible", "isHidden"]
+- !private ["Ps23CustomStringConvertible", "navigationBar"]
+- !private ["Ps23CustomStringConvertible", "navigationController"]
+- !private ["Ps23CustomStringConvertible", "performSegue"]
+- ["Ps23CustomStringConvertible", "prepare"]
+- !private ["Ps23CustomStringConvertible", "sharedInstance"]
+- !private ["Ps23CustomStringConvertible", "user"]
+- !private ["Ps23CustomStringConvertible", "viewControllers"]
+- ["Ps23CustomStringConvertible", "viewDidLoad"]
+- ["Ps23CustomStringConvertible", ""]
+- !private ["Sd", "deinit"]
+- !private ["Ps9Equatable", "RestApiManager"]
+- !private ["Ps9Equatable", "SpeedLog"]
+- !private ["Ps9Equatable", "_getBuiltinLogicValue"]
+- !private ["Ps9Equatable", "comingFrom"]
+- !private ["Ps9Equatable", "destination"]
+- ["Ps9Equatable", "didReceiveMemoryWarning"]
+- ["Ps9Equatable", "disconnect"]
+- !private ["Ps9Equatable", "fatalError"]
+- ["Ps9Equatable", "goToListeEvenements"]
+- ["Ps9Equatable", "goToProfile"]
+- !private ["Ps9Equatable", "identifier"]
+- !private ["Ps9Equatable", "init"]
+- !private ["Ps9Equatable", "isHidden"]
+- !private ["Ps9Equatable", "navigationBar"]
+- !private ["Ps9Equatable", "navigationController"]
+- !private ["Ps9Equatable", "performSegue"]
+- ["Ps9Equatable", "prepare"]
+- !private ["Ps9Equatable", "sharedInstance"]
+- !private ["Ps9Equatable", "user"]
+- !private ["Ps9Equatable", "viewControllers"]
+- ["Ps9Equatable", "viewDidLoad"]
+- ["Ps9Equatable", ""]
+- !private ["Ps25ExpressibleByArrayLiteral", "Iterator"]
+- !private ["Ps25ExpressibleByArrayLiteral", "_Element"]
+- !private ["Ps25ExpressibleByArrayLiteral", "first"]
+- !private ["Ps27ExpressibleByBooleanLiteral", "_getBuiltinLogicValue"]
+- !private ["Ps43ExpressibleByExtendedGraphemeClusterLiteral", "init"]
+- !private ["Ps32ExpressibleByStringInterpolation", "init"]
+- !private ["Ps26ExpressibleByStringLiteral", "init"]
+- !private ["Ps33ExpressibleByUnicodeScalarLiteral", "init"]
+- !private ["Sf", "deinit"]
+- !private ["Ps8Hashable", "RestApiManager"]
+- !private ["Ps8Hashable", "SpeedLog"]
+- !private ["Ps8Hashable", "_getBuiltinLogicValue"]
+- !private ["Ps8Hashable", "comingFrom"]
+- !private ["Ps8Hashable", "destination"]
+- ["Ps8Hashable", "didReceiveMemoryWarning"]
+- ["Ps8Hashable", "disconnect"]
+- !private ["Ps8Hashable", "fatalError"]
+- ["Ps8Hashable", "goToListeEvenements"]
+- ["Ps8Hashable", "goToProfile"]
+- !private ["Ps8Hashable", "identifier"]
+- !private ["Ps8Hashable", "init"]
+- !private ["Ps8Hashable", "isHidden"]
+- !private ["Ps8Hashable", "navigationBar"]
+- !private ["Ps8Hashable", "navigationController"]
+- !private ["Ps8Hashable", "performSegue"]
+- ["Ps8Hashable", "prepare"]
+- !private ["Ps8Hashable", "sharedInstance"]
+- !private ["Ps8Hashable", "user"]
+- !private ["Ps8Hashable", "viewControllers"]
+- ["Ps8Hashable", "viewDidLoad"]
+- ["Ps8Hashable", ""]
+- !private ["Ps9Indexable", "Iterator"]
+- !private ["Ps9Indexable", "_Element"]
+- !private ["Ps9Indexable", "first"]
+- !private ["Ps13IndexableBase", "Iterator"]
+- !private ["Ps13IndexableBase", "_Element"]
+- !private ["Ps13IndexableBase", "first"]
+- !private ["Vs16IndexingIterator", "Element"]
+- !private ["Si", "deinit"]
+- !private ["Vs5Int16", "deinit"]
+- !private ["Vs5Int32", "deinit"]
+- !private ["Vs5Int64", "deinit"]
+- !private ["Vs4Int8", "deinit"]
+- !private ["Ps16IteratorProtocol", "Element"]
+- !private ["C12Kilobits_iOS29ListeEvenementsViewController", "comingFrom"]
+- ["C12Kilobits_iOS29ListeEvenementsViewController", "deinit"]
+- !private ["Ps25LosslessStringConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps25LosslessStringConvertible", "init"]
+- !private ["C12Kilobits_iOS22MenuUserViewController", "ListeEvenementsViewController"]
+- !private ["C12Kilobits_iOS22MenuUserViewController", "RestApiManager"]
+- !private ["C12Kilobits_iOS22MenuUserViewController", "SpeedLog"]
+- ["C12Kilobits_iOS22MenuUserViewController", "UIBarButtonItem"]
+- ["C12Kilobits_iOS22MenuUserViewController", "UIButton"]
+- !private ["C12Kilobits_iOS22MenuUserViewController", "UINavigationController"]
+- ["C12Kilobits_iOS22MenuUserViewController", "UIStoryboardSegue"]
+- ["C12Kilobits_iOS22MenuUserViewController", "deinit"]
+- ["C12Kilobits_iOS22MenuUserViewController", "didReceiveMemoryWarning"]
+- ["C12Kilobits_iOS22MenuUserViewController", "disconnect"]
+- !private ["C12Kilobits_iOS22MenuUserViewController", "fatalError"]
+- ["C12Kilobits_iOS22MenuUserViewController", "goToListeEvenements"]
+- ["C12Kilobits_iOS22MenuUserViewController", "goToProfile"]
+- ["C12Kilobits_iOS22MenuUserViewController", "init"]
+- !private ["C12Kilobits_iOS22MenuUserViewController", "navigationController"]
+- !private ["C12Kilobits_iOS22MenuUserViewController", "performSegue"]
+- ["C12Kilobits_iOS22MenuUserViewController", "prepare"]
+- ["C12Kilobits_iOS22MenuUserViewController", "viewDidLoad"]
+- !private ["Ps10MirrorPath", "init"]
+- !private ["Ps17MutableCollection", "Iterator"]
+- !private ["Ps17MutableCollection", "_Element"]
+- !private ["Ps17MutableCollection", "first"]
+- !private ["Ps16MutableIndexable", "Iterator"]
+- !private ["Ps16MutableIndexable", "_Element"]
+- !private ["Ps16MutableIndexable", "first"]
+- ["CSo7NSCoder", "deinit"]
+- !private ["PSo8NSCoding", "RestApiManager"]
+- !private ["PSo8NSCoding", "SpeedLog"]
+- !private ["PSo8NSCoding", "comingFrom"]
+- ["PSo8NSCoding", "didReceiveMemoryWarning"]
+- ["PSo8NSCoding", "disconnect"]
+- !private ["PSo8NSCoding", "fatalError"]
+- ["PSo8NSCoding", "goToListeEvenements"]
+- ["PSo8NSCoding", "goToProfile"]
+- !private ["PSo8NSCoding", "init"]
+- !private ["PSo8NSCoding", "isHidden"]
+- !private ["PSo8NSCoding", "navigationBar"]
+- !private ["PSo8NSCoding", "navigationController"]
+- !private ["PSo8NSCoding", "performSegue"]
+- ["PSo8NSCoding", "prepare"]
+- !private ["PSo8NSCoding", "viewControllers"]
+- ["PSo8NSCoding", "viewDidLoad"]
+- ["PSo8NSCoding", ""]
+- !private ["PSo9NSCopying", "init"]
+- !private ["PSo26NSExtensionRequestHandling", "RestApiManager"]
+- !private ["PSo26NSExtensionRequestHandling", "SpeedLog"]
+- !private ["PSo26NSExtensionRequestHandling", "comingFrom"]
+- ["PSo26NSExtensionRequestHandling", "didReceiveMemoryWarning"]
+- ["PSo26NSExtensionRequestHandling", "disconnect"]
+- !private ["PSo26NSExtensionRequestHandling", "fatalError"]
+- ["PSo26NSExtensionRequestHandling", "goToListeEvenements"]
+- ["PSo26NSExtensionRequestHandling", "goToProfile"]
+- !private ["PSo26NSExtensionRequestHandling", "init"]
+- !private ["PSo26NSExtensionRequestHandling", "navigationBar"]
+- !private ["PSo26NSExtensionRequestHandling", "navigationController"]
+- !private ["PSo26NSExtensionRequestHandling", "performSegue"]
+- ["PSo26NSExtensionRequestHandling", "prepare"]
+- !private ["PSo26NSExtensionRequestHandling", "viewControllers"]
+- ["PSo26NSExtensionRequestHandling", "viewDidLoad"]
+- ["PSo26NSExtensionRequestHandling", ""]
+- !private ["PSo16NSMutableCopying", "init"]
+- !private ["CSo8NSObject", "ListeEvenementsViewController"]
+- !private ["CSo8NSObject", "RestApiManager"]
+- !private ["CSo8NSObject", "SpeedLog"]
+- ["CSo8NSObject", "UIBarButtonItem"]
+- ["CSo8NSObject", "UIButton"]
+- !private ["CSo8NSObject", "UINavigationController"]
+- ["CSo8NSObject", "UIStoryboardSegue"]
+- !private ["CSo8NSObject", "comingFrom"]
+- !private ["CSo8NSObject", "destination"]
+- ["CSo8NSObject", "didReceiveMemoryWarning"]
+- ["CSo8NSObject", "disconnect"]
+- !private ["CSo8NSObject", "fatalError"]
+- ["CSo8NSObject", "goToListeEvenements"]
+- ["CSo8NSObject", "goToProfile"]
+- !private ["CSo8NSObject", "identifier"]
+- ["CSo8NSObject", "init"]
+- !private ["CSo8NSObject", "isHidden"]
+- !private ["CSo8NSObject", "navigationBar"]
+- !private ["CSo8NSObject", "navigationController"]
+- !private ["CSo8NSObject", "performSegue"]
+- ["CSo8NSObject", "prepare"]
+- !private ["CSo8NSObject", "sharedInstance"]
+- !private ["CSo8NSObject", "user"]
+- !private ["CSo8NSObject", "viewControllers"]
+- ["CSo8NSObject", "viewDidLoad"]
+- !private ["PSo16NSObjectProtocol", "RestApiManager"]
+- !private ["PSo16NSObjectProtocol", "SpeedLog"]
+- !private ["PSo16NSObjectProtocol", "comingFrom"]
+- !private ["PSo16NSObjectProtocol", "destination"]
+- ["PSo16NSObjectProtocol", "didReceiveMemoryWarning"]
+- ["PSo16NSObjectProtocol", "disconnect"]
+- !private ["PSo16NSObjectProtocol", "fatalError"]
+- ["PSo16NSObjectProtocol", "goToListeEvenements"]
+- ["PSo16NSObjectProtocol", "goToProfile"]
+- !private ["PSo16NSObjectProtocol", "identifier"]
+- !private ["PSo16NSObjectProtocol", "init"]
+- !private ["PSo16NSObjectProtocol", "isHidden"]
+- !private ["PSo16NSObjectProtocol", "navigationBar"]
+- !private ["PSo16NSObjectProtocol", "navigationController"]
+- !private ["PSo16NSObjectProtocol", "performSegue"]
+- ["PSo16NSObjectProtocol", "prepare"]
+- !private ["PSo16NSObjectProtocol", "sharedInstance"]
+- !private ["PSo16NSObjectProtocol", "user"]
+- !private ["PSo16NSObjectProtocol", "viewControllers"]
+- ["PSo16NSObjectProtocol", "viewDidLoad"]
+- ["PSo16NSObjectProtocol", ""]
+- !private ["PSo14NSSecureCoding", "init"]
+- !private ["CSo8NSString", "init"]
+- ["Os5Never", "deinit"]
+- ["Sq", "deinit"]
+- !private ["Ps22RandomAccessCollection", "Iterator"]
+- !private ["Ps22RandomAccessCollection", "_Element"]
+- !private ["Ps22RandomAccessCollection", "first"]
+- !private ["Ps21RandomAccessIndexable", "Iterator"]
+- !private ["Ps21RandomAccessIndexable", "_Element"]
+- !private ["Ps21RandomAccessIndexable", "first"]
+- !private ["Vs5Range", "deinit"]
+- !private ["Ps26RangeReplaceableCollection", "Iterator"]
+- !private ["Ps26RangeReplaceableCollection", "_Element"]
+- !private ["Ps26RangeReplaceableCollection", "first"]
+- !private ["Ps25RangeReplaceableIndexable", "Iterator"]
+- !private ["Ps25RangeReplaceableIndexable", "_Element"]
+- !private ["Ps25RangeReplaceableIndexable", "first"]
+- ["C12Kilobits_iOS14RestApiManager", "deinit"]
+- !private ["C12Kilobits_iOS14RestApiManager", "sharedInstance"]
+- !private ["C12Kilobits_iOS14RestApiManager", "user"]
+- !private ["Ps8Sequence", "Element"]
+- !private ["Ps8Sequence", "Iterator"]
+- !private ["Ps8Sequence", "_Element"]
+- !private ["Ps8Sequence", "first"]
+- ["Vs12StaticString", "deinit"]
+- !private ["Vs12StaticString", "init"]
+- ["SS", "deinit"]
+- !private ["SS", "init"]
+- !private ["Ps16TextOutputStream", "init"]
+- !private ["Ps20TextOutputStreamable", "init"]
+- !private ["PSo29UIAccessibilityIdentification", "isHidden"]
+- !private ["PSo12UIAppearance", "isHidden"]
+- !private ["PSo21UIAppearanceContainer", "RestApiManager"]
+- !private ["PSo21UIAppearanceContainer", "SpeedLog"]
+- !private ["PSo21UIAppearanceContainer", "comingFrom"]
+- ["PSo21UIAppearanceContainer", "didReceiveMemoryWarning"]
+- ["PSo21UIAppearanceContainer", "disconnect"]
+- !private ["PSo21UIAppearanceContainer", "fatalError"]
+- ["PSo21UIAppearanceContainer", "goToListeEvenements"]
+- ["PSo21UIAppearanceContainer", "goToProfile"]
+- !private ["PSo21UIAppearanceContainer", "init"]
+- !private ["PSo21UIAppearanceContainer", "isHidden"]
+- !private ["PSo21UIAppearanceContainer", "navigationBar"]
+- !private ["PSo21UIAppearanceContainer", "navigationController"]
+- !private ["PSo21UIAppearanceContainer", "performSegue"]
+- ["PSo21UIAppearanceContainer", "prepare"]
+- !private ["PSo21UIAppearanceContainer", "viewControllers"]
+- ["PSo21UIAppearanceContainer", "viewDidLoad"]
+- ["PSo21UIAppearanceContainer", ""]
+- !private ["PSo16UIBarPositioning", "isHidden"]
+- !private ["PSo18UIContentContainer", "RestApiManager"]
+- !private ["PSo18UIContentContainer", "SpeedLog"]
+- !private ["PSo18UIContentContainer", "comingFrom"]
+- ["PSo18UIContentContainer", "didReceiveMemoryWarning"]
+- ["PSo18UIContentContainer", "disconnect"]
+- !private ["PSo18UIContentContainer", "fatalError"]
+- ["PSo18UIContentContainer", "goToListeEvenements"]
+- ["PSo18UIContentContainer", "goToProfile"]
+- !private ["PSo18UIContentContainer", "init"]
+- !private ["PSo18UIContentContainer", "navigationBar"]
+- !private ["PSo18UIContentContainer", "navigationController"]
+- !private ["PSo18UIContentContainer", "performSegue"]
+- ["PSo18UIContentContainer", "prepare"]
+- !private ["PSo18UIContentContainer", "viewControllers"]
+- ["PSo18UIContentContainer", "viewDidLoad"]
+- ["PSo18UIContentContainer", ""]
+- !private ["PSo17UICoordinateSpace", "isHidden"]
+- !private ["PSo13UIDynamicItem", "isHidden"]
+- !private ["PSo18UIFocusEnvironment", "RestApiManager"]
+- !private ["PSo18UIFocusEnvironment", "SpeedLog"]
+- !private ["PSo18UIFocusEnvironment", "comingFrom"]
+- ["PSo18UIFocusEnvironment", "didReceiveMemoryWarning"]
+- ["PSo18UIFocusEnvironment", "disconnect"]
+- !private ["PSo18UIFocusEnvironment", "fatalError"]
+- ["PSo18UIFocusEnvironment", "goToListeEvenements"]
+- ["PSo18UIFocusEnvironment", "goToProfile"]
+- !private ["PSo18UIFocusEnvironment", "init"]
+- !private ["PSo18UIFocusEnvironment", "isHidden"]
+- !private ["PSo18UIFocusEnvironment", "navigationBar"]
+- !private ["PSo18UIFocusEnvironment", "navigationController"]
+- !private ["PSo18UIFocusEnvironment", "performSegue"]
+- ["PSo18UIFocusEnvironment", "prepare"]
+- !private ["PSo18UIFocusEnvironment", "viewControllers"]
+- ["PSo18UIFocusEnvironment", "viewDidLoad"]
+- ["PSo18UIFocusEnvironment", ""]
+- !private ["PSo11UIFocusItem", "isHidden"]
+- ["CSo15UINavigationBar", "deinit"]
+- !private ["CSo15UINavigationBar", "isHidden"]
+- ["CSo22UINavigationController", "deinit"]
+- !private ["CSo22UINavigationController", "navigationBar"]
+- !private ["CSo22UINavigationController", "viewControllers"]
+- !private ["CSo11UIResponder", "ListeEvenementsViewController"]
+- !private ["CSo11UIResponder", "RestApiManager"]
+- !private ["CSo11UIResponder", "SpeedLog"]
+- ["CSo11UIResponder", "UIBarButtonItem"]
+- ["CSo11UIResponder", "UIButton"]
+- !private ["CSo11UIResponder", "UINavigationController"]
+- ["CSo11UIResponder", "UIStoryboardSegue"]
+- !private ["CSo11UIResponder", "comingFrom"]
+- ["CSo11UIResponder", "didReceiveMemoryWarning"]
+- ["CSo11UIResponder", "disconnect"]
+- !private ["CSo11UIResponder", "fatalError"]
+- ["CSo11UIResponder", "goToListeEvenements"]
+- ["CSo11UIResponder", "goToProfile"]
+- ["CSo11UIResponder", "init"]
+- !private ["CSo11UIResponder", "isHidden"]
+- !private ["CSo11UIResponder", "navigationBar"]
+- !private ["CSo11UIResponder", "navigationController"]
+- !private ["CSo11UIResponder", "performSegue"]
+- ["CSo11UIResponder", "prepare"]
+- !private ["CSo11UIResponder", "viewControllers"]
+- ["CSo11UIResponder", "viewDidLoad"]
+- !private ["PSo30UIResponderStandardEditActions", "RestApiManager"]
+- !private ["PSo30UIResponderStandardEditActions", "SpeedLog"]
+- !private ["PSo30UIResponderStandardEditActions", "comingFrom"]
+- ["PSo30UIResponderStandardEditActions", "didReceiveMemoryWarning"]
+- ["PSo30UIResponderStandardEditActions", "disconnect"]
+- !private ["PSo30UIResponderStandardEditActions", "fatalError"]
+- ["PSo30UIResponderStandardEditActions", "goToListeEvenements"]
+- ["PSo30UIResponderStandardEditActions", "goToProfile"]
+- !private ["PSo30UIResponderStandardEditActions", "init"]
+- !private ["PSo30UIResponderStandardEditActions", "isHidden"]
+- !private ["PSo30UIResponderStandardEditActions", "navigationBar"]
+- !private ["PSo30UIResponderStandardEditActions", "navigationController"]
+- !private ["PSo30UIResponderStandardEditActions", "performSegue"]
+- ["PSo30UIResponderStandardEditActions", "prepare"]
+- !private ["PSo30UIResponderStandardEditActions", "viewControllers"]
+- ["PSo30UIResponderStandardEditActions", "viewDidLoad"]
+- ["PSo30UIResponderStandardEditActions", ""]
+- !private ["PSo20UIScrollViewDelegate", "comingFrom"]
+- !private ["PSo16UIStateRestoring", "RestApiManager"]
+- !private ["PSo16UIStateRestoring", "SpeedLog"]
+- !private ["PSo16UIStateRestoring", "comingFrom"]
+- ["PSo16UIStateRestoring", "didReceiveMemoryWarning"]
+- ["PSo16UIStateRestoring", "disconnect"]
+- !private ["PSo16UIStateRestoring", "fatalError"]
+- ["PSo16UIStateRestoring", "goToListeEvenements"]
+- ["PSo16UIStateRestoring", "goToProfile"]
+- !private ["PSo16UIStateRestoring", "init"]
+- !private ["PSo16UIStateRestoring", "navigationBar"]
+- !private ["PSo16UIStateRestoring", "navigationController"]
+- !private ["PSo16UIStateRestoring", "performSegue"]
+- ["PSo16UIStateRestoring", "prepare"]
+- !private ["PSo16UIStateRestoring", "viewControllers"]
+- ["PSo16UIStateRestoring", "viewDidLoad"]
+- ["PSo16UIStateRestoring", ""]
+- ["CSo17UIStoryboardSegue", "deinit"]
+- !private ["CSo17UIStoryboardSegue", "destination"]
+- !private ["CSo17UIStoryboardSegue", "identifier"]
+- !private ["CSo21UITableViewController", "comingFrom"]
+- !private ["PSo21UITableViewDataSource", "comingFrom"]
+- !private ["PSo19UITableViewDelegate", "comingFrom"]
+- !private ["PSo18UITraitEnvironment", "RestApiManager"]
+- !private ["PSo18UITraitEnvironment", "SpeedLog"]
+- !private ["PSo18UITraitEnvironment", "comingFrom"]
+- ["PSo18UITraitEnvironment", "didReceiveMemoryWarning"]
+- ["PSo18UITraitEnvironment", "disconnect"]
+- !private ["PSo18UITraitEnvironment", "fatalError"]
+- ["PSo18UITraitEnvironment", "goToListeEvenements"]
+- ["PSo18UITraitEnvironment", "goToProfile"]
+- !private ["PSo18UITraitEnvironment", "init"]
+- !private ["PSo18UITraitEnvironment", "isHidden"]
+- !private ["PSo18UITraitEnvironment", "navigationBar"]
+- !private ["PSo18UITraitEnvironment", "navigationController"]
+- !private ["PSo18UITraitEnvironment", "performSegue"]
+- ["PSo18UITraitEnvironment", "prepare"]
+- !private ["PSo18UITraitEnvironment", "viewControllers"]
+- ["PSo18UITraitEnvironment", "viewDidLoad"]
+- ["PSo18UITraitEnvironment", ""]
+- !private ["CSo6UIView", "isHidden"]
+- !private ["CSo16UIViewController", "ListeEvenementsViewController"]
+- !private ["CSo16UIViewController", "RestApiManager"]
+- !private ["CSo16UIViewController", "SpeedLog"]
+- ["CSo16UIViewController", "UIBarButtonItem"]
+- ["CSo16UIViewController", "UIButton"]
+- !private ["CSo16UIViewController", "UINavigationController"]
+- ["CSo16UIViewController", "UIStoryboardSegue"]
+- !private ["CSo16UIViewController", "comingFrom"]
+- ["CSo16UIViewController", "deinit"]
+- ["CSo16UIViewController", "didReceiveMemoryWarning"]
+- ["CSo16UIViewController", "disconnect"]
+- !private ["CSo16UIViewController", "fatalError"]
+- ["CSo16UIViewController", "goToListeEvenements"]
+- ["CSo16UIViewController", "goToProfile"]
+- ["CSo16UIViewController", "init"]
+- !private ["CSo16UIViewController", "navigationBar"]
+- !private ["CSo16UIViewController", "navigationController"]
+- !private ["CSo16UIViewController", "performSegue"]
+- ["CSo16UIViewController", "prepare"]
+- !private ["CSo16UIViewController", "viewControllers"]
+- ["CSo16UIViewController", "viewDidLoad"]
+- ["CSo16UIViewController", ""]
+- ["Su", "deinit"]
+- !private ["Vs6UInt16", "deinit"]
+- !private ["Vs6UInt32", "deinit"]
+- !private ["Vs6UInt64", "deinit"]
+- !private ["Vs5UInt8", "deinit"]
+- !private ["Sc", "deinit"]
+- !private ["Ps14_ArrayProtocol", "Iterator"]
+- !private ["Ps14_ArrayProtocol", "_Element"]
+- !private ["Ps14_ArrayProtocol", "first"]
+- !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "isHidden"]
+- !private ["Ps24_DestructorSafeContainer", "Iterator"]
+- !private ["Ps24_DestructorSafeContainer", "_Element"]
+- !private ["Ps24_DestructorSafeContainer", "first"]
+- !private ["Ps35_ExpressibleByBuiltinBooleanLiteral", "_getBuiltinLogicValue"]
+- !private ["Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral", "init"]
+- !private ["Ps34_ExpressibleByBuiltinStringLiteral", "init"]
+- !private ["Ps39_ExpressibleByBuiltinUTF16StringLiteral", "init"]
+- !private ["Ps41_ExpressibleByBuiltinUnicodeScalarLiteral", "init"]
+- !private ["Ps35_HasCustomAnyHashableRepresentation", "init"]
+- !private ["Ps9_Hashable", "RestApiManager"]
+- !private ["Ps9_Hashable", "SpeedLog"]
+- !private ["Ps9_Hashable", "_getBuiltinLogicValue"]
+- !private ["Ps9_Hashable", "comingFrom"]
+- !private ["Ps9_Hashable", "destination"]
+- ["Ps9_Hashable", "didReceiveMemoryWarning"]
+- ["Ps9_Hashable", "disconnect"]
+- !private ["Ps9_Hashable", "fatalError"]
+- ["Ps9_Hashable", "goToListeEvenements"]
+- ["Ps9_Hashable", "goToProfile"]
+- !private ["Ps9_Hashable", "identifier"]
+- !private ["Ps9_Hashable", "init"]
+- !private ["Ps9_Hashable", "isHidden"]
+- !private ["Ps9_Hashable", "navigationBar"]
+- !private ["Ps9_Hashable", "navigationController"]
+- !private ["Ps9_Hashable", "performSegue"]
+- ["Ps9_Hashable", "prepare"]
+- !private ["Ps9_Hashable", "sharedInstance"]
+- !private ["Ps9_Hashable", "user"]
+- !private ["Ps9_Hashable", "viewControllers"]
+- ["Ps9_Hashable", "viewDidLoad"]
+- ["Ps9_Hashable", ""]
+- !private ["Ps21_ObjectiveCBridgeable", "Iterator"]
+- !private ["Ps21_ObjectiveCBridgeable", "_Element"]
+- !private ["Ps21_ObjectiveCBridgeable", "_getBuiltinLogicValue"]
+- !private ["Ps21_ObjectiveCBridgeable", "first"]
+- !private ["Ps21_ObjectiveCBridgeable", "init"]
+- !private ["Vs26_OptionalNilComparisonType", "deinit"]
+depends-nominal:
+- "Ps9AnyObject"
+- !private "Sa"
+- !private "Ps23BidirectionalCollection"
+- !private "Ps22BidirectionalIndexable"
+- "Sb"
+- !private "PSo15CALayerDelegate"
+- "Ps7CVarArg"
+- !private "Vs9Character"
+- !private "Vs11ClosedRange"
+- !private "Ps10Collection"
+- !private "Ps10Comparable"
+- !private "Vs20CountableClosedRange"
+- !private "Vs14CountableRange"
+- "Ps28CustomDebugStringConvertible"
+- !private "Ps29CustomPlaygroundQuickLookable"
+- !private "Ps17CustomReflectable"
+- "Ps23CustomStringConvertible"
+- !private "Sd"
+- "Ps9Equatable"
+- !private "Ps25ExpressibleByArrayLiteral"
+- !private "Ps27ExpressibleByBooleanLiteral"
+- !private "Ps43ExpressibleByExtendedGraphemeClusterLiteral"
+- !private "Ps32ExpressibleByStringInterpolation"
+- !private "Ps26ExpressibleByStringLiteral"
+- !private "Ps33ExpressibleByUnicodeScalarLiteral"
+- !private "Sf"
+- "Ps8Hashable"
+- !private "Ps9Indexable"
+- !private "Ps13IndexableBase"
+- !private "Vs16IndexingIterator"
+- !private "Si"
+- !private "Vs5Int16"
+- !private "Vs5Int32"
+- !private "Vs5Int64"
+- !private "Vs4Int8"
+- !private "Ps16IteratorProtocol"
+- "C12Kilobits_iOS29ListeEvenementsViewController"
+- !private "Ps25LosslessStringConvertible"
+- "C12Kilobits_iOS22MenuUserViewController"
+- !private "Ps10MirrorPath"
+- !private "Ps17MutableCollection"
+- !private "Ps16MutableIndexable"
+- "CSo7NSCoder"
+- "PSo8NSCoding"
+- !private "PSo9NSCopying"
+- "PSo26NSExtensionRequestHandling"
+- !private "PSo16NSMutableCopying"
+- "CSo8NSObject"
+- "PSo16NSObjectProtocol"
+- !private "PSo14NSSecureCoding"
+- !private "CSo8NSString"
+- "Os5Never"
+- "Sq"
+- !private "Ps22RandomAccessCollection"
+- !private "Ps21RandomAccessIndexable"
+- !private "Vs5Range"
+- !private "Ps26RangeReplaceableCollection"
+- !private "Ps25RangeReplaceableIndexable"
+- "C12Kilobits_iOS14RestApiManager"
+- !private "Ps8Sequence"
+- "Vs12StaticString"
+- "SS"
+- !private "Ps16TextOutputStream"
+- !private "Ps20TextOutputStreamable"
+- !private "PSo29UIAccessibilityIdentification"
+- !private "PSo12UIAppearance"
+- "PSo21UIAppearanceContainer"
+- !private "PSo16UIBarPositioning"
+- "PSo18UIContentContainer"
+- !private "PSo17UICoordinateSpace"
+- !private "PSo13UIDynamicItem"
+- "PSo18UIFocusEnvironment"
+- !private "PSo11UIFocusItem"
+- "CSo15UINavigationBar"
+- "CSo22UINavigationController"
+- "CSo11UIResponder"
+- "PSo30UIResponderStandardEditActions"
+- !private "PSo20UIScrollViewDelegate"
+- "PSo16UIStateRestoring"
+- "CSo17UIStoryboardSegue"
+- !private "CSo21UITableViewController"
+- !private "PSo21UITableViewDataSource"
+- !private "PSo19UITableViewDelegate"
+- "PSo18UITraitEnvironment"
+- !private "CSo6UIView"
+- "CSo16UIViewController"
+- "Su"
+- !private "Vs6UInt16"
+- !private "Vs6UInt32"
+- !private "Vs6UInt64"
+- !private "Vs5UInt8"
+- !private "Sc"
+- !private "Ps14_ArrayProtocol"
+- !private "Ps37_DefaultCustomPlaygroundQuickLookable"
+- !private "Ps24_DestructorSafeContainer"
+- !private "Ps35_ExpressibleByBuiltinBooleanLiteral"
+- !private "Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral"
+- !private "Ps34_ExpressibleByBuiltinStringLiteral"
+- !private "Ps39_ExpressibleByBuiltinUTF16StringLiteral"
+- !private "Ps41_ExpressibleByBuiltinUnicodeScalarLiteral"
+- !private "Ps35_HasCustomAnyHashableRepresentation"
+- "Ps9_Hashable"
+- !private "Ps21_ObjectiveCBridgeable"
+- !private "Vs26_OptionalNilComparisonType"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/SwiftOnoneSupport.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/CoreImage.swiftmodule"
+interface-hash: "dc23ec306681bb5c56a4120a3c15effa"

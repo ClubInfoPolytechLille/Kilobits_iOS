@@ -22,8 +22,6 @@ class InscriptionViewController: UIViewController, UITextFieldDelegate, UIPicker
     @IBOutlet weak var miscellaneous: UITextView!
     @IBOutlet weak var createAccount: UIButton!
     
-    var cityData : [(Int, String)] = []
-    
     // MARK: - Initialisation
     //TODO: Trouver le moyen de retirer la ligne vide mise par défaut dans la textview
     override func viewDidLoad()
@@ -43,12 +41,6 @@ class InscriptionViewController: UIViewController, UITextFieldDelegate, UIPicker
         //Rend la textview miscellaneous visible lors de son édition
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
-        
-        //Load cities data from txt file
-        RestApiManager.sharedInstance.getAllCities(completionHandler: { cities in
-            self.cityData = Array(cities.villes).sorted(by: {$0.0 < $1.0})
-            self.city.reloadAllComponents()
-        })
     }
     
     override func didReceiveMemoryWarning()
@@ -136,12 +128,12 @@ class InscriptionViewController: UIViewController, UITextFieldDelegate, UIPicker
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int
     {
-        return cityData.count
+        return RestApiManager.sharedInstance.cityData.count
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String?
     {
-        return cityData[row].1
+        return RestApiManager.sharedInstance.cityData[row].1
     }
     
     // MARK: - IBActions
@@ -154,7 +146,7 @@ class InscriptionViewController: UIViewController, UITextFieldDelegate, UIPicker
     @IBAction func createAccountAction(_ sender: UIButton)
     {
         //let user = UserData(json: ["pseudo":"userTest3", "nom":"TestNom", "prenom":"TestPrenom", "ville":"Lille","mdp":"unicorn", "estMobile":false, "typ":false, "dispo":true]) //Pour que le debug soit plus facile
-        let ville = cityData[city.selectedRow(inComponent: 0)].0
+        let ville = RestApiManager.sharedInstance.cityData[city.selectedRow(inComponent: 0)].0
         let divers = miscellaneous.text
         let user = UserData(json: ["pseudo":identifier.text!, "nom":name.text!, "prenom":firstName.text!, "mdp":password.text!, "ville":ville, "estMobile":isMobile.isOn, "typ":!isMigrant.isOn, "dispo":hasFreeTime.isOn]) //Vraie version
         if !divers!.isEmpty
@@ -165,7 +157,7 @@ class InscriptionViewController: UIViewController, UITextFieldDelegate, UIPicker
         RestApiManager.sharedInstance.createUser(user: user, completionHandler: { success in
             if success == 1
             {
-                self.performSegue(withIdentifier: "goToMenuMigrantFromInscription", sender: self)
+                self.performSegue(withIdentifier: "goToMenuUserFromInscription", sender: self)
             }
             else if success == 0
             {
