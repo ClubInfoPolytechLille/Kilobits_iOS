@@ -9,9 +9,9 @@ provides-dynamic-lookup:
 - "hideKeyboardWithTouch"
 - "dismissKeyboard"
 depends-top-level:
+- "UIViewController"
 - !private "BooleanLiteralType"
 - !private "UITapGestureRecognizer"
-- "UIViewController"
 depends-member:
 - !private ["Ps9AnyObject", "UITapGestureRecognizer"]
 - !private ["Ps9AnyObject", "UIViewController"]

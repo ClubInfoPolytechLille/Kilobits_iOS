@@ -115,11 +115,36 @@ class ProfileViewController: UIViewController, UITextFieldDelegate, UIPickerView
         let confirmAlertCtrl = UIAlertController(title: "alerte_delete_account_titre".localized(table: "ProfileViewController"), message: message, preferredStyle: .alert)
         
         let confirmAction = UIAlertAction(title: "alerte_delete_account_confirm_action".localized(table: "ProfileViewController"), style: .destructive) { _ in
-            //Send request
-            print("delete account")
-            self.navigationController!.navigationBar.isHidden = true
-            RestApiManager.sharedInstance.user = nil
-            self.performSegue(withIdentifier: "goToMenuFromProfile", sender: self)
+            RestApiManager.sharedInstance.deleteUser(user: RestApiManager.sharedInstance.user!, completionHandler: { success in
+                if success
+                {
+                    //LocalizedStrings
+                    let titre = "alerte_compte_supprime_titre".localized(table: "ProfileViewController")
+                    let contenu = "alerte_compte_supprime_contenu".localized(table: "ProfileViewController")
+                    let action = "alerte_action_OK".localized(table: "Common")
+                    
+                    //Alerte
+                    let alerte = UIAlertController(title: titre, message: contenu, preferredStyle: UIAlertControllerStyle.alert)
+                    alerte.addAction(UIAlertAction(title: action, style: UIAlertActionStyle.default, handler: { _ in
+                        self.navigationController!.navigationBar.isHidden = true
+                        RestApiManager.sharedInstance.user = nil
+                        self.performSegue(withIdentifier: "goToMenuFromProfile", sender: self)
+                    }))
+                    self.present(alerte, animated: true, completion: nil)
+                }
+                else
+                {
+                    //LocalizedStrings
+                    let titre = "alerte_erreur_titre".localized(table: "Common")
+                    let contenu = "alerte_deletion_utilisateur_contenu".localized(table: "ProfileViewController")
+                    let action = "alerte_action_OK".localized(table: "Common")
+                    
+                    //Alerte
+                    let alerte = UIAlertController(title: titre, message: contenu, preferredStyle: UIAlertControllerStyle.alert)
+                    alerte.addAction(UIAlertAction(title: action, style: UIAlertActionStyle.default, handler: nil))
+                    self.present(alerte, animated: true, completion: nil)
+                }
+            })
         }
         confirmAlertCtrl.addAction(confirmAction)
         

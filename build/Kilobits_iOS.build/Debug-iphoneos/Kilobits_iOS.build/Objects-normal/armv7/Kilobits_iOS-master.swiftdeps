@@ -1,19 +1,19 @@
 version: "Apple Swift version 3.0.2 (swiftlang-800.0.63 clang-800.0.42.1)"
 options: "ba5db0fe033729910d9775a3dc95cc6b"
-build_time: [542040716, 655711000]
+build_time: [542115744, 284382000]
 inputs:
   "/Users/Liki/Documents/Programmation/Swift/Kilobits_iOS/Kilobits_iOS/Villes.swift": !dirty [542040441, 0]
   "/Users/Liki/Documents/Programmation/Swift/Kilobits_iOS/Kilobits_iOS/DateExtension.swift": !dirty [542033070, 0]
   "/Users/Liki/Documents/Programmation/Swift/Kilobits_iOS/Kilobits_iOS/MenuUserViewController.swift": !dirty [542029407, 0]
   "/Users/Liki/Documents/Programmation/Swift/Kilobits_iOS/Kilobits_iOS/Extensions.swift": !dirty [540848670, 0]
-  "/Users/Liki/Documents/Programmation/Swift/Kilobits_iOS/Kilobits_iOS/RestApiManager.swift": !dirty [542038286, 0]
+  "/Users/Liki/Documents/Programmation/Swift/Kilobits_iOS/Kilobits_iOS/RestApiManager.swift": !dirty [542112926, 0]
   "/Users/Liki/Documents/Programmation/Swift/Kilobits_iOS/Kilobits_iOS/UserData.swift": !dirty [542038987, 0]
   "/Users/Liki/Documents/Programmation/Swift/Kilobits_iOS/Kilobits_iOS/ConnexionViewController.swift": !dirty [541964910, 0]
   "/Users/Liki/Documents/Programmation/Swift/Kilobits_iOS/Kilobits_iOS/InscriptionViewController.swift": !dirty [542031149, 0]
   "/Users/Liki/Documents/Programmation/Swift/Kilobits_iOS/Kilobits_iOS/JSONExtension.swift": !dirty [542032264, 0]
-  "/Users/Liki/Documents/Programmation/Swift/Kilobits_iOS/Kilobits_iOS/MenuViewController.swift": !dirty [542029218, 0]
+  "/Users/Liki/Documents/Programmation/Swift/Kilobits_iOS/Kilobits_iOS/MenuViewController.swift": !dirty [542113844, 0]
   "/Users/Liki/Documents/Programmation/Swift/Kilobits_iOS/Kilobits_iOS/EvenementInfoViewController.swift": !dirty [542036561, 0]
-  "/Users/Liki/Documents/Programmation/Swift/Kilobits_iOS/Kilobits_iOS/ProfileViewController.swift": !dirty [541964959, 0]
+  "/Users/Liki/Documents/Programmation/Swift/Kilobits_iOS/Kilobits_iOS/ProfileViewController.swift": !dirty [542112660, 0]
   "/Users/Liki/Documents/Programmation/Swift/Kilobits_iOS/Kilobits_iOS/AppDelegate.swift": !dirty [540848933, 0]
   "/Users/Liki/Documents/Programmation/Swift/Kilobits_iOS/Kilobits_iOS/StringExtension.swift": !dirty [542035029, 0]
   "/Users/Liki/Documents/Programmation/Swift/Kilobits_iOS/Kilobits_iOS/ListeEvenementsViewController.swift": !dirty [542028674, 0]

@@ -251,4 +251,30 @@ class RestApiManager: NSObject {
     }
     
     
+    
+    // MARK: - API DELETE Functions
+    
+    /// Envoie une requête DELETE pour supprimer un utilisateur.
+    ///
+    /// - Parameters:
+    ///   - user: L'utilisateur à supprimer.
+    ///   - completionHandler: Les tâches à effectuer ensuite avec un `Bool` valant `true` si la requête a abouti, `false` sinon.
+    func deleteUser(user: UserData, completionHandler: @escaping (Bool) -> Void) {
+        let route = baseURL + "user/" + "\(user.id!)"
+        
+        Alamofire.request(route, method: .delete)
+            .response(completionHandler: { response in
+                guard response.error == nil else
+                {
+                    SpeedLog.print("error calling DELETE on /user/\(user.id!)")
+                    SpeedLog.print(response.error!)
+                    SpeedLog.print("Code erreur \(response.response!.statusCode)")
+                    completionHandler(false)
+                    return
+                }
+                
+                SpeedLog.print("Utilisateur \(user.pseudo!) supprimé.")
+                completionHandler(true)
+            })
+    }
 }

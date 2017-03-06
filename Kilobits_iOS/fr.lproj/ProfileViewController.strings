@@ -20,3 +20,12 @@
 
 /* Action (Confirm action) de l'alerte de confirmation lors d'une suppression de compte */
 "alerte_delete_account_confirm_action" = "Confirm action";
+
+/* Contenu de l'alerte de problème lors d'une suppression de compte */
+"alerte_deletion_utilisateur_contenu" = "An error occured and the account could not be deleted.";
+
+/* Titre de l'alerte de réussite lors d'une suppression de compte */
+"alerte_compte_supprime_titre" = "Account deleted";
+
+/* Contenu de l'alerte de réussite lors d'une suppression de compte */
+"alerte_compte_supprime_contenu" = "The account was deleted successfully.";

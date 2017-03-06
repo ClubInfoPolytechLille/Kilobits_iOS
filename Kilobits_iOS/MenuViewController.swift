@@ -12,7 +12,10 @@ import SpeedLog
 class MenuViewController: UIViewController
 {
     // MARK: - IBOutlets
+    /// Bouton pour changer la langue. Composé d'un drapeau et du nom de la langue.
     @IBOutlet var boutonLangues: UIButton!
+    
+    
     
     // MARK: - Initialisation
     override func viewWillAppear(_ animated: Bool)
@@ -68,7 +71,7 @@ class MenuViewController: UIViewController
         }
     }
     
-    //Charge la liste des langues disponibles pour l'application récupérées par une requête à la BDD.
+    /// Charge la liste des langues disponibles pour l'application récupérées par une requête à la BDD.
     func chargerLangues()
     {
         //On vérifie que l'utilisateur n'existe pas déjà
@@ -94,8 +97,15 @@ class MenuViewController: UIViewController
         })
     }
     
+    
+    
     // MARK: - Utility Functions
 
+    /// Affiche une alerte de confirmation pour le changement de langue à l'utilisateur. 
+    ///
+    /// S'il confirme, modifie la langue de l'application et ferme celle-ci.
+    ///
+    /// - Parameter langCode: Le code de la nouvelle langue (en, fr, ...).
     private func changeToLanguage(_ langCode: String) {
         if Bundle.main.preferredLocalizations.first != langCode {
             let message = "alerte_changer_langue_contenu".localized(table: "MenuViewController")
@@ -116,6 +126,11 @@ class MenuViewController: UIViewController
     }
     
     // MARK: - IBActions
+    /// Action effectuée lors du clic sur le bouton des langues. 
+    ///
+    /// Affiche un popover avec les différentes langues disponibles et appelle la fonction `changeToLanguage` sur la langue sélectionnée.
+    ///
+    /// - Parameter sender: Le bouton langues.
     @IBAction func changerLangue(_ sender: UIButton)
     {
         //Alerte choix des langues
@@ -151,21 +166,33 @@ class MenuViewController: UIViewController
         self.present(alerte, animated: true, completion: nil)
     }
     
+    /// Emmène l'utilisateur vers une page de connexion.
+    ///
+    /// - Parameter sender: Le bouton de connexion.
     @IBAction func seConnecter(_ sender: UIButton)
     {
         performSegue(withIdentifier: "goToConnexion", sender: self)
     }
     
+    /// Emmène l'utilisateur vers une page d'inscription.
+    ///
+    /// - Parameter sender: Le bouton d'inscription.
     @IBAction func sInscrire(_ sender: UIButton)
     {
         performSegue(withIdentifier: "goToInscription", sender: self)
     }
 
+    /// Emmène l'utilisateur vers une page d'accès au forum.
+    ///
+    /// - Parameter sender: Le bouton d'accès au forum.
     @IBAction func accesForum(_ sender: UIButton)
     {
         //performSegueWithIdentifier("goToForum", sender: self)
     }
     
+    /// Emmène l'utilisateur vers une page avec une liste des événements disponibles.
+    ///
+    /// - Parameter sender: Le bouton de liste des événements.
     @IBAction func consulterEvenements(_ sender: UIButton)
     {
         performSegue(withIdentifier: "goToListeEvenements", sender: self)

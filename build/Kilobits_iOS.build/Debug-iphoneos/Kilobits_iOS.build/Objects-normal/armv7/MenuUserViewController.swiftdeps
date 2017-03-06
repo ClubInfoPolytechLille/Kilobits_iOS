@@ -6,29 +6,29 @@ provides-nominal:
 provides-member:
 - ["C12Kilobits_iOS22MenuUserViewController", ""]
 provides-dynamic-lookup:
-- "didReceiveMemoryWarning"
-- "goToProfile"
-- "viewDidLoad"
-- "disconnect"
 - "prepare"
+- "disconnect"
 - "goToListeEvenements"
+- "viewDidLoad"
+- "goToProfile"
+- "didReceiveMemoryWarning"
 depends-top-level:
-- "UIStoryboardSegue"
 - !private "BooleanLiteralType"
-- !private "RestApiManager"
-- "CastingPrecedence"
-- "AssignmentPrecedence"
-- "UIViewController"
-- !private "~="
-- !private "UINavigationController"
-- !private "StringLiteralType"
-- !private "ListeEvenementsViewController"
 - !private "SpeedLog"
-- !private "fatalError"
 - "UIButton"
+- !private "fatalError"
 - !private "??"
+- !private "StringLiteralType"
 - "MenuUserViewController"
+- !private "ListeEvenementsViewController"
 - "UIBarButtonItem"
+- "UIViewController"
+- "AssignmentPrecedence"
+- !private "~="
+- "CastingPrecedence"
+- !private "RestApiManager"
+- !private "UINavigationController"
+- "UIStoryboardSegue"
 depends-member:
 - !private ["Ps9AnyObject", "RestApiManager"]
 - !private ["Ps9AnyObject", "SpeedLog"]

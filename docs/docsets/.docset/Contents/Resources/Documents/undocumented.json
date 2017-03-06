@@ -541,85 +541,29 @@
     },
     {
       "file": "/Users/Liki/Documents/Programmation/Swift/Kilobits_iOS/Kilobits_iOS/MenuViewController.swift",
-      "line": 15,
-      "symbol": "MenuViewController.boutonLangues",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/Liki/Documents/Programmation/Swift/Kilobits_iOS/Kilobits_iOS/MenuViewController.swift",
-      "line": 18,
+      "line": 21,
       "symbol": "MenuViewController.viewWillAppear(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/Liki/Documents/Programmation/Swift/Kilobits_iOS/Kilobits_iOS/MenuViewController.swift",
-      "line": 31,
+      "line": 34,
       "symbol": "MenuViewController.viewDidLoad()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/Liki/Documents/Programmation/Swift/Kilobits_iOS/Kilobits_iOS/MenuViewController.swift",
-      "line": 44,
+      "line": 47,
       "symbol": "MenuViewController.didReceiveMemoryWarning()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/Liki/Documents/Programmation/Swift/Kilobits_iOS/Kilobits_iOS/MenuViewController.swift",
-      "line": 50,
+      "line": 53,
       "symbol": "MenuViewController.prepare(for:sender:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/Liki/Documents/Programmation/Swift/Kilobits_iOS/Kilobits_iOS/MenuViewController.swift",
-      "line": 72,
-      "symbol": "MenuViewController.chargerLangues()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/Liki/Documents/Programmation/Swift/Kilobits_iOS/Kilobits_iOS/MenuViewController.swift",
-      "line": 99,
-      "symbol": "MenuViewController.changeToLanguage(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/Liki/Documents/Programmation/Swift/Kilobits_iOS/Kilobits_iOS/MenuViewController.swift",
-      "line": 119,
-      "symbol": "MenuViewController.changerLangue(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/Liki/Documents/Programmation/Swift/Kilobits_iOS/Kilobits_iOS/MenuViewController.swift",
-      "line": 154,
-      "symbol": "MenuViewController.seConnecter(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/Liki/Documents/Programmation/Swift/Kilobits_iOS/Kilobits_iOS/MenuViewController.swift",
-      "line": 159,
-      "symbol": "MenuViewController.sInscrire(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/Liki/Documents/Programmation/Swift/Kilobits_iOS/Kilobits_iOS/MenuViewController.swift",
-      "line": 164,
-      "symbol": "MenuViewController.accesForum(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/Liki/Documents/Programmation/Swift/Kilobits_iOS/Kilobits_iOS/MenuViewController.swift",
-      "line": 169,
-      "symbol": "MenuViewController.consulterEvenements(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
@@ -744,56 +688,56 @@
     },
     {
       "file": "/Users/Liki/Documents/Programmation/Swift/Kilobits_iOS/Kilobits_iOS/ProfileViewController.swift",
-      "line": 134,
+      "line": 159,
       "symbol": "ProfileViewController.textFieldShouldReturn(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/Liki/Documents/Programmation/Swift/Kilobits_iOS/Kilobits_iOS/ProfileViewController.swift",
-      "line": 164,
+      "line": 189,
       "symbol": "ProfileViewController.textFieldDidBeginEditing(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/Liki/Documents/Programmation/Swift/Kilobits_iOS/Kilobits_iOS/ProfileViewController.swift",
-      "line": 171,
+      "line": 196,
       "symbol": "ProfileViewController.textFieldDidChange(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/Liki/Documents/Programmation/Swift/Kilobits_iOS/Kilobits_iOS/ProfileViewController.swift",
-      "line": 178,
+      "line": 203,
       "symbol": "ProfileViewController.keyboardWillShow(notification:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/Liki/Documents/Programmation/Swift/Kilobits_iOS/Kilobits_iOS/ProfileViewController.swift",
-      "line": 192,
+      "line": 217,
       "symbol": "ProfileViewController.keyboardWillHide(notification:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/Liki/Documents/Programmation/Swift/Kilobits_iOS/Kilobits_iOS/ProfileViewController.swift",
-      "line": 204,
+      "line": 229,
       "symbol": "ProfileViewController.numberOfComponents(in:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/Liki/Documents/Programmation/Swift/Kilobits_iOS/Kilobits_iOS/ProfileViewController.swift",
-      "line": 209,
+      "line": 234,
       "symbol": "ProfileViewController.pickerView(_:numberOfRowsInComponent:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/Liki/Documents/Programmation/Swift/Kilobits_iOS/Kilobits_iOS/ProfileViewController.swift",
-      "line": 214,
+      "line": 239,
       "symbol": "ProfileViewController.pickerView(_:titleForRow:forComponent:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
